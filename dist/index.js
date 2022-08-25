@@ -34513,6 +34513,17 @@ let pinataOptions = {
 let cid = ''
 
 const main = async () => {
+  console.log(`
+                  .o                 .oooo.   
+                .d88                d8P'\`Y8b  
+ooo. .oo.     .d'888   ooo. .oo.   888    888 
+\`888P"Y88b  .d'  888   \`888P"Y88b  888    888 
+ 888   888  88ooo888oo  888   888  888    888 
+ 888   888       888    888   888  \`88b  d88' 
+o888o o888o     o888o  o888o o888o  \`Y8bd8P'  
+
+        --- touch grass, anon <3 ---
+  `)
     try {
         // @dev retrieve action inputs
         let sourcePath = core.getInput('path', {required: true})
@@ -34545,25 +34556,27 @@ const main = async () => {
 
         // @dev pin the new file
         await pinata.pinFromFS(sourcePath, pinataOptions).then(async (result) => {
-            console.log('pinata response:', result)
             cid = result.IpfsHash.toString()
+            const totalData = await pinata.userPinnedDataTotal()
             if (!result.isDuplicate) {
-              // @dev update the gateway
+              // @dev generate the gateway url
               const prefix = `https://${gatewayName}.mypinata.cloud`
               const newGateway = await gatewayTools.convertToDesiredGateway(
                 `${prefix}/ipfs/${cid}`,
                 prefix
               )
-              console.log({gateway: newGateway, cid})
               core.setOutput('gateway', newGateway)
+              core.setOutput('duplicate', 'false')
+              console.log('ヾ(＾-＾)ノ Pinned file', {gateway: newGateway, cid})
             } else {
-              console.log('No code was changed, duplicate hash generated. Skipping...')
+              core.setOutput('duplicate', 'true')
+              console.log('Σ(； ･`д･´) No code was changed, duplicate hash generated. Skipping...')
             }
+            console.log(`(。・ω・。) Total filesize of all pins is ${(totalData/1024/1024).toFixed(2)}MB`)
         })
 
         // @dev unpin old file if applicable
-        if (!!unpinOld) {
-            // TODO change conditional to proper evaluation
+        if (unpinOld === 'true') {
             // @dev retrieve current pins with the same name
             const currentPins = await pinata.pinList({
               status: 'pinned',
@@ -34572,10 +34585,11 @@ const main = async () => {
               }
             })
             const pinList = currentPins.rows
-            console.log(pinList)
             pinList.filter((pin) => pin.ipfs_pin_hash !== cid).forEach((pin) => {
-              pinata.unpin(pin.ipfs_pin_hash).then((result) => {
-                console.log(pin.ipfs_pin_hash, 'unpinned', result)
+              pinata.unpin(pin.ipfs_pin_hash).then(() => {
+                console.log('(•̀o•́)ง Pin removed:', pin.ipfs_pin_hash)
+              }).catch((e) => {
+                console.log('(´；ω；`) Failed to remove pin', e.message)
               })
             })
         }
@@ -34587,6 +34601,7 @@ const main = async () => {
 
 main().then(() => {
   core.setOutput('cid', cid)
+  console.log('✧*｡٩(ˊᗜˋ*)و✧*｡ All done!')
 })
 
 })();

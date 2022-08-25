@@ -25,9 +25,11 @@ inputs:
     required: true
 outputs:
   gateway:
-    description: 'The gateway address'
+    description: 'Returns the new gateway address of a successful pin'
   cid:
-    description: 'The new CID'
+    description: 'Returns the CID of the built codebase'
+  duplicate:
+    description: 'Returns true if the pin was skipped'
 runs:
   using: 'node16'
   main: 'dist/index.js'
