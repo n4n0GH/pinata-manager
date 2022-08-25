@@ -1,8 +1,7 @@
-import core from '@actions/core';
-// import axios from 'axios';
-import fsPath from 'path'
-import pinataSdk from '@pinata/sdk'
-import IPFSGatewayTools from '@pinata/ipfs-gateway-tools/dist/browser'
+const core = require('@actions/core');
+const fsPath = require('path')
+const pinataSdk = require('@pinata/sdk')
+const IPFSGatewayTools = require('@pinata/ipfs-gateway-tools/dist/browser')
 
 const gatewayTools = new IPFSGatewayTools()
 
