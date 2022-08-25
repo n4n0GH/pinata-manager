@@ -40540,10 +40540,10 @@ o888o o888o     o888o  o888o o888o  \`Y8bd8P'
               // @dev use undocumented blackmagick to update gateway root
               console.log(`https://api.pinata.cloud/v2/gateways/${gatewayId}/pin/${pinId}`)
               await axios({
-                method: 'POST',
+                method: 'PUT',
                 url: `https://api.pinata.cloud/v2/gateways/${gatewayId}/pin/${pinId}`,
                   headers: {
-                      authorization: `Bearer ${secret}`
+                      Authorization: `Bearer ${secret}`
                   }
               }).then(() => {
                 console.log('(≧◡≦) Updated gateway root')
