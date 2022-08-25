@@ -40541,8 +40541,9 @@ o888o o888o     o888o  o888o o888o  \`Y8bd8P'
               // @dev use undocumented blackmagick to update gateway root
               console.log(`https://api.pinata.cloud/v2/gateways/${gatewayId}/pin/${pinId}`)
               await axios({
-                method: 'POST',
-                url: `https://api.pinata.cloud/v2/gateways/${gatewayId}/pin/${pinId}`
+                method: 'PUT',
+                url: `https://api.pinata.cloud/v2/gateways/${gatewayId}/pin/${pinId}`,
+                  authorization: `Bearer ${secret}`
               }).then(() => {
                 console.log('(≧◡≦) Updated gateway root')
               }).catch((e) => {
@@ -40566,9 +40567,7 @@ o888o o888o     o888o  o888o o888o  \`Y8bd8P'
               }
             })
             const pinList = currentPins.rows
-            console.log(pinList)
             pinList.filter(async (pin) => {
-                console.log(pin)
                 if (pin.ipfs_pin_hash !== cid) {
                     await pinata.unpin(pin.ipfs_pin_hash).then(() => {
                       console.log('(•̀o•́)ง Pin removed:', pin.ipfs_pin_hash)
