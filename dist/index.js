@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 351:
+/***/ 7351:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -27,8 +27,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.issue = exports.issueCommand = void 0;
-const os = __importStar(__nccwpck_require__(37));
-const utils_1 = __nccwpck_require__(278);
+const os = __importStar(__nccwpck_require__(2037));
+const utils_1 = __nccwpck_require__(5278);
 /**
  * Commands
  *
@@ -100,7 +100,7 @@ function escapeProperty(s) {
 
 /***/ }),
 
-/***/ 186:
+/***/ 2186:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -135,13 +135,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getIDToken = exports.getState = exports.saveState = exports.group = exports.endGroup = exports.startGroup = exports.info = exports.notice = exports.warning = exports.error = exports.debug = exports.isDebug = exports.setFailed = exports.setCommandEcho = exports.setOutput = exports.getBooleanInput = exports.getMultilineInput = exports.getInput = exports.addPath = exports.setSecret = exports.exportVariable = exports.ExitCode = void 0;
-const command_1 = __nccwpck_require__(351);
+const command_1 = __nccwpck_require__(7351);
 const file_command_1 = __nccwpck_require__(717);
-const utils_1 = __nccwpck_require__(278);
-const os = __importStar(__nccwpck_require__(37));
-const path = __importStar(__nccwpck_require__(17));
-const uuid_1 = __nccwpck_require__(840);
-const oidc_utils_1 = __nccwpck_require__(41);
+const utils_1 = __nccwpck_require__(5278);
+const os = __importStar(__nccwpck_require__(2037));
+const path = __importStar(__nccwpck_require__(1017));
+const uuid_1 = __nccwpck_require__(5840);
+const oidc_utils_1 = __nccwpck_require__(8041);
 /**
  * The code to exit an action
  */
@@ -426,17 +426,17 @@ exports.getIDToken = getIDToken;
 /**
  * Summary exports
  */
-var summary_1 = __nccwpck_require__(327);
+var summary_1 = __nccwpck_require__(1327);
 Object.defineProperty(exports, "summary", ({ enumerable: true, get: function () { return summary_1.summary; } }));
 /**
  * @deprecated use core.summary
  */
-var summary_2 = __nccwpck_require__(327);
+var summary_2 = __nccwpck_require__(1327);
 Object.defineProperty(exports, "markdownSummary", ({ enumerable: true, get: function () { return summary_2.markdownSummary; } }));
 /**
  * Path exports
  */
-var path_utils_1 = __nccwpck_require__(981);
+var path_utils_1 = __nccwpck_require__(2981);
 Object.defineProperty(exports, "toPosixPath", ({ enumerable: true, get: function () { return path_utils_1.toPosixPath; } }));
 Object.defineProperty(exports, "toWin32Path", ({ enumerable: true, get: function () { return path_utils_1.toWin32Path; } }));
 Object.defineProperty(exports, "toPlatformPath", ({ enumerable: true, get: function () { return path_utils_1.toPlatformPath; } }));
@@ -473,9 +473,9 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.issueCommand = void 0;
 // We use any as a valid input type
 /* eslint-disable @typescript-eslint/no-explicit-any */
-const fs = __importStar(__nccwpck_require__(147));
-const os = __importStar(__nccwpck_require__(37));
-const utils_1 = __nccwpck_require__(278);
+const fs = __importStar(__nccwpck_require__(7147));
+const os = __importStar(__nccwpck_require__(2037));
+const utils_1 = __nccwpck_require__(5278);
 function issueCommand(command, message) {
     const filePath = process.env[`GITHUB_${command}`];
     if (!filePath) {
@@ -493,7 +493,7 @@ exports.issueCommand = issueCommand;
 
 /***/ }),
 
-/***/ 41:
+/***/ 8041:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -509,9 +509,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.OidcClient = void 0;
-const http_client_1 = __nccwpck_require__(255);
-const auth_1 = __nccwpck_require__(526);
-const core_1 = __nccwpck_require__(186);
+const http_client_1 = __nccwpck_require__(6255);
+const auth_1 = __nccwpck_require__(5526);
+const core_1 = __nccwpck_require__(2186);
 class OidcClient {
     static createHttpClient(allowRetry = true, maxRetry = 10) {
         const requestOptions = {
@@ -577,7 +577,7 @@ exports.OidcClient = OidcClient;
 
 /***/ }),
 
-/***/ 981:
+/***/ 2981:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -603,7 +603,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.toPlatformPath = exports.toWin32Path = exports.toPosixPath = void 0;
-const path = __importStar(__nccwpck_require__(17));
+const path = __importStar(__nccwpck_require__(1017));
 /**
  * toPosixPath converts the given path to the posix form. On Windows, \\ will be
  * replaced with /.
@@ -642,7 +642,7 @@ exports.toPlatformPath = toPlatformPath;
 
 /***/ }),
 
-/***/ 327:
+/***/ 1327:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -658,8 +658,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.summary = exports.markdownSummary = exports.SUMMARY_DOCS_URL = exports.SUMMARY_ENV_VAR = void 0;
-const os_1 = __nccwpck_require__(37);
-const fs_1 = __nccwpck_require__(147);
+const os_1 = __nccwpck_require__(2037);
+const fs_1 = __nccwpck_require__(7147);
 const { access, appendFile, writeFile } = fs_1.promises;
 exports.SUMMARY_ENV_VAR = 'GITHUB_STEP_SUMMARY';
 exports.SUMMARY_DOCS_URL = 'https://docs.github.com/actions/using-workflows/workflow-commands-for-github-actions#adding-a-job-summary';
@@ -932,7 +932,7 @@ exports.summary = _summary;
 
 /***/ }),
 
-/***/ 278:
+/***/ 5278:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -979,7 +979,7 @@ exports.toCommandProperties = toCommandProperties;
 
 /***/ }),
 
-/***/ 526:
+/***/ 5526:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -1067,7 +1067,7 @@ exports.PersonalAccessTokenCredentialHandler = PersonalAccessTokenCredentialHand
 
 /***/ }),
 
-/***/ 255:
+/***/ 6255:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -1103,10 +1103,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.HttpClient = exports.isHttps = exports.HttpClientResponse = exports.HttpClientError = exports.getProxyUrl = exports.MediaTypes = exports.Headers = exports.HttpCodes = void 0;
-const http = __importStar(__nccwpck_require__(685));
-const https = __importStar(__nccwpck_require__(687));
-const pm = __importStar(__nccwpck_require__(835));
-const tunnel = __importStar(__nccwpck_require__(294));
+const http = __importStar(__nccwpck_require__(3685));
+const https = __importStar(__nccwpck_require__(5687));
+const pm = __importStar(__nccwpck_require__(9835));
+const tunnel = __importStar(__nccwpck_require__(4294));
 var HttpCodes;
 (function (HttpCodes) {
     HttpCodes[HttpCodes["OK"] = 200] = "OK";
@@ -1679,7 +1679,7 @@ const lowercaseKeys = (obj) => Object.keys(obj).reduce((c, k) => ((c[k.toLowerCa
 
 /***/ }),
 
-/***/ 835:
+/***/ 9835:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -1747,14 +1747,3259 @@ exports.checkBypass = checkBypass;
 
 /***/ }),
 
-/***/ 158:
-/***/ (function(module) {
+/***/ 3841:
+/***/ ((module) => {
 
-!function(e,t){ true?module.exports=t():0}(this,(function(){return(()=>{var e={820:e=>{"use strict";e.exports=function(e){if(e.length>=255)throw new TypeError("Alphabet too long");for(var t=new Uint8Array(256),n=0;n<t.length;n++)t[n]=255;for(var s=0;s<e.length;s++){var r=e.charAt(s),i=r.charCodeAt(0);if(255!==t[i])throw new TypeError(r+" is ambiguous");t[i]=s}var o=e.length,a=e.charAt(0),c=Math.log(o)/Math.log(256),u=Math.log(256)/Math.log(o);function l(e){if("string"!=typeof e)throw new TypeError("Expected String");if(0===e.length)return new Uint8Array;var n=0;if(" "!==e[n]){for(var s=0,r=0;e[n]===a;)s++,n++;for(var i=(e.length-n)*c+1>>>0,u=new Uint8Array(i);e[n];){var l=t[e.charCodeAt(n)];if(255===l)return;for(var k=0,h=i-1;(0!==l||k<r)&&-1!==h;h--,k++)l+=o*u[h]>>>0,u[h]=l%256>>>0,l=l/256>>>0;if(0!==l)throw new Error("Non-zero carry");r=k,n++}if(" "!==e[n]){for(var b=i-r;b!==i&&0===u[b];)b++;for(var d=new Uint8Array(s+(i-b)),p=s;b!==i;)d[p++]=u[b++];return d}}}return{encode:function(t){if(t instanceof Uint8Array||(ArrayBuffer.isView(t)?t=new Uint8Array(t.buffer,t.byteOffset,t.byteLength):Array.isArray(t)&&(t=Uint8Array.from(t))),!(t instanceof Uint8Array))throw new TypeError("Expected Uint8Array");if(0===t.length)return"";for(var n=0,s=0,r=0,i=t.length;r!==i&&0===t[r];)r++,n++;for(var c=(i-r)*u+1>>>0,l=new Uint8Array(c);r!==i;){for(var k=t[r],h=0,b=c-1;(0!==k||h<s)&&-1!==b;b--,h++)k+=256*l[b]>>>0,l[b]=k%o>>>0,k=k/o>>>0;if(0!==k)throw new Error("Non-zero carry");s=h,r++}for(var d=c-s;d!==c&&0===l[d];)d++;for(var p=a.repeat(n);d<c;++d)p+=e.charAt(l[d]);return p},decodeUnsafe:l,decode:function(e){var t=l(e);if(t)return t;throw new Error("Non-base"+o+" character")}}}},303:(e,t,n)=>{"use strict";const s=n(370),r={checkCIDComponents:function(e){if(null==e)return"null values are not valid CIDs";if(0!==e.version&&1!==e.version)return"Invalid version, must be a number equal to 1 or 0";if("string"!=typeof e.codec)return"codec must be string";if(0===e.version){if("dag-pb"!==e.codec)return"codec must be 'dag-pb' for CIDv0";if("base58btc"!==e.multibaseName)return"multibaseName must be 'base58btc' for CIDv0"}if(!(e.multihash instanceof Uint8Array))return"multihash must be a Uint8Array";try{s.validate(e.multihash)}catch(e){let t=e.message;return t||(t="Multihash validation failed"),t}}};e.exports=r},878:(e,t,n)=>{"use strict";const s=n(370),r=n(957),i=n(883),o=n(303),a=n(643),c=n(71),u=n(142),l=i.nameToCode,k=Object.keys(l).reduce(((e,t)=>(e[l[t]]=t,e)),{}),h=Symbol.for("@ipld/js-cid/CID");class b{constructor(e,t,n,o){if(this.version,this.codec,this.multihash,Object.defineProperty(this,h,{value:!0}),b.isCID(e)){const t=e;return this.version=t.version,this.codec=t.codec,this.multihash=t.multihash,void(this.multibaseName=t.multibaseName||(0===t.version?"base58btc":"base32"))}if("string"==typeof e){const t=r.isEncoded(e);if(t){const n=r.decode(e);this.version=parseInt(n[0].toString(),16),this.codec=i.getCodec(n.slice(1)),this.multihash=i.rmPrefix(n.slice(1)),this.multibaseName=t}else this.version=0,this.codec="dag-pb",this.multihash=s.fromB58String(e),this.multibaseName="base58btc";return b.validateCID(this),void Object.defineProperty(this,"string",{value:e})}if(e instanceof Uint8Array){const t=parseInt(e[0].toString(),16);if(1===t){const n=e;this.version=t,this.codec=i.getCodec(n.slice(1)),this.multihash=i.rmPrefix(n.slice(1)),this.multibaseName="base32"}else this.version=0,this.codec="dag-pb",this.multihash=e,this.multibaseName="base58btc";b.validateCID(this)}else this.version=e,"number"==typeof t&&(t=k[t]),this.codec=t,this.multihash=n,this.multibaseName=o||(0===e?"base58btc":"base32"),b.validateCID(this)}get bytes(){let e=this._bytes;if(!e){if(0===this.version)e=this.multihash;else{if(1!==this.version)throw new Error("unsupported version");{const t=i.getCodeVarint(this.codec);e=a([[1],t,this.multihash],1+t.byteLength+this.multihash.byteLength)}}Object.defineProperty(this,"_bytes",{value:e})}return e}get prefix(){const e=i.getCodeVarint(this.codec),t=s.prefix(this.multihash);return a([[this.version],e,t],1+e.byteLength+t.byteLength)}get code(){return l[this.codec]}toV0(){if("dag-pb"!==this.codec)throw new Error("Cannot convert a non dag-pb CID to CIDv0");const{name:e,length:t}=s.decode(this.multihash);if("sha2-256"!==e)throw new Error("Cannot convert non sha2-256 multihash CID to CIDv0");if(32!==t)throw new Error("Cannot convert non 32 byte multihash CID to CIDv0");return new b(0,this.codec,this.multihash)}toV1(){return new b(1,this.codec,this.multihash)}toBaseEncodedString(e=this.multibaseName){if(this.string&&0!==this.string.length&&e===this.multibaseName)return this.string;let t;if(0===this.version){if("base58btc"!==e)throw new Error("not supported with CIDv0, to support different bases, please migrate the instance do CIDv1, you can do that through cid.toV1()");t=s.toB58String(this.multihash)}else{if(1!==this.version)throw new Error("unsupported version");t=c(r.encode(e,this.bytes))}return e===this.multibaseName&&Object.defineProperty(this,"string",{value:t}),t}[Symbol.for("nodejs.util.inspect.custom")](){return"CID("+this.toString()+")"}toString(e){return this.toBaseEncodedString(e)}toJSON(){return{codec:this.codec,version:this.version,hash:this.multihash}}equals(e){return this.codec===e.codec&&this.version===e.version&&u(this.multihash,e.multihash)}static validateCID(e){const t=o.checkCIDComponents(e);if(t)throw new Error(t)}static isCID(e){return e instanceof b||Boolean(e&&e[h])}}b.codecs=l,e.exports=b},114:e=>{"use strict";function t(e,t){for(const n in t)Object.defineProperty(e,n,{value:t[n],enumerable:!0,configurable:!0});return e}e.exports=function(e,n,s){if(!e||"string"==typeof e)throw new TypeError("Please pass an Error to err-code");s||(s={}),"object"==typeof n&&(s=n,n=""),n&&(s.code=n);try{return t(e,s)}catch(n){s.message=e.message,s.stack=e.stack;const r=function(){};return r.prototype=Object.create(Object.getPrototypeOf(e)),t(new r,s)}}},3:(e,t,n)=>{"use strict";const s=n(875),r=e=>s({exact:!0}).test(e);r.v4=e=>s.v4({exact:!0}).test(e),r.v6=e=>s.v6({exact:!0}).test(e),r.version=e=>r(e)?r.v4(e)?4:6:void 0,e.exports=r},875:e=>{"use strict";const t="[a-fA-F\\d:]",n=e=>e&&e.includeBoundaries?`(?:(?<=\\s|^)(?=${t})|(?<=${t})(?=\\s|$))`:"",s="(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)(?:\\.(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)){3}",r="[a-fA-F\\d]{1,4}",i=`\n(?:\n(?:${r}:){7}(?:${r}|:)|                                    // 1:2:3:4:5:6:7::  1:2:3:4:5:6:7:8\n(?:${r}:){6}(?:${s}|:${r}|:)|                             // 1:2:3:4:5:6::    1:2:3:4:5:6::8   1:2:3:4:5:6::8  1:2:3:4:5:6::1.2.3.4\n(?:${r}:){5}(?::${s}|(?::${r}){1,2}|:)|                   // 1:2:3:4:5::      1:2:3:4:5::7:8   1:2:3:4:5::8    1:2:3:4:5::7:1.2.3.4\n(?:${r}:){4}(?:(?::${r}){0,1}:${s}|(?::${r}){1,3}|:)| // 1:2:3:4::        1:2:3:4::6:7:8   1:2:3:4::8      1:2:3:4::6:7:1.2.3.4\n(?:${r}:){3}(?:(?::${r}){0,2}:${s}|(?::${r}){1,4}|:)| // 1:2:3::          1:2:3::5:6:7:8   1:2:3::8        1:2:3::5:6:7:1.2.3.4\n(?:${r}:){2}(?:(?::${r}){0,3}:${s}|(?::${r}){1,5}|:)| // 1:2::            1:2::4:5:6:7:8   1:2::8          1:2::4:5:6:7:1.2.3.4\n(?:${r}:){1}(?:(?::${r}){0,4}:${s}|(?::${r}){1,6}|:)| // 1::              1::3:4:5:6:7:8   1::8            1::3:4:5:6:7:1.2.3.4\n(?::(?:(?::${r}){0,5}:${s}|(?::${r}){1,7}|:))             // ::2:3:4:5:6:7:8  ::2:3:4:5:6:7:8  ::8             ::1.2.3.4\n)(?:%[0-9a-zA-Z]{1,})?                                             // %eth0            %1\n`.replace(/\s*\/\/.*$/gm,"").replace(/\n/g,"").trim(),o=new RegExp(`(?:^${s}$)|(?:^${i}$)`),a=new RegExp(`^${s}$`),c=new RegExp(`^${i}$`),u=e=>e&&e.exact?o:new RegExp(`(?:${n(e)}${s}${n(e)})|(?:${n(e)}${i}${n(e)})`,"g");u.v4=e=>e&&e.exact?a:new RegExp(`${n(e)}${s}${n(e)}`,"g"),u.v6=e=>e&&e.exact?c:new RegExp(`${n(e)}${i}${n(e)}`,"g"),e.exports=u},981:(e,t,n)=>{"use strict";const s=n(370),r=n(957),{Multiaddr:i}=n(584),o=n(175),a=n(878),{URL:c}=n(745),u=n(71),l=/^https?:\/\/[^/]+\/(ip[fn]s)\/([^/?#]+)/,k=/^\/(ip[fn]s)\/([^/?#]+)/,h=/^https?:\/\/([^/]+)\.(ip[fn]s)\.[^/?]+/,b=/^(([a-z0-9]|[a-z0-9][a-z0-9-]*[a-z0-9])\.)+([a-z0-9]|[a-z0-9][a-z0-9-]*[a-z0-9])$/;function d(e){try{return new a(e),!0}catch(e){return!1}}function p(e){if(!e)return!1;if(i.isMultiaddr(e))return!0;try{return new i(e),!0}catch(e){return!1}}function f(e,t,n=1,s=2){const r=w(e);if(!r)return!1;const i=r.match(t);if(!i)return!1;if("ipfs"!==i[n])return!1;let o=i[s];return o&&t===h&&(o=o.toLowerCase()),d(o)}function g(e,t,n=1,s=2){const r=w(e);if(!r)return!1;const i=r.match(t);if(!i)return!1;if("ipns"!==i[n])return!1;let o=i[s];if(o&&t===h){if(o=o.toLowerCase(),d(o))return!0;try{!o.includes(".")&&o.includes("-")&&(o=o.replace(/--/g,"@").replace(/-/g,".").replace(/@/g,"-"));const{hostname:e}=new c(`http://${o}`);return b.test(e)}catch(e){return!1}}return!0}function m(e){return"string"==typeof e}function w(e){return e instanceof Uint8Array?u(e,"base58btc"):!!m(e)&&e}const y=e=>f(e,h,2,1),v=e=>g(e,h,2,1),x=e=>y(e)||v(e),E=e=>f(e,l)||y(e),S=e=>g(e,l)||v(e),A=e=>E(e)||S(e)||x(e),C=e=>f(e,k)||g(e,k);e.exports={multihash:function(e){const t=w(e);try{return s.decode(r.decode("z"+t)),!0}catch(e){return!1}},multiaddr:p,peerMultiaddr:function(e){return p(e)&&o.P2P.matches(e)},cid:d,base32cid:e=>"base32"===function(e){try{return r.isEncoded(e)}catch(e){return!1}}(e)&&d(e),ipfsSubdomain:y,ipnsSubdomain:v,subdomain:x,subdomainGatewayPattern:h,ipfsUrl:E,ipnsUrl:S,url:A,pathGatewayPattern:l,ipfsPath:e=>f(e,k),ipnsPath:e=>g(e,k),path:C,pathPattern:k,urlOrPath:e=>A(e)||C(e),cidPath:e=>m(e)&&!d(e)&&f(`/ipfs/${e}`,k)}},745:(e,t,n)=>{"use strict";const{URLWithLegacySupport:s,format:r,URLSearchParams:i,defaultBase:o}=n(49),a=n(939);e.exports={URL:s,URLSearchParams:i,format:r,relative:a,defaultBase:o}},939:(e,t,n)=>{"use strict";const{URLWithLegacySupport:s,format:r}=n(49);e.exports=(e,t={},n={},i)=>{let o,a=t.protocol?t.protocol.replace(":",""):"http";a=(n[a]||i||a)+":";try{o=new s(e)}catch(e){o={}}const c=Object.assign({},t,{protocol:a||o.protocol,host:t.host||o.host});return new s(e,r(c)).toString()}},49:e=>{"use strict";const t="undefined"!=typeof navigator&&"ReactNative"===navigator.product,n=self.URL,s=t?"http://localhost":self.location.protocol+"//"+self.location.host;e.exports={URLWithLegacySupport:class{constructor(e="",t=s){this.super=new n(e,t),this.path=this.pathname+this.search,this.auth=this.username&&this.password?this.username+":"+this.password:null,this.query=this.search&&this.search.startsWith("?")?this.search.slice(1):null}get hash(){return this.super.hash}get host(){return this.super.host}get hostname(){return this.super.hostname}get href(){return this.super.href}get origin(){return this.super.origin}get password(){return this.super.password}get pathname(){return this.super.pathname}get port(){return this.super.port}get protocol(){return this.super.protocol}get search(){return this.super.search}get searchParams(){return this.super.searchParams}get username(){return this.super.username}set hash(e){this.super.hash=e}set host(e){this.super.host=e}set hostname(e){this.super.hostname=e}set href(e){this.super.href=e}set password(e){this.super.password=e}set pathname(e){this.super.pathname=e}set port(e){this.super.port=e}set protocol(e){this.super.protocol=e}set search(e){this.super.search=e}set username(e){this.super.username=e}static createObjectURL(e){return n.createObjectURL(e)}static revokeObjectURL(e){n.revokeObjectURL(e)}toJSON(){return this.super.toJSON()}toString(){return this.super.toString()}format(){return this.toString()}},URLSearchParams:self.URLSearchParams,defaultBase:s,format:function(e){if("string"==typeof e)return new n(e).toString();if(!(e instanceof n)){const t=e.username&&e.password?`${e.username}:${e.password}@`:"",n=e.auth?e.auth+"@":"",s=e.port?":"+e.port:"",r=e.protocol?e.protocol+"//":"",i=e.host||"",o=e.hostname||"",a=e.search||(e.query?"?"+e.query:""),c=e.hash||"",u=e.pathname||"";return`${r}${t||n}${i||o+s}${e.path||u+a}${c}`}}}},175:(e,t,n)=>{"use strict";const{Multiaddr:s}=n(584),r=j("dns4"),i=j("dns6"),o=j("dnsaddr"),a=$(j("dns"),o,r,i),c=$(j("ip4"),j("ip6")),u=$(T(c,j("tcp")),T(a,j("tcp"))),l=T(c,j("udp")),k=T(l,j("utp")),h=T(l,j("quic")),b=$(T(u,j("ws")),T(a,j("ws"))),d=$(T(u,j("wss")),T(a,j("wss"))),p=$(T(u,j("http")),T(c,j("http")),T(a,j("http"))),f=$(T(u,j("https")),T(c,j("https")),T(a,j("https"))),g=$(T(b,j("p2p-webrtc-star"),j("p2p")),T(d,j("p2p-webrtc-star"),j("p2p")),T(b,j("p2p-webrtc-star")),T(d,j("p2p-webrtc-star"))),m=$(T(b,j("p2p-websocket-star"),j("p2p")),T(d,j("p2p-websocket-star"),j("p2p")),T(b,j("p2p-websocket-star")),T(d,j("p2p-websocket-star"))),w=$(T(p,j("p2p-webrtc-direct"),j("p2p")),T(f,j("p2p-webrtc-direct"),j("p2p")),T(p,j("p2p-webrtc-direct")),T(f,j("p2p-webrtc-direct"))),y=$(b,d,p,f,g,w,u,k,h,a),v=$(T(y,j("p2p-stardust"),j("p2p")),T(y,j("p2p-stardust"))),x=$(T(y,j("p2p")),g,w,j("p2p")),E=$(T(x,j("p2p-circuit"),x),T(x,j("p2p-circuit")),T(j("p2p-circuit"),x),T(y,j("p2p-circuit")),T(j("p2p-circuit"),y),j("p2p-circuit")),S=()=>$(T(E,S),E),A=S(),C=$(T(A,x,A),T(x,A),T(A,x),A,x);function U(e){return function(t){if(!s.isMultiaddr(t))try{t=new s(t)}catch(e){return!1}const n=e(t.protoNames());return null!==n&&(!0===n||!1===n?n:0===n.length)}}function T(...e){function t(t){if(t.length<e.length)return null;let n=t;return e.some((e=>(n="function"==typeof e?e().partialMatch(t):e.partialMatch(t),Array.isArray(n)&&(t=n),null===n))),n}return{toString:function(){return"{ "+e.join(" ")+" }"},input:e,matches:U(t),partialMatch:t}}function $(...e){function t(t){let n=null;return e.some((e=>{const s="function"==typeof e?e().partialMatch(t):e.partialMatch(t);return!!s&&(n=s,!0)})),n}return{toString:function(){return"{ "+e.join(" ")+" }"},input:e,matches:U(t),partialMatch:t}}function j(e){const t=e;return{toString:function(){return t},matches:function(e){if("string"==typeof e)try{e=new s(e)}catch(e){return!1}const n=e.protoNames();return 1===n.length&&n[0]===t},partialMatch:function(e){return 0===e.length?null:e[0]===t?e.slice(1):null}}}e.exports={DNS:a,DNS4:r,DNS6:i,DNSADDR:o,IP:c,TCP:u,UDP:l,QUIC:h,UTP:k,HTTP:p,HTTPS:f,WebSockets:b,WebSocketsSecure:d,WebSocketStar:m,WebRTCStar:g,WebRTCDirect:w,Reliable:y,Stardust:v,Circuit:A,P2P:C,IPFS:C}},602:e=>{e.exports=function e(t,n){var s,r=0,i=0,o=n=n||0,a=t.length;do{if(o>=a||i>49)throw e.bytes=0,new RangeError("Could not decode varint");s=t[o++],r+=i<28?(127&s)<<i:(127&s)*Math.pow(2,i),i+=7}while(s>=128);return e.bytes=o-n,r}},137:e=>{e.exports=function e(n,s,r){if(Number.MAX_SAFE_INTEGER&&n>Number.MAX_SAFE_INTEGER)throw e.bytes=0,new RangeError("Could not encode varint");s=s||[];for(var i=r=r||0;n>=t;)s[r++]=255&n|128,n/=128;for(;-128&n;)s[r++]=255&n|128,n>>>=7;return s[r]=0|n,e.bytes=r-i+1,s};var t=Math.pow(2,31)},328:(e,t,n)=>{e.exports={encode:n(137),decode:n(602),encodingLength:n(766)}},766:e=>{var t=Math.pow(2,7),n=Math.pow(2,14),s=Math.pow(2,21),r=Math.pow(2,28),i=Math.pow(2,35),o=Math.pow(2,42),a=Math.pow(2,49),c=Math.pow(2,56),u=Math.pow(2,63);e.exports=function(e){return e<t?1:e<n?2:e<s?3:e<r?4:e<i?5:e<o?6:e<a?7:e<c?8:e<u?9:10}},190:(e,t,n)=>{"use strict";const s=n(918),r=n(768),i=n(328),o=n(643),a=n(71);function c(e){const t=[],n=e.split("/").slice(1);if(1===n.length&&""===n[0])return[];for(let s=0;s<n.length;s++){const i=n[s],o=r(i);if(0!==o.size){if(s++,s>=n.length)throw w("invalid address: "+e);if(o.path){t.push([i,m(n.slice(s).join("/"))]);break}t.push([i,n[s]])}else t.push([i])}return t}function u(e){const t=[];return e.map((e=>{const n=y(e);return t.push(n.name),e.length>1&&t.push(e[1]),null})),m(t.join("/"))}function l(e){return e.map((e=>{Array.isArray(e)||(e=[e]);const t=y(e);return e.length>1?[t.code,s.toBytes(t.code,e[1])]:[t.code]}))}function k(e){return e.map((e=>{const t=y(e);return e[1]?[t.code,s.toString(t.code,e[1])]:[t.code]}))}function h(e){return f(o(e.map((e=>{const t=y(e);let n=Uint8Array.from(i.encode(t.code));return e.length>1&&(n=o([n,e[1]])),n}))))}function b(e,t){return e.size>0?e.size/8:0===e.size?0:i.decode(t)+i.decode.bytes}function d(e){const t=[];let n=0;for(;n<e.length;){const s=i.decode(e,n),o=i.decode.bytes,c=b(r(s),e.slice(n+o));if(0===c){t.push([s]),n+=o;continue}const u=e.slice(n+o,n+o+c);if(n+=c+o,n>e.length)throw w("Invalid address Uint8Array: "+a(e,"base16"));t.push([s,u])}return t}function p(e){return h(l(c(e=m(e))))}function f(e){const t=g(e);if(t)throw t;return Uint8Array.from(e)}function g(e){try{d(e)}catch(e){return e}}function m(e){return"/"+e.trim().split("/").filter((e=>e)).join("/")}function w(e){return new Error("Error parsing address: "+e)}function y(e){return r(e[0])}e.exports={stringToStringTuples:c,stringTuplesToString:u,tuplesToStringTuples:k,stringTuplesToTuples:l,bytesToTuples:d,tuplesToBytes:h,bytesToString:function(e){return u(k(d(e)))},stringToBytes:p,fromString:function(e){return p(e)},fromBytes:f,validateBytes:g,isValidBytes:function(e){return void 0===g(e)},cleanPath:m,ParseError:w,protoFromTuple:y,sizeForAddr:b}},918:(e,t,n)=>{"use strict";const s=n(692),r=n(768),i=n(878),o=n(957),a=n(328),c=n(71),u=n(962),l=n(643);function k(e,t){return t instanceof Uint8Array?k.toString(e,t):k.toBytes(e,t)}function h(e){const t=new ArrayBuffer(2);return new DataView(t).setUint16(0,e),new Uint8Array(t)}function b(e){return new DataView(e.buffer).getUint16(0)}e.exports=k,k.toString=function(e,t){switch(r(e).code){case 4:case 41:return function(e){const t=s.toString(e);if(!t||!s.isIP(t))throw new Error("invalid ip address");return t}(t);case 6:case 273:case 33:case 132:return b(t).toString();case 53:case 54:case 55:case 56:case 400:case 777:return function(e){const t=a.decode(e);if((e=e.slice(a.decode.bytes)).length!==t)throw new Error("inconsistent lengths");return c(e)}(t);case 421:return function(e){const t=a.decode(e),n=e.slice(a.decode.bytes);if(n.length!==t)throw new Error("inconsistent lengths");return c(n,"base58btc")}(t);case 444:case 445:return function(e){const t=e.slice(0,e.length-2),n=e.slice(e.length-2);return c(t,"base32")+":"+b(n)}(t);default:return c(t,"base16")}},k.toBytes=function(e,t){switch(r(e).code){case 4:case 41:return function(e){if(!s.isIP(e))throw new Error("invalid ip address");return s.toBytes(e)}(t);case 6:case 273:case 33:case 132:return h(parseInt(t,10));case 53:case 54:case 55:case 56:case 400:case 777:return function(e){const t=u(e),n=Uint8Array.from(a.encode(t.length));return l([n,t],n.length+t.length)}(t);case 421:return function(e){const t=new i(e).multihash,n=Uint8Array.from(a.encode(t.length));return l([n,t],n.length+t.length)}(t);case 444:return function(e){const t=e.split(":");if(2!==t.length)throw new Error("failed to parse onion addr: "+t+" does not contain a port number");if(16!==t[0].length)throw new Error("failed to parse onion addr: "+t[0]+" not a Tor onion address.");const n=o.decode("b"+t[0]),s=parseInt(t[1],10);if(s<1||s>65536)throw new Error("Port number is not in range(1, 65536)");const r=h(s);return l([n,r],n.length+r.length)}(t);case 445:return function(e){const t=e.split(":");if(2!==t.length)throw new Error("failed to parse onion addr: "+t+" does not contain a port number");if(56!==t[0].length)throw new Error("failed to parse onion addr: "+t[0]+" not a Tor onion3 address.");const n=o.decode("b"+t[0]),s=parseInt(t[1],10);if(s<1||s>65536)throw new Error("Port number is not in range(1, 65536)");const r=h(s);return l([n,r],n.length+r.length)}(t);default:return u(t,"base16")}}},584:(e,t,n)=>{"use strict";const s=n(190),r=n(768),i=n(328),o=n(878),a=n(114),c=Symbol.for("nodejs.util.inspect.custom"),u=n(71),l=n(142),k=new Map,h=Symbol.for("@multiformats/js-multiaddr/multiaddr");class b{constructor(e){if(null==e&&(e=""),Object.defineProperty(this,h,{value:!0}),e instanceof Uint8Array)this.bytes=s.fromBytes(e);else if("string"==typeof e){if(e.length>0&&"/"!==e.charAt(0))throw new Error(`multiaddr "${e}" must start with a "/"`);this.bytes=s.fromString(e)}else{if(!b.isMultiaddr(e))throw new Error("addr must be a string, Buffer, or another Multiaddr");this.bytes=s.fromBytes(e.bytes)}}toString(){return s.bytesToString(this.bytes)}toJSON(){return this.toString()}toOptions(){const e={},t=this.toString().split("/");return e.family="ip4"===t[1]?4:6,e.host=t[2],e.transport=t[3],e.port=parseInt(t[4]),e}protos(){return this.protoCodes().map((e=>Object.assign({},r(e))))}protoCodes(){const e=[],t=this.bytes;let n=0;for(;n<t.length;){const o=i.decode(t,n),a=i.decode.bytes,c=r(o);n+=s.sizeForAddr(c,t.slice(n+a))+a,e.push(o)}return e}protoNames(){return this.protos().map((e=>e.name))}tuples(){return s.bytesToTuples(this.bytes)}stringTuples(){const e=s.bytesToTuples(this.bytes);return s.tuplesToStringTuples(e)}encapsulate(e){return e=new b(e),new b(this.toString()+e.toString())}decapsulate(e){const t=e.toString(),n=this.toString(),s=n.lastIndexOf(t);if(s<0)throw new Error("Address "+this+" does not contain subaddress: "+e);return new b(n.slice(0,s))}decapsulateCode(e){const t=this.tuples();for(let n=t.length-1;n>=0;n--)if(t[n][0]===e)return new b(s.tuplesToBytes(t.slice(0,n)));return this}getPeerId(){try{const e=this.stringTuples().filter((e=>e[0]===r.names.ipfs.code)).pop();return e&&e[1]?u(new o(e[1]).multihash,"base58btc"):null}catch(e){return null}}getPath(){let e=null;try{e=this.stringTuples().filter((e=>!!r(e[0]).path))[0][1],e||(e=null)}catch(t){e=null}return e}equals(e){return l(this.bytes,e.bytes)}async resolve(){const e=this.protos().find((e=>e.resolvable));if(!e)return[this];const t=k.get(e.name);if(!t)throw a(new Error(`no available resolver for ${e.name}`),"ERR_NO_AVAILABLE_RESOLVER");return(await t(this)).map((e=>new b(e)))}nodeAddress(){const e=this.protoCodes(),t=this.protoNames(),n=this.toString().split("/").slice(1);if(n.length<4)throw new Error('multiaddr must have a valid format: "/{ip4, ip6, dns4, dns6}/{address}/{tcp, udp}/{port}".');if(4!==e[0]&&41!==e[0]&&54!==e[0]&&55!==e[0])throw new Error(`no protocol with name: "'${t[0]}'". Must have a valid family name: "{ip4, ip6, dns4, dns6}".`);if("tcp"!==n[2]&&"udp"!==n[2])throw new Error(`no protocol with name: "'${t[1]}'". Must have a valid transport protocol: "{tcp, udp}".`);return{family:41===e[0]||55===e[0]?6:4,address:n[1],port:parseInt(n[3])}}isThinWaistAddress(e){const t=(e||this).protos();return!(2!==t.length||4!==t[0].code&&41!==t[0].code||6!==t[1].code&&273!==t[1].code)}static fromNodeAddress(e,t){if(!e)throw new Error("requires node address object");if(!t)throw new Error("requires transport protocol");let n;switch(e.family){case 4:n="ip4";break;case 6:n="ip6";break;default:throw Error(`Invalid addr family. Got '${e.family}' instead of 4 or 6`)}return new b("/"+[n,e.address,t,e.port].join("/"))}static isName(e){return!!b.isMultiaddr(e)&&e.protos().some((e=>e.resolvable))}static isMultiaddr(e){return e instanceof b||Boolean(e&&e[h])}[c](){return"<Multiaddr "+u(this.bytes,"base16")+" - "+s.bytesToString(this.bytes)+">"}inspect(){return"<Multiaddr "+u(this.bytes,"base16")+" - "+s.bytesToString(this.bytes)+">"}}b.protocols=r,b.resolvers=k,e.exports={Multiaddr:b,multiaddr:function(e){return new b(e)},protocols:r,resolvers:k}},692:(e,t,n)=>{"use strict";const s=n(3),r=n(71),i=s,o=s.v4,a=s.v6,c=function(e,t,n){let s;if(n=~~n,o(e))s=t||new Uint8Array(n+4),e.split(/\./g).map((function(e){s[n++]=255&parseInt(e,10)}));else if(a(e)){const a=e.split(":",8);let u;for(u=0;u<a.length;u++){var i;o(a[u])&&(i=c(a[u]),a[u]=r(i.slice(0,2),"base16")),i&&++u<8&&a.splice(u,0,r(i.slice(2,4),"base16"))}if(""===a[0])for(;a.length<8;)a.unshift("0");else if(""===a[a.length-1])for(;a.length<8;)a.push("0");else if(a.length<8){for(u=0;u<a.length&&""!==a[u];u++);const e=[u,"1"];for(u=9-a.length;u>0;u--)e.push("0");a.splice.apply(a,e)}for(s=t||new Uint8Array(n+16),u=0;u<a.length;u++){const e=parseInt(a[u],16);s[n++]=e>>8&255,s[n++]=255&e}}if(!s)throw Error("Invalid ip address: "+e);return s};e.exports={isIP:i,isV4:o,isV6:a,toBytes:c,toString:function(e,t,n){t=~~t,n=n||e.length-t;const s=[];let r;const i=new DataView(e.buffer);if(4===n){for(let r=0;r<n;r++)s.push(e[t+r]);r=s.join(".")}else if(16===n){for(let e=0;e<n;e+=2)s.push(i.getUint16(t+e).toString(16));r=s.join(":"),r=r.replace(/(^|:)0(:0)*:0(:|$)/,"$1::$3"),r=r.replace(/:{3,4}/,"::")}return r}}},768:e=>{"use strict";function t(e){if("number"==typeof e){if(t.codes[e])return t.codes[e];throw new Error("no protocol with code: "+e)}if("string"==typeof e){if(t.names[e])return t.names[e];throw new Error("no protocol with name: "+e)}throw new Error("invalid protocol id type: "+e)}const n=-1;function s(e,t,n,s,r){return{code:e,size:t,name:n,resolvable:Boolean(s),path:Boolean(r)}}t.lengthPrefixedVarSize=n,t.V=n,t.table=[[4,32,"ip4"],[6,16,"tcp"],[33,16,"dccp"],[41,128,"ip6"],[42,n,"ip6zone"],[53,n,"dns","resolvable"],[54,n,"dns4","resolvable"],[55,n,"dns6","resolvable"],[56,n,"dnsaddr","resolvable"],[132,16,"sctp"],[273,16,"udp"],[275,0,"p2p-webrtc-star"],[276,0,"p2p-webrtc-direct"],[277,0,"p2p-stardust"],[290,0,"p2p-circuit"],[301,0,"udt"],[302,0,"utp"],[400,n,"unix",!1,"path"],[421,n,"ipfs"],[421,n,"p2p"],[443,0,"https"],[444,96,"onion"],[445,296,"onion3"],[446,n,"garlic64"],[460,0,"quic"],[477,0,"ws"],[478,0,"wss"],[479,0,"p2p-websocket-star"],[480,0,"http"],[777,n,"memory"]],t.names={},t.codes={},t.table.map((e=>{const n=s.apply(null,e);return t.codes[n.code]=n,t.names[n.name]=n,null})),t.object=s,e.exports=t},556:(e,t,n)=>{"use strict";const{encodeText:s}=n(413);e.exports=class{constructor(e,t,n,r){this.name=e,this.code=t,this.codeBuf=s(this.code),this.alphabet=r,this.codec=n(r)}encode(e){return this.codec.encode(e)}decode(e){for(const t of e)if(this.alphabet&&this.alphabet.indexOf(t)<0)throw new Error(`invalid character '${t}' in '${e}'`);return this.codec.decode(e)}}},77:(e,t,n)=>{"use strict";const s=n(820),r=n(556),{rfc4648:i}=n(727),{decodeText:o,encodeText:a}=n(413),c=[["identity","\0",()=>({encode:o,decode:a}),""],["base2","0",i(1),"01"],["base8","7",i(3),"01234567"],["base10","9",s,"0123456789"],["base16","f",i(4),"0123456789abcdef"],["base16upper","F",i(4),"0123456789ABCDEF"],["base32hex","v",i(5),"0123456789abcdefghijklmnopqrstuv"],["base32hexupper","V",i(5),"0123456789ABCDEFGHIJKLMNOPQRSTUV"],["base32hexpad","t",i(5),"0123456789abcdefghijklmnopqrstuv="],["base32hexpadupper","T",i(5),"0123456789ABCDEFGHIJKLMNOPQRSTUV="],["base32","b",i(5),"abcdefghijklmnopqrstuvwxyz234567"],["base32upper","B",i(5),"ABCDEFGHIJKLMNOPQRSTUVWXYZ234567"],["base32pad","c",i(5),"abcdefghijklmnopqrstuvwxyz234567="],["base32padupper","C",i(5),"ABCDEFGHIJKLMNOPQRSTUVWXYZ234567="],["base32z","h",i(5),"ybndrfg8ejkmcpqxot1uwisza345h769"],["base36","k",s,"0123456789abcdefghijklmnopqrstuvwxyz"],["base36upper","K",s,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"],["base58btc","z",s,"123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"],["base58flickr","Z",s,"123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ"],["base64","m",i(6),"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"],["base64pad","M",i(6),"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="],["base64url","u",i(6),"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_"],["base64urlpad","U",i(6),"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_="]],u=c.reduce(((e,t)=>(e[t[0]]=new r(t[0],t[1],t[2],t[3]),e)),{}),l=c.reduce(((e,t)=>(e[t[1]]=u[t[0]],e)),{});e.exports={names:u,codes:l}},957:(e,t,n)=>{"use strict";const s=n(77),{encodeText:r,decodeText:i,concat:o}=n(413);function a(e){if(Object.prototype.hasOwnProperty.call(s.names,e))return s.names[e];if(Object.prototype.hasOwnProperty.call(s.codes,e))return s.codes[e];throw new Error(`Unsupported encoding: ${e}`)}(t=e.exports=function(e,t){if(!t)throw new Error("requires an encoded Uint8Array");const{name:n,codeBuf:s}=a(e);return function(e,t){a(e).decode(i(t))}(n,t),o([s,t],s.length+t.length)}).encode=function(e,t){const n=a(e),s=r(n.encode(t));return o([n.codeBuf,s],n.codeBuf.length+s.length)},t.decode=function(e){e instanceof Uint8Array&&(e=i(e));const t=e[0];return["f","F","v","V","t","T","b","B","c","C","h","k","K"].includes(t)&&(e=e.toLowerCase()),a(e[0]).decode(e.substring(1))},t.isEncoded=function(e){if(e instanceof Uint8Array&&(e=i(e)),"[object String]"!==Object.prototype.toString.call(e))return!1;try{return a(e[0]).name}catch(e){return!1}},t.encoding=a,t.encodingFromData=function(e){return e instanceof Uint8Array&&(e=i(e)),a(e[0])};const c=Object.freeze(s.names),u=Object.freeze(s.codes);t.names=c,t.codes=u},727:e=>{"use strict";e.exports={rfc4648:e=>t=>({encode:n=>((e,t,n)=>{const s="="===t[t.length-1],r=(1<<n)-1;let i="",o=0,a=0;for(let s=0;s<e.length;++s)for(a=a<<8|e[s],o+=8;o>n;)o-=n,i+=t[r&a>>o];if(o&&(i+=t[r&a<<n-o]),s)for(;i.length*n&7;)i+="=";return i})(n,t,e),decode:n=>((e,t,n)=>{const s={};for(let e=0;e<t.length;++e)s[t[e]]=e;let r=e.length;for(;"="===e[r-1];)--r;const i=new Uint8Array(r*n/8|0);let o=0,a=0,c=0;for(let t=0;t<r;++t){const r=s[e[t]];if(void 0===r)throw new SyntaxError("Invalid character "+e[t]);a=a<<n|r,o+=n,o>=8&&(o-=8,i[c++]=255&a>>o)}if(o>=n||255&a<<8-o)throw new SyntaxError("Unexpected end of data");return i})(n,t,e)})}},413:e=>{"use strict";const t=new TextDecoder,n=new TextEncoder;e.exports={decodeText:e=>t.decode(e),encodeText:e=>n.encode(e),concat:function(e,t){const n=new Uint8Array(t);let s=0;for(const t of e)n.set(t,s),s+=t.length;return n}}},636:e=>{"use strict";const t=Object.freeze({identity:0,cidv1:1,cidv2:2,cidv3:3,ip4:4,tcp:6,sha1:17,"sha2-256":18,"sha2-512":19,"sha3-512":20,"sha3-384":21,"sha3-256":22,"sha3-224":23,"shake-128":24,"shake-256":25,"keccak-224":26,"keccak-256":27,"keccak-384":28,"keccak-512":29,blake3:30,dccp:33,"murmur3-128":34,"murmur3-32":35,ip6:41,ip6zone:42,path:47,multicodec:48,multihash:49,multiaddr:50,multibase:51,dns:53,dns4:54,dns6:55,dnsaddr:56,protobuf:80,cbor:81,raw:85,"dbl-sha2-256":86,rlp:96,bencode:99,"dag-pb":112,"dag-cbor":113,"libp2p-key":114,"git-raw":120,"torrent-info":123,"torrent-file":124,"leofcoin-block":129,"leofcoin-tx":130,"leofcoin-pr":131,sctp:132,"dag-jose":133,"dag-cose":134,"eth-block":144,"eth-block-list":145,"eth-tx-trie":146,"eth-tx":147,"eth-tx-receipt-trie":148,"eth-tx-receipt":149,"eth-state-trie":150,"eth-account-snapshot":151,"eth-storage-trie":152,"bitcoin-block":176,"bitcoin-tx":177,"bitcoin-witness-commitment":178,"zcash-block":192,"zcash-tx":193,docid:206,"stellar-block":208,"stellar-tx":209,md4:212,md5:213,bmt:214,"decred-block":224,"decred-tx":225,"ipld-ns":226,"ipfs-ns":227,"swarm-ns":228,"ipns-ns":229,zeronet:230,"secp256k1-pub":231,"bls12_381-g1-pub":234,"bls12_381-g2-pub":235,"x25519-pub":236,"ed25519-pub":237,"bls12_381-g1g2-pub":238,"dash-block":240,"dash-tx":241,"swarm-manifest":250,"swarm-feed":251,udp:273,"p2p-webrtc-star":275,"p2p-webrtc-direct":276,"p2p-stardust":277,"p2p-circuit":290,"dag-json":297,udt:301,utp:302,unix:400,thread:406,p2p:421,ipfs:421,https:443,onion:444,onion3:445,garlic64:446,garlic32:447,tls:448,quic:460,ws:477,wss:478,"p2p-websocket-star":479,http:480,json:512,messagepack:513,"libp2p-peer-record":769,"sha2-256-trunc254-padded":4114,"ripemd-128":4178,"ripemd-160":4179,"ripemd-256":4180,"ripemd-320":4181,x11:4352,"p256-pub":4608,"p384-pub":4609,"p521-pub":4610,"ed448-pub":4611,"x448-pub":4612,"ed25519-priv":4864,kangarootwelve:7425,"sm3-256":21325,"blake2b-8":45569,"blake2b-16":45570,"blake2b-24":45571,"blake2b-32":45572,"blake2b-40":45573,"blake2b-48":45574,"blake2b-56":45575,"blake2b-64":45576,"blake2b-72":45577,"blake2b-80":45578,"blake2b-88":45579,"blake2b-96":45580,"blake2b-104":45581,"blake2b-112":45582,"blake2b-120":45583,"blake2b-128":45584,"blake2b-136":45585,"blake2b-144":45586,"blake2b-152":45587,"blake2b-160":45588,"blake2b-168":45589,"blake2b-176":45590,"blake2b-184":45591,"blake2b-192":45592,"blake2b-200":45593,"blake2b-208":45594,"blake2b-216":45595,"blake2b-224":45596,"blake2b-232":45597,"blake2b-240":45598,"blake2b-248":45599,"blake2b-256":45600,"blake2b-264":45601,"blake2b-272":45602,"blake2b-280":45603,"blake2b-288":45604,"blake2b-296":45605,"blake2b-304":45606,"blake2b-312":45607,"blake2b-320":45608,"blake2b-328":45609,"blake2b-336":45610,"blake2b-344":45611,"blake2b-352":45612,"blake2b-360":45613,"blake2b-368":45614,"blake2b-376":45615,"blake2b-384":45616,"blake2b-392":45617,"blake2b-400":45618,"blake2b-408":45619,"blake2b-416":45620,"blake2b-424":45621,"blake2b-432":45622,"blake2b-440":45623,"blake2b-448":45624,"blake2b-456":45625,"blake2b-464":45626,"blake2b-472":45627,"blake2b-480":45628,"blake2b-488":45629,"blake2b-496":45630,"blake2b-504":45631,"blake2b-512":45632,"blake2s-8":45633,"blake2s-16":45634,"blake2s-24":45635,"blake2s-32":45636,"blake2s-40":45637,"blake2s-48":45638,"blake2s-56":45639,"blake2s-64":45640,"blake2s-72":45641,"blake2s-80":45642,"blake2s-88":45643,"blake2s-96":45644,"blake2s-104":45645,"blake2s-112":45646,"blake2s-120":45647,"blake2s-128":45648,"blake2s-136":45649,"blake2s-144":45650,"blake2s-152":45651,"blake2s-160":45652,"blake2s-168":45653,"blake2s-176":45654,"blake2s-184":45655,"blake2s-192":45656,"blake2s-200":45657,"blake2s-208":45658,"blake2s-216":45659,"blake2s-224":45660,"blake2s-232":45661,"blake2s-240":45662,"blake2s-248":45663,"blake2s-256":45664,"skein256-8":45825,"skein256-16":45826,"skein256-24":45827,"skein256-32":45828,"skein256-40":45829,"skein256-48":45830,"skein256-56":45831,"skein256-64":45832,"skein256-72":45833,"skein256-80":45834,"skein256-88":45835,"skein256-96":45836,"skein256-104":45837,"skein256-112":45838,"skein256-120":45839,"skein256-128":45840,"skein256-136":45841,"skein256-144":45842,"skein256-152":45843,"skein256-160":45844,"skein256-168":45845,"skein256-176":45846,"skein256-184":45847,"skein256-192":45848,"skein256-200":45849,"skein256-208":45850,"skein256-216":45851,"skein256-224":45852,"skein256-232":45853,"skein256-240":45854,"skein256-248":45855,"skein256-256":45856,"skein512-8":45857,"skein512-16":45858,"skein512-24":45859,"skein512-32":45860,"skein512-40":45861,"skein512-48":45862,"skein512-56":45863,"skein512-64":45864,"skein512-72":45865,"skein512-80":45866,"skein512-88":45867,"skein512-96":45868,"skein512-104":45869,"skein512-112":45870,"skein512-120":45871,"skein512-128":45872,"skein512-136":45873,"skein512-144":45874,"skein512-152":45875,"skein512-160":45876,"skein512-168":45877,"skein512-176":45878,"skein512-184":45879,"skein512-192":45880,"skein512-200":45881,"skein512-208":45882,"skein512-216":45883,"skein512-224":45884,"skein512-232":45885,"skein512-240":45886,"skein512-248":45887,"skein512-256":45888,"skein512-264":45889,"skein512-272":45890,"skein512-280":45891,"skein512-288":45892,"skein512-296":45893,"skein512-304":45894,"skein512-312":45895,"skein512-320":45896,"skein512-328":45897,"skein512-336":45898,"skein512-344":45899,"skein512-352":45900,"skein512-360":45901,"skein512-368":45902,"skein512-376":45903,"skein512-384":45904,"skein512-392":45905,"skein512-400":45906,"skein512-408":45907,"skein512-416":45908,"skein512-424":45909,"skein512-432":45910,"skein512-440":45911,"skein512-448":45912,"skein512-456":45913,"skein512-464":45914,"skein512-472":45915,"skein512-480":45916,"skein512-488":45917,"skein512-496":45918,"skein512-504":45919,"skein512-512":45920,"skein1024-8":45921,"skein1024-16":45922,"skein1024-24":45923,"skein1024-32":45924,"skein1024-40":45925,"skein1024-48":45926,"skein1024-56":45927,"skein1024-64":45928,"skein1024-72":45929,"skein1024-80":45930,"skein1024-88":45931,"skein1024-96":45932,"skein1024-104":45933,"skein1024-112":45934,"skein1024-120":45935,"skein1024-128":45936,"skein1024-136":45937,"skein1024-144":45938,"skein1024-152":45939,"skein1024-160":45940,"skein1024-168":45941,"skein1024-176":45942,"skein1024-184":45943,"skein1024-192":45944,"skein1024-200":45945,"skein1024-208":45946,"skein1024-216":45947,"skein1024-224":45948,"skein1024-232":45949,"skein1024-240":45950,"skein1024-248":45951,"skein1024-256":45952,"skein1024-264":45953,"skein1024-272":45954,"skein1024-280":45955,"skein1024-288":45956,"skein1024-296":45957,"skein1024-304":45958,"skein1024-312":45959,"skein1024-320":45960,"skein1024-328":45961,"skein1024-336":45962,"skein1024-344":45963,"skein1024-352":45964,"skein1024-360":45965,"skein1024-368":45966,"skein1024-376":45967,"skein1024-384":45968,"skein1024-392":45969,"skein1024-400":45970,"skein1024-408":45971,"skein1024-416":45972,"skein1024-424":45973,"skein1024-432":45974,"skein1024-440":45975,"skein1024-448":45976,"skein1024-456":45977,"skein1024-464":45978,"skein1024-472":45979,"skein1024-480":45980,"skein1024-488":45981,"skein1024-496":45982,"skein1024-504":45983,"skein1024-512":45984,"skein1024-520":45985,"skein1024-528":45986,"skein1024-536":45987,"skein1024-544":45988,"skein1024-552":45989,"skein1024-560":45990,"skein1024-568":45991,"skein1024-576":45992,"skein1024-584":45993,"skein1024-592":45994,"skein1024-600":45995,"skein1024-608":45996,"skein1024-616":45997,"skein1024-624":45998,"skein1024-632":45999,"skein1024-640":46e3,"skein1024-648":46001,"skein1024-656":46002,"skein1024-664":46003,"skein1024-672":46004,"skein1024-680":46005,"skein1024-688":46006,"skein1024-696":46007,"skein1024-704":46008,"skein1024-712":46009,"skein1024-720":46010,"skein1024-728":46011,"skein1024-736":46012,"skein1024-744":46013,"skein1024-752":46014,"skein1024-760":46015,"skein1024-768":46016,"skein1024-776":46017,"skein1024-784":46018,"skein1024-792":46019,"skein1024-800":46020,"skein1024-808":46021,"skein1024-816":46022,"skein1024-824":46023,"skein1024-832":46024,"skein1024-840":46025,"skein1024-848":46026,"skein1024-856":46027,"skein1024-864":46028,"skein1024-872":46029,"skein1024-880":46030,"skein1024-888":46031,"skein1024-896":46032,"skein1024-904":46033,"skein1024-912":46034,"skein1024-920":46035,"skein1024-928":46036,"skein1024-936":46037,"skein1024-944":46038,"skein1024-952":46039,"skein1024-960":46040,"skein1024-968":46041,"skein1024-976":46042,"skein1024-984":46043,"skein1024-992":46044,"skein1024-1000":46045,"skein1024-1008":46046,"skein1024-1016":46047,"skein1024-1024":46048,"poseidon-bls12_381-a2-fc1":46081,"poseidon-bls12_381-a2-fc1-sc":46082,"zeroxcert-imprint-256":52753,"fil-commitment-unsealed":61697,"fil-commitment-sealed":61698,"holochain-adr-v0":8417572,"holochain-adr-v1":8483108,"holochain-key-v0":9728292,"holochain-key-v1":9793828,"holochain-sig-v0":10645796,"holochain-sig-v1":10711332,"skynet-ns":11639056});e.exports={baseTable:t}},883:(e,t,n)=>{"use strict";const s=n(676),r=n(643),i=n(945),{nameToVarint:o,constantToCode:a,nameToCode:c,codeToName:u}=n(843);function l(e){const t=s.decode(e),n=u[t];if(void 0===n)throw new Error(`Code "${t}" not found`);return n}function k(e){return u[e]}function h(e){const t=c[e];if(void 0===t)throw new Error(`Codec "${e}" not found`);return t}function b(e){return s.decode(e)}function d(e){const t=o[e];if(void 0===t)throw new Error(`Codec "${e}" not found`);return t}function p(e){return i.varintEncode(e)}e.exports={addPrefix:function(e,t){let n;if(e instanceof Uint8Array)n=i.varintUint8ArrayEncode(e);else{if(!o[e])throw new Error("multicodec not recognized");n=o[e]}return r([n,t],n.length+t.length)},rmPrefix:function(e){return s.decode(e),e.slice(s.decode.bytes)},getNameFromData:l,getNameFromCode:k,getCodeFromName:h,getCodeFromData:b,getVarintFromName:d,getVarintFromCode:p,getCodec:function(e){return l(e)},getName:function(e){return k(e)},getNumber:function(e){return h(e)},getCode:function(e){return b(e)},getCodeVarint:function(e){return d(e)},getVarint:function(e){return Array.from(p(e))},...a,nameToVarint:o,nameToCode:c,codeToName:u}},843:(e,t,n)=>{"use strict";const{baseTable:s}=n(636),r=n(945).varintEncode,i={},o={},a={};for(const e in s){const t=e,n=s[t];i[t]=r(n),o[t.toUpperCase().replace(/-/g,"_")]=n,a[n]||(a[n]=t)}Object.freeze(i),Object.freeze(o),Object.freeze(a);const c=Object.freeze(s);e.exports={nameToVarint:i,constantToCode:o,nameToCode:c,codeToName:a}},945:(e,t,n)=>{"use strict";const s=n(676),r=n(71),i=n(962);function o(e){return parseInt(r(e,"base16"),16)}e.exports={numberToUint8Array:function(e){let t=e.toString(16);return t.length%2==1&&(t="0"+t),i(t,"base16")},uint8ArrayToNumber:o,varintUint8ArrayEncode:function(e){return Uint8Array.from(s.encode(o(e)))},varintEncode:function(e){return Uint8Array.from(s.encode(e))}}},291:e=>{"use strict";const t=Object.freeze({identity:0,sha1:17,"sha2-256":18,"sha2-512":19,"sha3-512":20,"sha3-384":21,"sha3-256":22,"sha3-224":23,"shake-128":24,"shake-256":25,"keccak-224":26,"keccak-256":27,"keccak-384":28,"keccak-512":29,blake3:30,"murmur3-128":34,"murmur3-32":35,"dbl-sha2-256":86,md4:212,md5:213,bmt:214,"sha2-256-trunc254-padded":4114,"ripemd-128":4178,"ripemd-160":4179,"ripemd-256":4180,"ripemd-320":4181,x11:4352,kangarootwelve:7425,"sm3-256":21325,"blake2b-8":45569,"blake2b-16":45570,"blake2b-24":45571,"blake2b-32":45572,"blake2b-40":45573,"blake2b-48":45574,"blake2b-56":45575,"blake2b-64":45576,"blake2b-72":45577,"blake2b-80":45578,"blake2b-88":45579,"blake2b-96":45580,"blake2b-104":45581,"blake2b-112":45582,"blake2b-120":45583,"blake2b-128":45584,"blake2b-136":45585,"blake2b-144":45586,"blake2b-152":45587,"blake2b-160":45588,"blake2b-168":45589,"blake2b-176":45590,"blake2b-184":45591,"blake2b-192":45592,"blake2b-200":45593,"blake2b-208":45594,"blake2b-216":45595,"blake2b-224":45596,"blake2b-232":45597,"blake2b-240":45598,"blake2b-248":45599,"blake2b-256":45600,"blake2b-264":45601,"blake2b-272":45602,"blake2b-280":45603,"blake2b-288":45604,"blake2b-296":45605,"blake2b-304":45606,"blake2b-312":45607,"blake2b-320":45608,"blake2b-328":45609,"blake2b-336":45610,"blake2b-344":45611,"blake2b-352":45612,"blake2b-360":45613,"blake2b-368":45614,"blake2b-376":45615,"blake2b-384":45616,"blake2b-392":45617,"blake2b-400":45618,"blake2b-408":45619,"blake2b-416":45620,"blake2b-424":45621,"blake2b-432":45622,"blake2b-440":45623,"blake2b-448":45624,"blake2b-456":45625,"blake2b-464":45626,"blake2b-472":45627,"blake2b-480":45628,"blake2b-488":45629,"blake2b-496":45630,"blake2b-504":45631,"blake2b-512":45632,"blake2s-8":45633,"blake2s-16":45634,"blake2s-24":45635,"blake2s-32":45636,"blake2s-40":45637,"blake2s-48":45638,"blake2s-56":45639,"blake2s-64":45640,"blake2s-72":45641,"blake2s-80":45642,"blake2s-88":45643,"blake2s-96":45644,"blake2s-104":45645,"blake2s-112":45646,"blake2s-120":45647,"blake2s-128":45648,"blake2s-136":45649,"blake2s-144":45650,"blake2s-152":45651,"blake2s-160":45652,"blake2s-168":45653,"blake2s-176":45654,"blake2s-184":45655,"blake2s-192":45656,"blake2s-200":45657,"blake2s-208":45658,"blake2s-216":45659,"blake2s-224":45660,"blake2s-232":45661,"blake2s-240":45662,"blake2s-248":45663,"blake2s-256":45664,"skein256-8":45825,"skein256-16":45826,"skein256-24":45827,"skein256-32":45828,"skein256-40":45829,"skein256-48":45830,"skein256-56":45831,"skein256-64":45832,"skein256-72":45833,"skein256-80":45834,"skein256-88":45835,"skein256-96":45836,"skein256-104":45837,"skein256-112":45838,"skein256-120":45839,"skein256-128":45840,"skein256-136":45841,"skein256-144":45842,"skein256-152":45843,"skein256-160":45844,"skein256-168":45845,"skein256-176":45846,"skein256-184":45847,"skein256-192":45848,"skein256-200":45849,"skein256-208":45850,"skein256-216":45851,"skein256-224":45852,"skein256-232":45853,"skein256-240":45854,"skein256-248":45855,"skein256-256":45856,"skein512-8":45857,"skein512-16":45858,"skein512-24":45859,"skein512-32":45860,"skein512-40":45861,"skein512-48":45862,"skein512-56":45863,"skein512-64":45864,"skein512-72":45865,"skein512-80":45866,"skein512-88":45867,"skein512-96":45868,"skein512-104":45869,"skein512-112":45870,"skein512-120":45871,"skein512-128":45872,"skein512-136":45873,"skein512-144":45874,"skein512-152":45875,"skein512-160":45876,"skein512-168":45877,"skein512-176":45878,"skein512-184":45879,"skein512-192":45880,"skein512-200":45881,"skein512-208":45882,"skein512-216":45883,"skein512-224":45884,"skein512-232":45885,"skein512-240":45886,"skein512-248":45887,"skein512-256":45888,"skein512-264":45889,"skein512-272":45890,"skein512-280":45891,"skein512-288":45892,"skein512-296":45893,"skein512-304":45894,"skein512-312":45895,"skein512-320":45896,"skein512-328":45897,"skein512-336":45898,"skein512-344":45899,"skein512-352":45900,"skein512-360":45901,"skein512-368":45902,"skein512-376":45903,"skein512-384":45904,"skein512-392":45905,"skein512-400":45906,"skein512-408":45907,"skein512-416":45908,"skein512-424":45909,"skein512-432":45910,"skein512-440":45911,"skein512-448":45912,"skein512-456":45913,"skein512-464":45914,"skein512-472":45915,"skein512-480":45916,"skein512-488":45917,"skein512-496":45918,"skein512-504":45919,"skein512-512":45920,"skein1024-8":45921,"skein1024-16":45922,"skein1024-24":45923,"skein1024-32":45924,"skein1024-40":45925,"skein1024-48":45926,"skein1024-56":45927,"skein1024-64":45928,"skein1024-72":45929,"skein1024-80":45930,"skein1024-88":45931,"skein1024-96":45932,"skein1024-104":45933,"skein1024-112":45934,"skein1024-120":45935,"skein1024-128":45936,"skein1024-136":45937,"skein1024-144":45938,"skein1024-152":45939,"skein1024-160":45940,"skein1024-168":45941,"skein1024-176":45942,"skein1024-184":45943,"skein1024-192":45944,"skein1024-200":45945,"skein1024-208":45946,"skein1024-216":45947,"skein1024-224":45948,"skein1024-232":45949,"skein1024-240":45950,"skein1024-248":45951,"skein1024-256":45952,"skein1024-264":45953,"skein1024-272":45954,"skein1024-280":45955,"skein1024-288":45956,"skein1024-296":45957,"skein1024-304":45958,"skein1024-312":45959,"skein1024-320":45960,"skein1024-328":45961,"skein1024-336":45962,"skein1024-344":45963,"skein1024-352":45964,"skein1024-360":45965,"skein1024-368":45966,"skein1024-376":45967,"skein1024-384":45968,"skein1024-392":45969,"skein1024-400":45970,"skein1024-408":45971,"skein1024-416":45972,"skein1024-424":45973,"skein1024-432":45974,"skein1024-440":45975,"skein1024-448":45976,"skein1024-456":45977,"skein1024-464":45978,"skein1024-472":45979,"skein1024-480":45980,"skein1024-488":45981,"skein1024-496":45982,"skein1024-504":45983,"skein1024-512":45984,"skein1024-520":45985,"skein1024-528":45986,"skein1024-536":45987,"skein1024-544":45988,"skein1024-552":45989,"skein1024-560":45990,"skein1024-568":45991,"skein1024-576":45992,"skein1024-584":45993,"skein1024-592":45994,"skein1024-600":45995,"skein1024-608":45996,"skein1024-616":45997,"skein1024-624":45998,"skein1024-632":45999,"skein1024-640":46e3,"skein1024-648":46001,"skein1024-656":46002,"skein1024-664":46003,"skein1024-672":46004,"skein1024-680":46005,"skein1024-688":46006,"skein1024-696":46007,"skein1024-704":46008,"skein1024-712":46009,"skein1024-720":46010,"skein1024-728":46011,"skein1024-736":46012,"skein1024-744":46013,"skein1024-752":46014,"skein1024-760":46015,"skein1024-768":46016,"skein1024-776":46017,"skein1024-784":46018,"skein1024-792":46019,"skein1024-800":46020,"skein1024-808":46021,"skein1024-816":46022,"skein1024-824":46023,"skein1024-832":46024,"skein1024-840":46025,"skein1024-848":46026,"skein1024-856":46027,"skein1024-864":46028,"skein1024-872":46029,"skein1024-880":46030,"skein1024-888":46031,"skein1024-896":46032,"skein1024-904":46033,"skein1024-912":46034,"skein1024-920":46035,"skein1024-928":46036,"skein1024-936":46037,"skein1024-944":46038,"skein1024-952":46039,"skein1024-960":46040,"skein1024-968":46041,"skein1024-976":46042,"skein1024-984":46043,"skein1024-992":46044,"skein1024-1000":46045,"skein1024-1008":46046,"skein1024-1016":46047,"skein1024-1024":46048,"poseidon-bls12_381-a2-fc1":46081,"poseidon-bls12_381-a2-fc1-sc":46082});e.exports={names:t}},370:(e,t,n)=>{"use strict";const s=n(957),r=n(676),{names:i}=n(291),o=n(71),a=n(962),c=n(643),u={};for(const e in i){const t=e;u[i[t]]=t}function l(e){if(!(e instanceof Uint8Array))throw new Error("multihash must be a Uint8Array");if(e.length<2)throw new Error("multihash too short. must be > 2 bytes.");const t=r.decode(e);if(!b(t))throw new Error(`multihash unknown function code: 0x${t.toString(16)}`);e=e.slice(r.decode.bytes);const n=r.decode(e);if(n<0)throw new Error(`multihash invalid length: ${n}`);if((e=e.slice(r.decode.bytes)).length!==n)throw new Error(`multihash length inconsistent: 0x${o(e,"base16")}`);return{code:t,name:u[t],length:n,digest:e}}function k(e){let t=e;if("string"==typeof e){if(void 0===i[e])throw new Error(`Unrecognized hash function named: ${e}`);t=i[e]}if("number"!=typeof t)throw new Error(`Hash function code should be a number. Got: ${t}`);if(void 0===u[t]&&!h(t))throw new Error(`Unrecognized function code: ${t}`);return t}function h(e){return e>0&&e<16}function b(e){return!!h(e)||!!u[e]}function d(e){l(e)}Object.freeze(u),e.exports={names:i,codes:u,toHexString:function(e){if(!(e instanceof Uint8Array))throw new Error("must be passed a Uint8Array");return o(e,"base16")},fromHexString:function(e){return a(e,"base16")},toB58String:function(e){if(!(e instanceof Uint8Array))throw new Error("must be passed a Uint8Array");return o(s.encode("base58btc",e)).slice(1)},fromB58String:function(e){const t=e instanceof Uint8Array?o(e):e;return s.decode("z"+t)},decode:l,encode:function(e,t,n){if(!e||void 0===t)throw new Error("multihash encode requires at least two args: digest, code");const s=k(t);if(!(e instanceof Uint8Array))throw new Error("digest should be a Uint8Array");if(null==n&&(n=e.length),n&&e.length!==n)throw new Error("digest length should be equal to specified length.");const i=r.encode(s),o=r.encode(n);return c([i,o,e],i.length+o.length+e.length)},coerceCode:k,isAppCode:h,validate:d,prefix:function(e){return d(e),e.subarray(0,2)},isValidCode:b}},643:e=>{"use strict";e.exports=function(e,t){t||(t=e.reduce(((e,t)=>e+t.length),0));const n=new Uint8Array(t);let s=0;for(const t of e)n.set(t,s),s+=t.length;return n}},142:e=>{"use strict";e.exports=function(e,t){if(e===t)return!0;if(e.byteLength!==t.byteLength)return!1;for(let n=0;n<e.byteLength;n++)if(e[n]!==t[n])return!1;return!0}},962:(e,t,n)=>{"use strict";const{encoding:s}=n(957),r=new TextEncoder;e.exports=function(e,t="utf8"){return"utf8"===t||"utf-8"===t?r.encode(e):"ascii"===t?function(e){const t=new Uint8Array(e.length);for(let n=0;n<e.length;n++)t[n]=e.charCodeAt(n);return t}(e):s(t).decode(e)}},71:(e,t,n)=>{"use strict";const{encoding:s}=n(957),r=new TextDecoder("utf8");e.exports=function(e,t="utf8"){return"utf8"===t||"utf-8"===t?r.decode(e):"ascii"===t?function(e){let t="";for(let n=0;n<e.length;n++)t+=String.fromCharCode(e[n]);return t}(e):s(t).encode(e)}},988:e=>{e.exports=function e(t,n){var s,r=0,i=0,o=n=n||0,a=t.length;do{if(o>=a)throw e.bytes=0,new RangeError("Could not decode varint");s=t[o++],r+=i<28?(127&s)<<i:(127&s)*Math.pow(2,i),i+=7}while(s>=128);return e.bytes=o-n,r}},312:e=>{e.exports=function e(n,s,r){s=s||[];for(var i=r=r||0;n>=t;)s[r++]=255&n|128,n/=128;for(;-128&n;)s[r++]=255&n|128,n>>>=7;return s[r]=0|n,e.bytes=r-i+1,s};var t=Math.pow(2,31)},676:(e,t,n)=>{e.exports={encode:n(312),decode:n(988),encodingLength:n(82)}},82:e=>{var t=Math.pow(2,7),n=Math.pow(2,14),s=Math.pow(2,21),r=Math.pow(2,28),i=Math.pow(2,35),o=Math.pow(2,42),a=Math.pow(2,49),c=Math.pow(2,56),u=Math.pow(2,63);e.exports=function(e){return e<t?1:e<n?2:e<s?3:e<r?4:e<i?5:e<o?6:e<a?7:e<c?8:e<u?9:10}}},t={};function n(s){var r=t[s];if(void 0!==r)return r.exports;var i=t[s]={exports:{}};return e[s](i,i.exports,n),i.exports}n.d=(e,t)=>{for(var s in t)n.o(t,s)&&!n.o(e,s)&&Object.defineProperty(e,s,{enumerable:!0,get:t[s]})},n.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t);var s={};return(()=>{"use strict";function e(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,s=new Array(t);n<t;n++)s[n]=e[n];return s}function t(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}n.d(s,{default:()=>i});var r=n(981);const i=function n(){var s=this;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,n),t(this,"containsCID",(function(t){if("string"!=typeof t)throw new Error("url is not string");var n,s=function(t,n){var s="undefined"!=typeof Symbol&&t[Symbol.iterator]||t["@@iterator"];if(!s){if(Array.isArray(t)||(s=function(t,n){if(t){if("string"==typeof t)return e(t,n);var s=Object.prototype.toString.call(t).slice(8,-1);return"Object"===s&&t.constructor&&(s=t.constructor.name),"Map"===s||"Set"===s?Array.from(t):"Arguments"===s||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(s)?e(t,n):void 0}}(t))||n&&t&&"number"==typeof t.length){s&&(t=s);var r=0,i=function(){};return{s:i,n:function(){return r>=t.length?{done:!0}:{done:!1,value:t[r++]}},e:function(e){throw e},f:i}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var o,a=!0,c=!1;return{s:function(){s=s.call(t)},n:function(){var e=s.next();return a=e.done,e},e:function(e){c=!0,o=e},f:function(){try{a||null==s.return||s.return()}finally{if(c)throw o}}}}(t.split(/\/|\?/));try{for(s.s();!(n=s.n()).done;){var i=n.value;if(r.cid(i))return{containsCid:!0,cid:i};var o=i.split(".")[0];if(r.cid(o))return{containsCid:!0,cid:o}}}catch(e){s.e(e)}finally{s.f()}return{containsCid:!1,cid:null}})),t(this,"convertToDesiredGateway",(function(e,t){var n=s.containsCID(e);if(!0!==n.containsCid)throw new Error("url does not contain CID");var r=e.split(n.cid);if(e.includes("ipfs://".concat(n.cid)))return"".concat(t,"/ipfs/").concat(n.cid).concat(r[1]);if(e.includes("/ipfs/".concat(n.cid)))return"".concat(t,"/ipfs/").concat(n.cid).concat(r[1]);if(e.includes("/ipns/".concat(n.cid)))return"".concat(t,"/ipns/").concat(n.cid).concat(r[1]);throw new Error("unsupported URL pattern, please submit a github issue with the URL utilized")}))}})(),s.default})()}));
+"use strict";
+
+// base-x encoding / decoding
+// Copyright (c) 2018 base-x contributors
+// Copyright (c) 2014-2018 The Bitcoin Core developers (base58.cpp)
+// Distributed under the MIT software license, see the accompanying
+// file LICENSE or http://www.opensource.org/licenses/mit-license.php.
+function base (ALPHABET) {
+  if (ALPHABET.length >= 255) { throw new TypeError('Alphabet too long') }
+  var BASE_MAP = new Uint8Array(256)
+  for (var j = 0; j < BASE_MAP.length; j++) {
+    BASE_MAP[j] = 255
+  }
+  for (var i = 0; i < ALPHABET.length; i++) {
+    var x = ALPHABET.charAt(i)
+    var xc = x.charCodeAt(0)
+    if (BASE_MAP[xc] !== 255) { throw new TypeError(x + ' is ambiguous') }
+    BASE_MAP[xc] = i
+  }
+  var BASE = ALPHABET.length
+  var LEADER = ALPHABET.charAt(0)
+  var FACTOR = Math.log(BASE) / Math.log(256) // log(BASE) / log(256), rounded up
+  var iFACTOR = Math.log(256) / Math.log(BASE) // log(256) / log(BASE), rounded up
+  function encode (source) {
+    if (source instanceof Uint8Array) {
+    } else if (ArrayBuffer.isView(source)) {
+      source = new Uint8Array(source.buffer, source.byteOffset, source.byteLength)
+    } else if (Array.isArray(source)) {
+      source = Uint8Array.from(source)
+    }
+    if (!(source instanceof Uint8Array)) { throw new TypeError('Expected Uint8Array') }
+    if (source.length === 0) { return '' }
+        // Skip & count leading zeroes.
+    var zeroes = 0
+    var length = 0
+    var pbegin = 0
+    var pend = source.length
+    while (pbegin !== pend && source[pbegin] === 0) {
+      pbegin++
+      zeroes++
+    }
+        // Allocate enough space in big-endian base58 representation.
+    var size = ((pend - pbegin) * iFACTOR + 1) >>> 0
+    var b58 = new Uint8Array(size)
+        // Process the bytes.
+    while (pbegin !== pend) {
+      var carry = source[pbegin]
+            // Apply "b58 = b58 * 256 + ch".
+      var i = 0
+      for (var it1 = size - 1; (carry !== 0 || i < length) && (it1 !== -1); it1--, i++) {
+        carry += (256 * b58[it1]) >>> 0
+        b58[it1] = (carry % BASE) >>> 0
+        carry = (carry / BASE) >>> 0
+      }
+      if (carry !== 0) { throw new Error('Non-zero carry') }
+      length = i
+      pbegin++
+    }
+        // Skip leading zeroes in base58 result.
+    var it2 = size - length
+    while (it2 !== size && b58[it2] === 0) {
+      it2++
+    }
+        // Translate the result into a string.
+    var str = LEADER.repeat(zeroes)
+    for (; it2 < size; ++it2) { str += ALPHABET.charAt(b58[it2]) }
+    return str
+  }
+  function decodeUnsafe (source) {
+    if (typeof source !== 'string') { throw new TypeError('Expected String') }
+    if (source.length === 0) { return new Uint8Array() }
+    var psz = 0
+        // Skip leading spaces.
+    if (source[psz] === ' ') { return }
+        // Skip and count leading '1's.
+    var zeroes = 0
+    var length = 0
+    while (source[psz] === LEADER) {
+      zeroes++
+      psz++
+    }
+        // Allocate enough space in big-endian base256 representation.
+    var size = (((source.length - psz) * FACTOR) + 1) >>> 0 // log(58) / log(256), rounded up.
+    var b256 = new Uint8Array(size)
+        // Process the characters.
+    while (source[psz]) {
+            // Decode character
+      var carry = BASE_MAP[source.charCodeAt(psz)]
+            // Invalid character
+      if (carry === 255) { return }
+      var i = 0
+      for (var it3 = size - 1; (carry !== 0 || i < length) && (it3 !== -1); it3--, i++) {
+        carry += (BASE * b256[it3]) >>> 0
+        b256[it3] = (carry % 256) >>> 0
+        carry = (carry / 256) >>> 0
+      }
+      if (carry !== 0) { throw new Error('Non-zero carry') }
+      length = i
+      psz++
+    }
+        // Skip trailing spaces.
+    if (source[psz] === ' ') { return }
+        // Skip leading zeroes in b256.
+    var it4 = size - length
+    while (it4 !== size && b256[it4] === 0) {
+      it4++
+    }
+    var vch = new Uint8Array(zeroes + (size - it4))
+    var j = zeroes
+    while (it4 !== size) {
+      vch[j++] = b256[it4++]
+    }
+    return vch
+  }
+  function decode (string) {
+    var buffer = decodeUnsafe(string)
+    if (buffer) { return buffer }
+    throw new Error('Non-base' + BASE + ' character')
+  }
+  return {
+    encode: encode,
+    decodeUnsafe: decodeUnsafe,
+    decode: decode
+  }
+}
+module.exports = base
+
 
 /***/ }),
 
-/***/ 0:
+/***/ 4329:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+!function(t,n){if(true)module.exports=n();else { var e, r; }}(global,(function(){return(()=>{var t={579:(t,n,r)=>{"use strict";function e(t,n){(null==n||n>t.length)&&(n=t.length);for(var r=0,e=new Array(n);r<n;r++)e[r]=t[r];return e}function o(t,n,r){return n in t?Object.defineProperty(t,n,{value:r,enumerable:!0,configurable:!0,writable:!0}):t[n]=r,t}r.r(n),r.d(n,{default:()=>c});var i=r(293);const c=function t(){var n=this;!function(t,n){if(!(t instanceof n))throw new TypeError("Cannot call a class as a function")}(this,t),o(this,"containsCID",(function(t){if("string"!=typeof t)throw new Error("url is not string");var n,r=function(t,n){var r="undefined"!=typeof Symbol&&t[Symbol.iterator]||t["@@iterator"];if(!r){if(Array.isArray(t)||(r=function(t,n){if(t){if("string"==typeof t)return e(t,n);var r=Object.prototype.toString.call(t).slice(8,-1);return"Object"===r&&t.constructor&&(r=t.constructor.name),"Map"===r||"Set"===r?Array.from(t):"Arguments"===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)?e(t,n):void 0}}(t))||n&&t&&"number"==typeof t.length){r&&(t=r);var o=0,i=function(){};return{s:i,n:function(){return o>=t.length?{done:!0}:{done:!1,value:t[o++]}},e:function(t){throw t},f:i}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var c,a=!0,u=!1;return{s:function(){r=r.call(t)},n:function(){var t=r.next();return a=t.done,t},e:function(t){u=!0,c=t},f:function(){try{a||null==r.return||r.return()}finally{if(u)throw c}}}}(t.split(/\/|\?/));try{for(r.s();!(n=r.n()).done;){var o=n.value;if(i.cid(o))return{containsCid:!0,cid:o};var c=o.split(".")[0];if(i.cid(c))return{containsCid:!0,cid:c}}}catch(t){r.e(t)}finally{r.f()}return{containsCid:!1,cid:null}})),o(this,"convertToDesiredGateway",(function(t,r){var e=n.containsCID(t);if(!0!==e.containsCid)throw new Error("url does not contain CID");var o=t.split(e.cid);if(t.includes("ipfs://".concat(e.cid)))return"".concat(r,"/ipfs/").concat(e.cid).concat(o[1]);if(t.includes("/ipfs/".concat(e.cid)))return"".concat(r,"/ipfs/").concat(e.cid).concat(o[1]);if(t.includes("/ipns/".concat(e.cid)))return"".concat(r,"/ipns/").concat(e.cid).concat(o[1]);throw new Error("unsupported URL pattern, please submit a github issue with the URL utilized")}))}},29:(t,n,r)=>{var e=r(579);t.exports=e},293:t=>{"use strict";t.exports=__nccwpck_require__(6235)}},n={};function r(e){var o=n[e];if(void 0!==o)return o.exports;var i=n[e]={exports:{}};return t[e](i,i.exports,r),i.exports}r.d=(t,n)=>{for(var e in n)r.o(n,e)&&!r.o(t,e)&&Object.defineProperty(t,e,{enumerable:!0,get:n[e]})},r.o=(t,n)=>Object.prototype.hasOwnProperty.call(t,n),r.r=t=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})};var e=r(29);return e.default})()}));
+
+/***/ }),
+
+/***/ 6235:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+const multihash = __nccwpck_require__(3471)
+const multibase = __nccwpck_require__(8959)
+const { Multiaddr } = __nccwpck_require__(7642)
+const mafmt = __nccwpck_require__(8755)
+const CID = __nccwpck_require__(9016)
+const { URL } = __nccwpck_require__(1286)
+const uint8ArrayToString = __nccwpck_require__(8328)
+
+const pathGatewayPattern = /^https?:\/\/[^/]+\/(ip[fn]s)\/([^/?#]+)/
+const pathPattern = /^\/(ip[fn]s)\/([^/?#]+)/
+const defaultProtocolMatch = 1
+const defaultHashMath = 2
+
+// CID, libp2p-key or DNSLink
+const subdomainGatewayPattern = /^https?:\/\/([^/]+)\.(ip[fn]s)\.[^/?]+/
+const subdomainIdMatch = 1
+const subdomainProtocolMatch = 2
+
+// Fully qualified domain name (FQDN) that has an explicit .tld suffix
+const fqdnWithTld = /^(([a-z0-9]|[a-z0-9][a-z0-9-]*[a-z0-9])\.)+([a-z0-9]|[a-z0-9][a-z0-9-]*[a-z0-9])$/
+
+/**
+ * @param {*} hash
+ */
+function isMultihash (hash) {
+  const formatted = convertToString(hash)
+  try {
+    multihash.decode(multibase.decode('z' + formatted))
+    return true
+  } catch (e) {
+    return false
+  }
+}
+
+/**
+ * @param {*} hash
+ */
+function isMultibase (hash) {
+  try {
+    return multibase.isEncoded(hash)
+  } catch (e) {
+    return false
+  }
+}
+
+/**
+ * @param {*} hash
+ */
+function isCID (hash) {
+  try {
+    new CID(hash) // eslint-disable-line no-new
+    return true
+  } catch (e) {
+    return false
+  }
+}
+
+/**
+ * @param {*} input
+ */
+function isMultiaddr (input) {
+  if (!input) return false
+  if (Multiaddr.isMultiaddr(input)) return true
+  try {
+    new Multiaddr(input) // eslint-disable-line no-new
+    return true
+  } catch (e) {
+    return false
+  }
+}
+
+/**
+ * @param {string | Uint8Array | Multiaddr} input
+ */
+function isPeerMultiaddr (input) {
+  return isMultiaddr(input) && mafmt.P2P.matches(input)
+}
+
+/**
+ * @param {string | Uint8Array} input
+ * @param {RegExp | string} pattern
+ * @param {number} [protocolMatch=1]
+ * @param {number} [hashMatch=2]
+ */
+function isIpfs (input, pattern, protocolMatch = defaultProtocolMatch, hashMatch = defaultHashMath) {
+  const formatted = convertToString(input)
+  if (!formatted) {
+    return false
+  }
+
+  const match = formatted.match(pattern)
+  if (!match) {
+    return false
+  }
+
+  if (match[protocolMatch] !== 'ipfs') {
+    return false
+  }
+
+  let hash = match[hashMatch]
+
+  if (hash && pattern === subdomainGatewayPattern) {
+    // when doing checks for subdomain context
+    // ensure hash is case-insensitive
+    // (browsers force-lowercase authority component anyway)
+    hash = hash.toLowerCase()
+  }
+
+  return isCID(hash)
+}
+
+/**
+ *
+ * @param {string | Uint8Array} input
+ * @param {string | RegExp} pattern
+ * @param {number} [protocolMatch=1]
+ * @param {number} [hashMatch=1]
+ */
+function isIpns (input, pattern, protocolMatch = defaultProtocolMatch, hashMatch = defaultHashMath) {
+  const formatted = convertToString(input)
+  if (!formatted) {
+    return false
+  }
+  const match = formatted.match(pattern)
+  if (!match) {
+    return false
+  }
+
+  if (match[protocolMatch] !== 'ipns') {
+    return false
+  }
+
+  let ipnsId = match[hashMatch]
+
+  if (ipnsId && pattern === subdomainGatewayPattern) {
+    // when doing checks for subdomain context
+    // ensure ipnsId is case-insensitive
+    // (browsers force-lowercase authority compotent anyway)
+    ipnsId = ipnsId.toLowerCase()
+    // Check if it is cidv1
+    if (isCID(ipnsId)) return true
+    // Check if it looks like FQDN
+    try {
+      if (!ipnsId.includes('.') && ipnsId.includes('-')) {
+        // name without tld, assuming its inlined into a single DNS label
+        // (https://github.com/ipfs/in-web-browsers/issues/169)
+        // en-wikipedia--on--ipfs-org → en.wikipedia-on-ipfs.org
+        ipnsId = ipnsId.replace(/--/g, '@').replace(/-/g, '.').replace(/@/g, '-')
+      }
+      // URL implementation in web browsers forces lowercase of the hostname
+      const { hostname } = new URL(`http://${ipnsId}`) // eslint-disable-line no-new
+      // Check if potential FQDN has an explicit TLD
+      return fqdnWithTld.test(hostname)
+    } catch (e) {
+      return false
+    }
+  }
+
+  return true
+}
+
+/**
+ * @param {any} input
+ */
+function isString (input) {
+  return typeof input === 'string'
+}
+
+/**
+ * @param {Uint8Array | string} input
+ */
+function convertToString (input) {
+  if (input instanceof Uint8Array) {
+    return uint8ArrayToString(input, 'base58btc')
+  }
+
+  if (isString(input)) {
+    return input
+  }
+
+  return false
+}
+
+/**
+ * @param {string | Uint8Array} url
+ */
+const ipfsSubdomain = (url) => isIpfs(url, subdomainGatewayPattern, subdomainProtocolMatch, subdomainIdMatch)
+/**
+ * @param {string | Uint8Array} url
+ */
+const ipnsSubdomain = (url) => isIpns(url, subdomainGatewayPattern, subdomainProtocolMatch, subdomainIdMatch)
+/**
+ * @param {string | Uint8Array} url
+ */
+const subdomain = (url) => ipfsSubdomain(url) || ipnsSubdomain(url)
+
+/**
+ * @param {string | Uint8Array} url
+ */
+const ipfsUrl = (url) => isIpfs(url, pathGatewayPattern) || ipfsSubdomain(url)
+/**
+ * @param {string | Uint8Array} url
+ */
+const ipnsUrl = (url) => isIpns(url, pathGatewayPattern) || ipnsSubdomain(url)
+/**
+ * @param {string | Uint8Array} url
+ */
+const url = (url) => ipfsUrl(url) || ipnsUrl(url) || subdomain(url)
+
+/**
+ * @param {string | Uint8Array} path
+ */
+const path = (path) => isIpfs(path, pathPattern) || isIpns(path, pathPattern)
+
+module.exports = {
+  multihash: isMultihash,
+  multiaddr: isMultiaddr,
+  peerMultiaddr: isPeerMultiaddr,
+  cid: isCID,
+  /**
+   * @param {CID | string | Uint8Array} cid
+   */
+  base32cid: (cid) => (isMultibase(cid) === 'base32' && isCID(cid)),
+  ipfsSubdomain,
+  ipnsSubdomain,
+  subdomain,
+  subdomainGatewayPattern,
+  ipfsUrl,
+  ipnsUrl,
+  url,
+  pathGatewayPattern: pathGatewayPattern,
+  /**
+   * @param {string | Uint8Array} path
+   */
+  ipfsPath: (path) => isIpfs(path, pathPattern),
+  /**
+   * @param {string | Uint8Array} path
+   */
+  ipnsPath: (path) => isIpns(path, pathPattern),
+  path,
+  pathPattern,
+  /**
+   * @param {string | Uint8Array} x
+   */
+  urlOrPath: (x) => url(x) || path(x),
+  /**
+   * @param {string | Uint8Array | CID} path
+   */
+  cidPath: path => isString(path) && !isCID(path) && isIpfs(`/ipfs/${path}`, pathPattern)
+}
+
+
+/***/ }),
+
+/***/ 8755:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+const { Multiaddr } = __nccwpck_require__(7642)
+
+/**
+ * @typedef {import('./types').MatchesFunction} MatchesFunction
+ * @typedef {import('./types').PartialMatchesFunction} PartialMatchesFunction
+ * @typedef {import('./types').Mafmt} Mafmt
+ */
+
+/*
+ * Valid combinations
+ */
+const DNS4 = base('dns4')
+const DNS6 = base('dns6')
+const DNSADDR = base('dnsaddr')
+const DNS = or(
+  base('dns'),
+  DNSADDR,
+  DNS4,
+  DNS6
+)
+
+const IP = or(base('ip4'), base('ip6'))
+const TCP = or(
+  and(IP, base('tcp')),
+  and(DNS, base('tcp'))
+)
+const UDP = and(IP, base('udp'))
+const UTP = and(UDP, base('utp'))
+
+const QUIC = and(UDP, base('quic'))
+
+const WebSockets = or(
+  and(TCP, base('ws')),
+  and(DNS, base('ws'))
+)
+
+const WebSocketsSecure = or(
+  and(TCP, base('wss')),
+  and(DNS, base('wss'))
+)
+
+const HTTP = or(
+  and(TCP, base('http')),
+  and(IP, base('http')),
+  and(DNS, base('http'))
+)
+
+const HTTPS = or(
+  and(TCP, base('https')),
+  and(IP, base('https')),
+  and(DNS, base('https'))
+)
+
+const WebRTCStar = or(
+  and(WebSockets, base('p2p-webrtc-star'), base('p2p')),
+  and(WebSocketsSecure, base('p2p-webrtc-star'), base('p2p')),
+  and(WebSockets, base('p2p-webrtc-star')),
+  and(WebSocketsSecure, base('p2p-webrtc-star'))
+)
+
+const WebSocketStar = or(
+  and(WebSockets, base('p2p-websocket-star'), base('p2p')),
+  and(WebSocketsSecure, base('p2p-websocket-star'), base('p2p')),
+  and(WebSockets, base('p2p-websocket-star')),
+  and(WebSocketsSecure, base('p2p-websocket-star'))
+)
+
+const WebRTCDirect = or(
+  and(HTTP, base('p2p-webrtc-direct'), base('p2p')),
+  and(HTTPS, base('p2p-webrtc-direct'), base('p2p')),
+  and(HTTP, base('p2p-webrtc-direct')),
+  and(HTTPS, base('p2p-webrtc-direct'))
+)
+
+const Reliable = or(
+  WebSockets,
+  WebSocketsSecure,
+  HTTP,
+  HTTPS,
+  WebRTCStar,
+  WebRTCDirect,
+  TCP,
+  UTP,
+  QUIC,
+  DNS
+)
+
+// Unlike ws-star, stardust can run over any transport thus removing the requirement for websockets (but don't even think about running a stardust server over webrtc-star ;) )
+const Stardust = or(
+  and(Reliable, base('p2p-stardust'), base('p2p')),
+  and(Reliable, base('p2p-stardust'))
+)
+
+const _P2P = or(
+  and(Reliable, base('p2p')),
+  WebRTCStar,
+  WebRTCDirect,
+  base('p2p')
+)
+
+const _Circuit = or(
+  and(_P2P, base('p2p-circuit'), _P2P),
+  and(_P2P, base('p2p-circuit')),
+  and(base('p2p-circuit'), _P2P),
+  and(Reliable, base('p2p-circuit')),
+  and(base('p2p-circuit'), Reliable),
+  base('p2p-circuit')
+)
+
+const CircuitRecursive = () => or(
+  and(_Circuit, CircuitRecursive),
+  _Circuit
+)
+
+const Circuit = CircuitRecursive()
+
+const P2P = or(
+  and(Circuit, _P2P, Circuit),
+  and(_P2P, Circuit),
+  and(Circuit, _P2P),
+  Circuit,
+  _P2P
+)
+
+module.exports = {
+  DNS,
+  DNS4,
+  DNS6,
+  DNSADDR,
+  IP,
+  TCP,
+  UDP,
+  QUIC,
+  UTP,
+  HTTP,
+  HTTPS,
+  WebSockets,
+  WebSocketsSecure,
+  WebSocketStar,
+  WebRTCStar,
+  WebRTCDirect,
+  Reliable,
+  Stardust,
+  Circuit,
+  P2P,
+  IPFS: P2P
+}
+
+/*
+ * Validation funcs
+ */
+
+/**
+ * @param {PartialMatchesFunction} partialMatch
+ */
+function makeMatchesFunction (partialMatch) {
+  /**
+   * @type {MatchesFunction}
+   */
+  function matches (a) {
+    if (!Multiaddr.isMultiaddr(a)) {
+      try {
+        a = new Multiaddr(a)
+      } catch (err) { // catch error
+        return false // also if it's invalid it's propably not matching as well so return false
+      }
+    }
+    const out = partialMatch(a.protoNames())
+    if (out === null) {
+      return false
+    }
+
+    if (out === true || out === false) {
+      return out
+    }
+
+    return out.length === 0
+  }
+
+  return matches
+}
+
+/**
+ * @param {Array<Mafmt | (() => Mafmt)>} args
+ * @returns {Mafmt}
+ */
+function and (...args) {
+  /**
+   * @type {PartialMatchesFunction}
+   */
+  function partialMatch (a) {
+    if (a.length < args.length) {
+      return null
+    }
+
+    /** @type {boolean | string[] | null} */
+    let out = a
+
+    args.some((arg) => {
+      out = typeof arg === 'function'
+        ? arg().partialMatch(a)
+        : arg.partialMatch(a)
+
+      if (Array.isArray(out)) {
+        a = out
+      }
+
+      if (out === null) {
+        return true
+      }
+
+      return false
+    })
+
+    return out
+  }
+
+  return {
+    toString: function () { return '{ ' + args.join(' ') + ' }' },
+    input: args,
+    matches: makeMatchesFunction(partialMatch),
+    partialMatch: partialMatch
+  }
+}
+
+/**
+ * @param {Array<Mafmt | (() => Mafmt)>} args
+ * @returns {Mafmt}
+ */
+function or (...args) {
+  /**
+   * @type {PartialMatchesFunction}
+   */
+  function partialMatch (a) {
+    let out = null
+    args.some((arg) => {
+      const res = typeof arg === 'function'
+        ? arg().partialMatch(a)
+        : arg.partialMatch(a)
+      if (res) {
+        out = res
+        return true
+      }
+      return false
+    })
+
+    return out
+  }
+
+  const result = {
+    toString: function () { return '{ ' + args.join(' ') + ' }' },
+    input: args,
+    matches: makeMatchesFunction(partialMatch),
+    partialMatch: partialMatch
+  }
+
+  return result
+}
+
+/**
+ * @param {string} n
+ * @returns {Mafmt}
+ */
+function base (n) {
+  const name = n
+
+  /**
+   * @type {MatchesFunction}
+   */
+  function matches (a) {
+    if (typeof a === 'string') {
+      try {
+        a = new Multiaddr(a)
+      } catch (err) { // catch error
+        return false // also if it's invalid it's propably not matching as well so return false
+      }
+    }
+
+    const pnames = a.protoNames()
+    if (pnames.length === 1 && pnames[0] === name) {
+      return true
+    }
+    return false
+  }
+
+  /**
+   * @type {PartialMatchesFunction}
+   */
+  function partialMatch (protos) {
+    if (protos.length === 0) {
+      return null
+    }
+
+    if (protos[0] === name) {
+      return protos.slice(1)
+    }
+    return null
+  }
+
+  return {
+    toString: function () { return name },
+    matches: matches,
+    partialMatch: partialMatch
+  }
+}
+
+
+/***/ }),
+
+/***/ 813:
+/***/ ((module) => {
+
+module.exports = read
+
+var MSB = 0x80
+  , REST = 0x7F
+
+function read(buf, offset) {
+  var res    = 0
+    , offset = offset || 0
+    , shift  = 0
+    , counter = offset
+    , b
+    , l = buf.length
+
+  do {
+    if (counter >= l || shift > 49) {
+      read.bytes = 0
+      throw new RangeError('Could not decode varint')
+    }
+    b = buf[counter++]
+    res += shift < 28
+      ? (b & REST) << shift
+      : (b & REST) * Math.pow(2, shift)
+    shift += 7
+  } while (b >= MSB)
+
+  read.bytes = counter - offset
+
+  return res
+}
+
+
+/***/ }),
+
+/***/ 3971:
+/***/ ((module) => {
+
+module.exports = encode
+
+var MSB = 0x80
+  , REST = 0x7F
+  , MSBALL = ~REST
+  , INT = Math.pow(2, 31)
+
+function encode(num, out, offset) {
+  if (Number.MAX_SAFE_INTEGER && num > Number.MAX_SAFE_INTEGER) {
+    encode.bytes = 0
+    throw new RangeError('Could not encode varint')
+  }
+  out = out || []
+  offset = offset || 0
+  var oldOffset = offset
+
+  while(num >= INT) {
+    out[offset++] = (num & 0xFF) | MSB
+    num /= 128
+  }
+  while(num & MSBALL) {
+    out[offset++] = (num & 0xFF) | MSB
+    num >>>= 7
+  }
+  out[offset] = num | 0
+  
+  encode.bytes = offset - oldOffset + 1
+  
+  return out
+}
+
+
+/***/ }),
+
+/***/ 2853:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+module.exports = {
+    encode: __nccwpck_require__(3971)
+  , decode: __nccwpck_require__(813)
+  , encodingLength: __nccwpck_require__(8515)
+}
+
+
+/***/ }),
+
+/***/ 8515:
+/***/ ((module) => {
+
+
+var N1 = Math.pow(2,  7)
+var N2 = Math.pow(2, 14)
+var N3 = Math.pow(2, 21)
+var N4 = Math.pow(2, 28)
+var N5 = Math.pow(2, 35)
+var N6 = Math.pow(2, 42)
+var N7 = Math.pow(2, 49)
+var N8 = Math.pow(2, 56)
+var N9 = Math.pow(2, 63)
+
+module.exports = function (value) {
+  return (
+    value < N1 ? 1
+  : value < N2 ? 2
+  : value < N3 ? 3
+  : value < N4 ? 4
+  : value < N5 ? 5
+  : value < N6 ? 6
+  : value < N7 ? 7
+  : value < N8 ? 8
+  : value < N9 ? 9
+  :              10
+  )
+}
+
+
+/***/ }),
+
+/***/ 2152:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+const convert = __nccwpck_require__(6789)
+const protocols = __nccwpck_require__(6354)
+const varint = __nccwpck_require__(2853)
+const uint8ArrayConcat = __nccwpck_require__(3745)
+const uint8ArrayToString = __nccwpck_require__(8328)
+
+// export codec
+module.exports = {
+  stringToStringTuples,
+  stringTuplesToString,
+
+  tuplesToStringTuples,
+  stringTuplesToTuples,
+
+  bytesToTuples,
+  tuplesToBytes,
+
+  bytesToString,
+  stringToBytes,
+
+  fromString,
+  fromBytes,
+  validateBytes,
+  isValidBytes,
+  cleanPath,
+
+  ParseError,
+  protoFromTuple,
+
+  sizeForAddr
+}
+
+// string -> [[str name, str addr]... ]
+/**
+ * @param {string} str
+ */
+function stringToStringTuples (str) {
+  const tuples = []
+  const parts = str.split('/').slice(1) // skip first empty elem
+  if (parts.length === 1 && parts[0] === '') {
+    return []
+  }
+
+  for (let p = 0; p < parts.length; p++) {
+    const part = parts[p]
+    const proto = protocols(part)
+
+    if (proto.size === 0) {
+      tuples.push([part])
+      continue
+    }
+
+    p++ // advance addr part
+    if (p >= parts.length) {
+      throw ParseError('invalid address: ' + str)
+    }
+
+    // if it's a path proto, take the rest
+    if (proto.path) {
+      tuples.push([
+        part,
+        // TODO: should we need to check each path part to see if it's a proto?
+        // This would allow for other protocols to be added after a unix path,
+        // however it would have issues if the path had a protocol name in the path
+        cleanPath(parts.slice(p).join('/'))
+      ])
+      break
+    }
+
+    tuples.push([part, parts[p]])
+  }
+
+  return tuples
+}
+
+// [[str name, str addr]... ] -> string
+/**
+ * @param {[number, string?][]} tuples
+ */
+function stringTuplesToString (tuples) {
+  /** @type {Array<string | undefined>} */
+  const parts = []
+  tuples.map((tup) => {
+    const proto = protoFromTuple(tup)
+    parts.push(proto.name)
+    if (tup.length > 1) {
+      parts.push(tup[1])
+    }
+    return null
+  })
+
+  return cleanPath(parts.join('/'))
+}
+
+// [[str name, str addr]... ] -> [[int code, Uint8Array]... ]
+/**
+ * @param {Array<string[] | string >} tuples
+ * @returns {[number , Uint8Array?][]}
+ */
+function stringTuplesToTuples (tuples) {
+  return tuples.map((tup) => {
+    if (!Array.isArray(tup)) {
+      tup = [tup]
+    }
+    const proto = protoFromTuple(tup)
+    if (tup.length > 1) {
+      return [proto.code, convert.toBytes(proto.code, tup[1])]
+    }
+    return [proto.code]
+  })
+}
+
+/**
+ * Convert tuples to string tuples
+ *
+ * [[int code, Uint8Array]... ] -> [[int code, str addr]... ]
+ *
+ * @param {Array<[number, Uint8Array?]>} tuples
+ * @returns {Array<[number, string?]>}
+ */
+
+function tuplesToStringTuples (tuples) {
+  return tuples.map(tup => {
+    const proto = protoFromTuple(tup)
+    if (tup[1]) {
+      return [proto.code, convert.toString(proto.code, tup[1])]
+    }
+    return [proto.code]
+  })
+}
+
+// [[int code, Uint8Array ]... ] -> Uint8Array
+/**
+ * @param {[number, Uint8Array?][]} tuples
+ */
+function tuplesToBytes (tuples) {
+  return fromBytes(uint8ArrayConcat(tuples.map((/** @type {any[]} */ tup) => {
+    const proto = protoFromTuple(tup)
+    let buf = Uint8Array.from(varint.encode(proto.code))
+
+    if (tup.length > 1) {
+      buf = uint8ArrayConcat([buf, tup[1]]) // add address buffer
+    }
+
+    return buf
+  })))
+}
+
+/**
+ * @param {import("./types").Protocol} p
+ * @param {Uint8Array | number[]} addr
+ */
+function sizeForAddr (p, addr) {
+  if (p.size > 0) {
+    return p.size / 8
+  } else if (p.size === 0) {
+    return 0
+  } else {
+    const size = varint.decode(addr)
+    return size + varint.decode.bytes
+  }
+}
+
+/**
+ *
+ * @param {Uint8Array} buf
+ * @returns {Array<[number, Uint8Array?]>}
+ */
+function bytesToTuples (buf) {
+  /** @type {Array<[number, Uint8Array?]>} */
+  const tuples = []
+  let i = 0
+  while (i < buf.length) {
+    const code = varint.decode(buf, i)
+    const n = varint.decode.bytes
+
+    const p = protocols(code)
+
+    const size = sizeForAddr(p, buf.slice(i + n))
+
+    if (size === 0) {
+      tuples.push([code])
+      i += n
+      continue
+    }
+
+    const addr = buf.slice(i + n, i + n + size)
+
+    i += (size + n)
+
+    if (i > buf.length) { // did not end _exactly_ at buffer.length
+      throw ParseError('Invalid address Uint8Array: ' + uint8ArrayToString(buf, 'base16'))
+    }
+
+    // ok, tuple seems good.
+    tuples.push([code, addr])
+  }
+
+  return tuples
+}
+
+// Uint8Array -> String
+/**
+ * @param {Uint8Array} buf
+ */
+function bytesToString (buf) {
+  const a = bytesToTuples(buf)
+  const b = tuplesToStringTuples(a)
+  return stringTuplesToString(b)
+}
+
+// String -> Uint8Array
+/**
+ * @param {string} str
+ */
+function stringToBytes (str) {
+  str = cleanPath(str)
+  const a = stringToStringTuples(str)
+  const b = stringTuplesToTuples(a)
+
+  return tuplesToBytes(b)
+}
+
+// String -> Uint8Array
+/**
+ * @param {string} str
+ */
+function fromString (str) {
+  return stringToBytes(str)
+}
+
+// Uint8Array -> Uint8Array
+/**
+ * @param {Uint8Array} buf
+ */
+function fromBytes (buf) {
+  const err = validateBytes(buf)
+  if (err) throw err
+  return Uint8Array.from(buf) // copy
+}
+
+/**
+ * @param {Uint8Array} buf
+ */
+function validateBytes (buf) {
+  try {
+    bytesToTuples(buf) // try to parse. will throw if breaks
+  } catch (err) {
+    return err
+  }
+}
+
+/**
+ * @param {Uint8Array} buf
+ */
+function isValidBytes (buf) {
+  return validateBytes(buf) === undefined
+}
+
+/**
+ * @param {string} str
+ */
+function cleanPath (str) {
+  return '/' + str.trim().split('/').filter((/** @type {any} */ a) => a).join('/')
+}
+
+/**
+ * @param {string} str
+ */
+function ParseError (str) {
+  return new Error('Error parsing address: ' + str)
+}
+
+/**
+ * @param {any[]} tup
+ */
+function protoFromTuple (tup) {
+  const proto = protocols(tup[0])
+  return proto
+}
+
+
+/***/ }),
+
+/***/ 6789:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+const ip = __nccwpck_require__(6133)
+const protocols = __nccwpck_require__(6354)
+const CID = __nccwpck_require__(9016)
+const multibase = __nccwpck_require__(8959)
+const varint = __nccwpck_require__(2853)
+const uint8ArrayToString = __nccwpck_require__(8328)
+const uint8ArrayFromString = __nccwpck_require__(7349)
+const uint8ArrayConcat = __nccwpck_require__(3745)
+
+module.exports = Convert
+
+// converts (serializes) addresses
+/**
+ * @param {string} proto
+ * @param {string | Uint8Array} a
+ */
+function Convert (proto, a) {
+  if (a instanceof Uint8Array) {
+    return Convert.toString(proto, a)
+  } else {
+    return Convert.toBytes(proto, a)
+  }
+}
+
+/**
+ * Convert [code,Uint8Array] to string
+ *
+ * @param {number|string} proto
+ * @param {Uint8Array} buf
+ * @returns {string}
+ */
+Convert.toString = function convertToString (proto, buf) {
+  const protocol = protocols(proto)
+  switch (protocol.code) {
+    case 4: // ipv4
+    case 41: // ipv6
+      return bytes2ip(buf)
+
+    case 6: // tcp
+    case 273: // udp
+    case 33: // dccp
+    case 132: // sctp
+      return bytes2port(buf).toString()
+
+    case 53: // dns
+    case 54: // dns4
+    case 55: // dns6
+    case 56: // dnsaddr
+    case 400: // unix
+    case 777: // memory
+      return bytes2str(buf)
+
+    case 421: // ipfs
+      return bytes2mh(buf)
+    case 444: // onion
+      return bytes2onion(buf)
+    case 445: // onion3
+      return bytes2onion(buf)
+    default:
+      return uint8ArrayToString(buf, 'base16') // no clue. convert to hex
+  }
+}
+
+Convert.toBytes = function convertToBytes (/** @type {string | number } */ proto, /** @type {string} */ str) {
+  const protocol = protocols(proto)
+  switch (protocol.code) {
+    case 4: // ipv4
+      return ip2bytes(str)
+    case 41: // ipv6
+      return ip2bytes(str)
+
+    case 6: // tcp
+    case 273: // udp
+    case 33: // dccp
+    case 132: // sctp
+      return port2bytes(parseInt(str, 10))
+
+    case 53: // dns
+    case 54: // dns4
+    case 55: // dns6
+    case 56: // dnsaddr
+    case 400: // unix
+    case 777: // memory
+      return str2bytes(str)
+
+    case 421: // ipfs
+      return mh2bytes(str)
+    case 444: // onion
+      return onion2bytes(str)
+    case 445: // onion3
+      return onion32bytes(str)
+    default:
+      return uint8ArrayFromString(str, 'base16') // no clue. convert from hex
+  }
+}
+
+/**
+ * @param {string} ipString
+ */
+function ip2bytes (ipString) {
+  if (!ip.isIP(ipString)) {
+    throw new Error('invalid ip address')
+  }
+  return ip.toBytes(ipString)
+}
+
+/**
+ * @param {Uint8Array} ipBuff
+ */
+function bytes2ip (ipBuff) {
+  const ipString = ip.toString(ipBuff)
+  if (!ipString || !ip.isIP(ipString)) {
+    throw new Error('invalid ip address')
+  }
+  return ipString
+}
+
+/**
+ * @param {number} port
+ */
+function port2bytes (port) {
+  const buf = new ArrayBuffer(2)
+  const view = new DataView(buf)
+  view.setUint16(0, port)
+
+  return new Uint8Array(buf)
+}
+
+/**
+ * @param {Uint8Array} buf
+ */
+function bytes2port (buf) {
+  const view = new DataView(buf.buffer)
+  return view.getUint16(buf.byteOffset)
+}
+
+/**
+ * @param {string} str
+ */
+function str2bytes (str) {
+  const buf = uint8ArrayFromString(str)
+  const size = Uint8Array.from(varint.encode(buf.length))
+  return uint8ArrayConcat([size, buf], size.length + buf.length)
+}
+
+/**
+ * @param {Uint8Array} buf
+ */
+function bytes2str (buf) {
+  const size = varint.decode(buf)
+  buf = buf.slice(varint.decode.bytes)
+
+  if (buf.length !== size) {
+    throw new Error('inconsistent lengths')
+  }
+
+  return uint8ArrayToString(buf)
+}
+
+/**
+ * @param {string | Uint8Array | CID} hash
+ */
+function mh2bytes (hash) {
+  // the address is a varint prefixed multihash string representation
+  const mh = new CID(hash).multihash
+  const size = Uint8Array.from(varint.encode(mh.length))
+  return uint8ArrayConcat([size, mh], size.length + mh.length)
+}
+
+/**
+ * Converts bytes to bas58btc string
+ *
+ * @param {Uint8Array} buf
+ * @returns {string} bas58btc string
+ */
+function bytes2mh (buf) {
+  const size = varint.decode(buf)
+  const address = buf.slice(varint.decode.bytes)
+
+  if (address.length !== size) {
+    throw new Error('inconsistent lengths')
+  }
+
+  return uint8ArrayToString(address, 'base58btc')
+}
+
+/**
+ * @param {string} str
+ */
+function onion2bytes (str) {
+  const addr = str.split(':')
+  if (addr.length !== 2) {
+    throw new Error('failed to parse onion addr: ' + addr + ' does not contain a port number')
+  }
+  if (addr[0].length !== 16) {
+    throw new Error('failed to parse onion addr: ' + addr[0] + ' not a Tor onion address.')
+  }
+
+  // onion addresses do not include the multibase prefix, add it before decoding
+  const buf = multibase.decode('b' + addr[0])
+
+  // onion port number
+  const port = parseInt(addr[1], 10)
+  if (port < 1 || port > 65536) {
+    throw new Error('Port number is not in range(1, 65536)')
+  }
+  const portBuf = port2bytes(port)
+  return uint8ArrayConcat([buf, portBuf], buf.length + portBuf.length)
+}
+
+/**
+ * @param {string} str
+ */
+function onion32bytes (str) {
+  const addr = str.split(':')
+  if (addr.length !== 2) {
+    throw new Error('failed to parse onion addr: ' + addr + ' does not contain a port number')
+  }
+  if (addr[0].length !== 56) {
+    throw new Error('failed to parse onion addr: ' + addr[0] + ' not a Tor onion3 address.')
+  }
+  // onion addresses do not include the multibase prefix, add it before decoding
+  const buf = multibase.decode('b' + addr[0])
+
+  // onion port number
+  const port = parseInt(addr[1], 10)
+  if (port < 1 || port > 65536) {
+    throw new Error('Port number is not in range(1, 65536)')
+  }
+  const portBuf = port2bytes(port)
+  return uint8ArrayConcat([buf, portBuf], buf.length + portBuf.length)
+}
+
+/**
+ * @param {Uint8Array} buf
+ */
+function bytes2onion (buf) {
+  const addrBytes = buf.slice(0, buf.length - 2)
+  const portBytes = buf.slice(buf.length - 2)
+  const addr = uint8ArrayToString(addrBytes, 'base32')
+  const port = bytes2port(portBytes)
+  return addr + ':' + port
+}
+
+
+/***/ }),
+
+/***/ 7642:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+const codec = __nccwpck_require__(2152)
+const protocols = __nccwpck_require__(6354)
+const varint = __nccwpck_require__(2853)
+const CID = __nccwpck_require__(9016)
+const errCode = __nccwpck_require__(2997)
+const inspect = Symbol.for('nodejs.util.inspect.custom')
+const uint8ArrayToString = __nccwpck_require__(8328)
+const uint8ArrayEquals = __nccwpck_require__(953)
+
+/**
+ * @typedef {(addr: Multiaddr) => Promise<string[]>} Resolver
+ * @typedef {string | Multiaddr | Uint8Array | null} MultiaddrInput
+ * @typedef {import('./types').MultiaddrObject} MultiaddrObject
+ * @typedef {import('./types').Protocol} Protocol
+ */
+
+/** @type {Map<string, Resolver>} */
+const resolvers = new Map()
+const symbol = Symbol.for('@multiformats/js-multiaddr/multiaddr')
+
+/**
+ * Creates a [multiaddr](https://github.com/multiformats/multiaddr) from
+ * a Uint8Array, String or another Multiaddr instance
+ * public key.
+ *
+ */
+class Multiaddr {
+  /**
+   * @example
+   * ```js
+   * new Multiaddr('/ip4/127.0.0.1/tcp/4001')
+   * // <Multiaddr 047f000001060fa1 - /ip4/127.0.0.1/tcp/4001>
+   * ```
+   *
+   * @param {MultiaddrInput} [addr] - If String or Uint8Array, needs to adhere to the address format of a [multiaddr](https://github.com/multiformats/multiaddr#string-format)
+   */
+  constructor (addr) {
+    // default
+    if (addr == null) {
+      addr = ''
+    }
+
+    // Define symbol
+    Object.defineProperty(this, symbol, { value: true })
+
+    if (addr instanceof Uint8Array) {
+      /** @type {Uint8Array} - The raw bytes representing this multiaddress */
+      this.bytes = codec.fromBytes(addr)
+    } else if (typeof addr === 'string') {
+      if (addr.length > 0 && addr.charAt(0) !== '/') {
+        throw new Error(`multiaddr "${addr}" must start with a "/"`)
+      }
+      this.bytes = codec.fromString(addr)
+    } else if (Multiaddr.isMultiaddr(addr)) { // Multiaddr
+      this.bytes = codec.fromBytes(addr.bytes) // validate + copy buffer
+    } else {
+      throw new Error('addr must be a string, Buffer, or another Multiaddr')
+    }
+  }
+
+  /**
+   * Returns Multiaddr as a String
+   *
+   * @example
+   * ```js
+   * new Multiaddr('/ip4/127.0.0.1/tcp/4001').toString()
+   * // '/ip4/127.0.0.1/tcp/4001'
+   * ```
+   */
+  toString () {
+    return codec.bytesToString(this.bytes)
+  }
+
+  /**
+   * Returns Multiaddr as a JSON encoded object
+   *
+   * @example
+   * ```js
+   * JSON.stringify(new Multiaddr('/ip4/127.0.0.1/tcp/4001'))
+   * // '/ip4/127.0.0.1/tcp/4001'
+   * ```
+   */
+  toJSON () {
+    return this.toString()
+  }
+
+  /**
+   * Returns Multiaddr as a convinient options object to be used with net.createConnection
+   *
+   * @example
+   * ```js
+   * new Multiaddr('/ip4/127.0.0.1/tcp/4001').toOptions()
+   * // { family: 4, host: '127.0.0.1', transport: 'tcp', port: 4001 }
+   * ```
+   */
+  toOptions () {
+    /** @type {MultiaddrObject} */
+    const opts = {}
+    const parsed = this.toString().split('/')
+    opts.family = parsed[1] === 'ip4' ? 4 : 6
+    opts.host = parsed[2]
+    opts.transport = parsed[3]
+    opts.port = parseInt(parsed[4])
+    return opts
+  }
+
+  /**
+   * Returns the protocols the Multiaddr is defined with, as an array of objects, in
+   * left-to-right order. Each object contains the protocol code, protocol name,
+   * and the size of its address space in bits.
+   * [See list of protocols](https://github.com/multiformats/multiaddr/blob/master/protocols.csv)
+   *
+   * @example
+   * ```js
+   * new Multiaddr('/ip4/127.0.0.1/tcp/4001').protos()
+   * // [ { code: 4, size: 32, name: 'ip4' },
+   * //   { code: 6, size: 16, name: 'tcp' } ]
+   * ```
+   *
+   * @returns {Protocol[]} protocols - All the protocols the address is composed of
+   */
+  protos () {
+    return this.protoCodes().map(code => Object.assign({}, protocols(code)))
+  }
+
+  /**
+   * Returns the codes of the protocols in left-to-right order.
+   * [See list of protocols](https://github.com/multiformats/multiaddr/blob/master/protocols.csv)
+   *
+   * @example
+   * ```js
+   * Multiaddr('/ip4/127.0.0.1/tcp/4001').protoCodes()
+   * // [ 4, 6 ]
+   * ```
+   *
+   * @returns {number[]} protocol codes
+   */
+  protoCodes () {
+    const codes = []
+    const buf = this.bytes
+    let i = 0
+    while (i < buf.length) {
+      const code = varint.decode(buf, i)
+      const n = varint.decode.bytes
+
+      const p = protocols(code)
+      const size = codec.sizeForAddr(p, buf.slice(i + n))
+
+      i += (size + n)
+      codes.push(code)
+    }
+
+    return codes
+  }
+
+  /**
+   * Returns the names of the protocols in left-to-right order.
+   * [See list of protocols](https://github.com/multiformats/multiaddr/blob/master/protocols.csv)
+   *
+   * @example
+   * ```js
+   * new Multiaddr('/ip4/127.0.0.1/tcp/4001').protoNames()
+   * // [ 'ip4', 'tcp' ]
+   * ```
+   *
+   * @returns {string[]} protocol names
+   */
+  protoNames () {
+    return this.protos().map(proto => proto.name)
+  }
+
+  /**
+   * Returns a tuple of parts
+   *
+   * @example
+   * ```js
+   * new Multiaddr("/ip4/127.0.0.1/tcp/4001").tuples()
+   * // [ [ 4, <Buffer 7f 00 00 01> ], [ 6, <Buffer 0f a1> ] ]
+   * ```
+   */
+  tuples () {
+    return codec.bytesToTuples(this.bytes)
+  }
+
+  /**
+   * Returns a tuple of string/number parts
+   * - tuples[][0] = code of protocol
+   * - tuples[][1] = contents of address
+   *
+   * @example
+   * ```js
+   * new Multiaddr("/ip4/127.0.0.1/tcp/4001").stringTuples()
+   * // [ [ 4, '127.0.0.1' ], [ 6, '4001' ] ]
+   * ```
+   */
+  stringTuples () {
+    const t = codec.bytesToTuples(this.bytes)
+    return codec.tuplesToStringTuples(t)
+  }
+
+  /**
+   * Encapsulates a Multiaddr in another Multiaddr
+   *
+   * @example
+   * ```js
+   * const mh1 = new Multiaddr('/ip4/8.8.8.8/tcp/1080')
+   * // <Multiaddr 0408080808060438 - /ip4/8.8.8.8/tcp/1080>
+   *
+   * const mh2 = new Multiaddr('/ip4/127.0.0.1/tcp/4001')
+   * // <Multiaddr 047f000001060fa1 - /ip4/127.0.0.1/tcp/4001>
+   *
+   * const mh3 = mh1.encapsulate(mh2)
+   * // <Multiaddr 0408080808060438047f000001060fa1 - /ip4/8.8.8.8/tcp/1080/ip4/127.0.0.1/tcp/4001>
+   *
+   * mh3.toString()
+   * // '/ip4/8.8.8.8/tcp/1080/ip4/127.0.0.1/tcp/4001'
+   * ```
+   *
+   * @param {MultiaddrInput} addr - Multiaddr to add into this Multiaddr
+   */
+  encapsulate (addr) {
+    addr = new Multiaddr(addr)
+    return new Multiaddr(this.toString() + addr.toString())
+  }
+
+  /**
+   * Decapsulates a Multiaddr from another Multiaddr
+   *
+   * @example
+   * ```js
+   * const mh1 = new Multiaddr('/ip4/8.8.8.8/tcp/1080')
+   * // <Multiaddr 0408080808060438 - /ip4/8.8.8.8/tcp/1080>
+   *
+   * const mh2 = new Multiaddr('/ip4/127.0.0.1/tcp/4001')
+   * // <Multiaddr 047f000001060fa1 - /ip4/127.0.0.1/tcp/4001>
+   *
+   * const mh3 = mh1.encapsulate(mh2)
+   * // <Multiaddr 0408080808060438047f000001060fa1 - /ip4/8.8.8.8/tcp/1080/ip4/127.0.0.1/tcp/4001>
+   *
+   * mh3.decapsulate(mh2).toString()
+   * // '/ip4/8.8.8.8/tcp/1080'
+   * ```
+   *
+   * @param {Multiaddr | string} addr - Multiaddr to remove from this Multiaddr
+   * @returns {Multiaddr}
+   */
+  decapsulate (addr) {
+    const addrString = addr.toString()
+    const s = this.toString()
+    const i = s.lastIndexOf(addrString)
+    if (i < 0) {
+      throw new Error('Address ' + this + ' does not contain subaddress: ' + addr)
+    }
+    return new Multiaddr(s.slice(0, i))
+  }
+
+  /**
+   * A more reliable version of `decapsulate` if you are targeting a
+   * specific code, such as 421 (the `p2p` protocol code). The last index of the code
+   * will be removed from the `Multiaddr`, and a new instance will be returned.
+   * If the code is not present, the original `Multiaddr` is returned.
+   *
+   * @example
+   * ```js
+   * const addr = new Multiaddr('/ip4/0.0.0.0/tcp/8080/p2p/QmcgpsyWgH8Y8ajJz1Cu72KnS5uo2Aa2LpzU7kinSupNKC')
+   * // <Multiaddr 0400... - /ip4/0.0.0.0/tcp/8080/p2p/QmcgpsyWgH8Y8ajJz1Cu72KnS5uo2Aa2LpzU7kinSupNKC>
+   *
+   * addr.decapsulateCode(421).toString()
+   * // '/ip4/0.0.0.0/tcp/8080'
+   *
+   * new Multiaddr('/ip4/127.0.0.1/tcp/8080').decapsulateCode(421).toString()
+   * // '/ip4/127.0.0.1/tcp/8080'
+   * ```
+   *
+   * @param {number} code - The code of the protocol to decapsulate from this Multiaddr
+   * @returns {Multiaddr}
+   */
+  decapsulateCode (code) {
+    const tuples = this.tuples()
+    for (let i = tuples.length - 1; i >= 0; i--) {
+      if (tuples[i][0] === code) {
+        return new Multiaddr(codec.tuplesToBytes(tuples.slice(0, i)))
+      }
+    }
+    return this
+  }
+
+  /**
+   * Extract the peerId if the multiaddr contains one
+   *
+   * @example
+   * ```js
+   * const mh1 = new Multiaddr('/ip4/8.8.8.8/tcp/1080/ipfs/QmValidBase58string')
+   * // <Multiaddr 0408080808060438 - /ip4/8.8.8.8/tcp/1080/ipfs/QmValidBase58string>
+   *
+   * // should return QmValidBase58string or null if the id is missing or invalid
+   * const peerId = mh1.getPeerId()
+   * ```
+   *
+   * @returns {string | null} peerId - The id of the peer or null if invalid or missing from the ma
+   */
+  getPeerId () {
+    try {
+      const tuples = this.stringTuples().filter((tuple) => {
+        if (tuple[0] === protocols.names.ipfs.code) {
+          return true
+        }
+        return false
+      })
+
+      // Get the last ipfs tuple ['ipfs', 'peerid string']
+      const tuple = tuples.pop()
+      if (tuple && tuple[1]) {
+        // Get multihash, unwrap from CID if needed
+        return uint8ArrayToString(new CID(tuple[1]).multihash, 'base58btc')
+      } else {
+        return null
+      }
+    } catch (e) {
+      return null
+    }
+  }
+
+  /**
+   * Extract the path if the multiaddr contains one
+   *
+   * @example
+   * ```js
+   * const mh1 = new Multiaddr('/ip4/8.8.8.8/tcp/1080/unix/tmp/p2p.sock')
+   * // <Multiaddr 0408080808060438 - /ip4/8.8.8.8/tcp/1080/unix/tmp/p2p.sock>
+   *
+   * // should return utf8 string or null if the id is missing or invalid
+   * const path = mh1.getPath()
+   * ```js
+   *
+   * @returns {string | null} path - The path of the multiaddr, or null if no path protocol is present
+   */
+  getPath () {
+    let path = null
+    try {
+      path = this.stringTuples().filter((tuple) => {
+        const proto = protocols(tuple[0])
+        if (proto.path) {
+          return true
+        }
+        return false
+      })[0][1]
+
+      if (!path) {
+        path = null
+      }
+    } catch (e) {
+      path = null
+    }
+    return path
+  }
+
+  /**
+   * Checks if two Multiaddrs are the same
+   *
+   * @example
+   * ```js
+   * const mh1 = new Multiaddr('/ip4/8.8.8.8/tcp/1080')
+   * // <Multiaddr 0408080808060438 - /ip4/8.8.8.8/tcp/1080>
+   *
+   * const mh2 = new Multiaddr('/ip4/127.0.0.1/tcp/4001')
+   * // <Multiaddr 047f000001060fa1 - /ip4/127.0.0.1/tcp/4001>
+   *
+   * mh1.equals(mh1)
+   * // true
+   *
+   * mh1.equals(mh2)
+   * // false
+   * ```
+   *
+   * @param {Multiaddr} addr
+   * @returns {boolean}
+   */
+  equals (addr) {
+    return uint8ArrayEquals(this.bytes, addr.bytes)
+  }
+
+  /**
+   * Resolve multiaddr if containing resolvable hostname.
+   *
+   * @example
+   * ```js
+   * Multiaddr.resolvers.set('dnsaddr', resolverFunction)
+   * const mh1 = new Multiaddr('/dnsaddr/bootstrap.libp2p.io/p2p/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb')
+   * const resolvedMultiaddrs = await mh1.resolve()
+   * // [
+   * //   <Multiaddr 04934b5353060fa1a503221220c10f9319dac35c270a6b74cd644cb3acfc1f6efc8c821f8eb282599fd1814f64 - /ip4/147.75.83.83/tcp/4001/p2p/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb>,
+   * //   <Multiaddr 04934b53530601bbde03a503221220c10f9319dac35c270a6b74cd644cb3acfc1f6efc8c821f8eb282599fd1814f64 - /ip4/147.75.83.83/tcp/443/wss/p2p/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb>,
+   * //   <Multiaddr 04934b535391020fa1cc03a503221220c10f9319dac35c270a6b74cd644cb3acfc1f6efc8c821f8eb282599fd1814f64 - /ip4/147.75.83.83/udp/4001/quic/p2p/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb>
+   * // ]
+   * ```
+   *
+   * @returns {Promise<Array<Multiaddr>>}
+   */
+  async resolve () {
+    const resolvableProto = this.protos().find((p) => p.resolvable)
+
+    // Multiaddr is not resolvable?
+    if (!resolvableProto) {
+      return [this]
+    }
+
+    const resolver = resolvers.get(resolvableProto.name)
+    if (!resolver) {
+      throw errCode(new Error(`no available resolver for ${resolvableProto.name}`), 'ERR_NO_AVAILABLE_RESOLVER')
+    }
+
+    const addresses = await resolver(this)
+    return addresses.map((a) => new Multiaddr(a))
+  }
+
+  /**
+   * Gets a Multiaddrs node-friendly address object. Note that protocol information
+   * is left out: in Node (and most network systems) the protocol is unknowable
+   * given only the address.
+   *
+   * Has to be a ThinWaist Address, otherwise throws error
+   *
+   * @example
+   * ```js
+   * new Multiaddr('/ip4/127.0.0.1/tcp/4001').nodeAddress()
+   * // {family: 4, address: '127.0.0.1', port: 4001}
+   * ```
+   *
+   * @returns {{family: 4 | 6, address: string, port: number}}
+   * @throws {Error} Throws error if Multiaddr is not a Thin Waist address
+   */
+  nodeAddress () {
+    const codes = this.protoCodes()
+    const names = this.protoNames()
+    const parts = this.toString().split('/').slice(1)
+
+    if (parts.length < 4) {
+      throw new Error('multiaddr must have a valid format: "/{ip4, ip6, dns4, dns6}/{address}/{tcp, udp}/{port}".')
+    } else if (codes[0] !== 4 && codes[0] !== 41 && codes[0] !== 54 && codes[0] !== 55) {
+      throw new Error(`no protocol with name: "'${names[0]}'". Must have a valid family name: "{ip4, ip6, dns4, dns6}".`)
+    } else if (parts[2] !== 'tcp' && parts[2] !== 'udp') {
+      throw new Error(`no protocol with name: "'${names[1]}'". Must have a valid transport protocol: "{tcp, udp}".`)
+    }
+
+    return {
+      family: (codes[0] === 41 || codes[0] === 55) ? 6 : 4,
+      address: parts[1],
+      port: parseInt(parts[3]) // tcp or udp port
+    }
+  }
+
+  /**
+   * Returns if a Multiaddr is a Thin Waist address or not.
+   *
+   * Thin Waist is if a Multiaddr adheres to the standard combination of:
+   *
+   * `{IPv4, IPv6}/{TCP, UDP}`
+   *
+   * @example
+   * ```js
+   * const mh1 = new Multiaddr('/ip4/127.0.0.1/tcp/4001')
+   * // <Multiaddr 047f000001060fa1 - /ip4/127.0.0.1/tcp/4001>
+   * const mh2 = new Multiaddr('/ip4/192.168.2.1/tcp/5001')
+   * // <Multiaddr 04c0a80201061389 - /ip4/192.168.2.1/tcp/5001>
+   * const mh3 = mh1.encapsulate(mh2)
+   * // <Multiaddr 047f000001060fa104c0a80201061389 - /ip4/127.0.0.1/tcp/4001/ip4/192.168.2.1/tcp/5001>
+   * const mh4 = new Multiaddr('/ip4/127.0.0.1/tcp/2000/wss/p2p-webrtc-star/p2p/QmcgpsyWgH8Y8ajJz1Cu72KnS5uo2Aa2LpzU7kinSooo2a')
+   * // <Multiaddr 047f0000010607d0de039302a503221220d52ebb89d85b02a284948203a62ff28389c57c9f42beec4ec20db76a64835843 - /ip4/127.0.0.1/tcp/2000/wss/p2p-webrtc-star/p2p/QmcgpsyWgH8Y8ajJz1Cu72KnS5uo2Aa2LpzU7kinSooo2a>
+   * mh1.isThinWaistAddress()
+   * // true
+   * mh2.isThinWaistAddress()
+   * // true
+   * mh3.isThinWaistAddress()
+   * // false
+   * mh4.isThinWaistAddress()
+   * // false
+   * ```
+   *
+   * @param {Multiaddr} [addr] - Defaults to using `this` instance
+   */
+  isThinWaistAddress (addr) {
+    const protos = (addr || this).protos()
+
+    if (protos.length !== 2) {
+      return false
+    }
+
+    if (protos[0].code !== 4 && protos[0].code !== 41) {
+      return false
+    }
+    if (protos[1].code !== 6 && protos[1].code !== 273) {
+      return false
+    }
+    return true
+  }
+
+  /**
+   * Creates a Multiaddr from a node-friendly address object
+   *
+   * @example
+   * ```js
+   * Multiaddr.fromNodeAddress({address: '127.0.0.1', port: '4001'}, 'tcp')
+   * // <Multiaddr 047f000001060fa1 - /ip4/127.0.0.1/tcp/4001>
+   * ```
+   *
+   * @param {{family: 4 | 6, address: string, port: number}} addr
+   * @param {string} transport
+   */
+  static fromNodeAddress (addr, transport) {
+    if (!addr) { throw new Error('requires node address object') }
+    if (!transport) { throw new Error('requires transport protocol') }
+    let ip
+    switch (addr.family) {
+      case 4:
+        ip = 'ip4'
+        break
+      case 6:
+        ip = 'ip6'
+        break
+      default:
+        throw Error(`Invalid addr family. Got '${addr.family}' instead of 4 or 6`)
+    }
+    return new Multiaddr('/' + [ip, addr.address, transport, addr.port].join('/'))
+  }
+
+  /**
+   * Returns if something is a Multiaddr that is a name
+   *
+   * @param {Multiaddr} addr
+   * @returns {boolean} isName
+   */
+  static isName (addr) {
+    if (!Multiaddr.isMultiaddr(addr)) {
+      return false
+    }
+
+    // if a part of the multiaddr is resolvable, then return true
+    return addr.protos().some((proto) => proto.resolvable)
+  }
+
+  /**
+   * Check if object is a CID instance
+   *
+   * @param {any} value
+   * @returns {value is Multiaddr}
+   */
+  static isMultiaddr (value) {
+    return value instanceof Multiaddr || Boolean(value && value[symbol])
+  }
+
+  /**
+   * Returns Multiaddr as a human-readable string.
+   * For post Node.js v10.0.0.
+   * https://nodejs.org/api/deprecations.html#deprecations_dep0079_custom_inspection_function_on_objects_via_inspect
+   *
+   * @example
+   * ```js
+   * console.log(new Multiaddr('/ip4/127.0.0.1/tcp/4001'))
+   * // '<Multiaddr 047f000001060fa1 - /ip4/127.0.0.1/tcp/4001>'
+   * ```
+   *
+   * @returns {string}
+   */
+  [inspect] () {
+    return '<Multiaddr ' +
+    uint8ArrayToString(this.bytes, 'base16') + ' - ' +
+    codec.bytesToString(this.bytes) + '>'
+  }
+
+  /**
+   * Returns Multiaddr as a human-readable string.
+   * Fallback for pre Node.js v10.0.0.
+   * https://nodejs.org/api/deprecations.html#deprecations_dep0079_custom_inspection_function_on_objects_via_inspect
+   *
+   * @example
+   * ```js
+   * new Multiaddr('/ip4/127.0.0.1/tcp/4001').inspect()
+   * // '<Multiaddr 047f000001060fa1 - /ip4/127.0.0.1/tcp/4001>'
+   * ```
+   *
+   * @returns {string}
+   */
+  inspect () {
+    return '<Multiaddr ' +
+      uint8ArrayToString(this.bytes, 'base16') + ' - ' +
+      codec.bytesToString(this.bytes) + '>'
+  }
+}
+
+/**
+ * Object containing table, names and codes of all supported protocols.
+ * To get the protocol values from a Multiaddr, you can use
+ * [`.protos()`](#multiaddrprotos),
+ * [`.protoCodes()`](#multiaddrprotocodes) or
+ * [`.protoNames()`](#multiaddrprotonames)
+ *
+ * @returns {{table: Array, names: Object, codes: Object}}
+ */
+Multiaddr.protocols = protocols
+
+Multiaddr.resolvers = resolvers
+
+/**
+ * Static factory
+ *
+ * @param {MultiaddrInput} addr
+ */
+function multiaddr (addr) {
+  return new Multiaddr(addr)
+}
+
+module.exports = { Multiaddr, multiaddr, protocols, resolvers }
+
+
+/***/ }),
+
+/***/ 6133:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+const isIp = __nccwpck_require__(4975)
+const uint8ArrayToString = __nccwpck_require__(8328)
+
+const isIP = isIp
+const isV4 = isIp.v4
+const isV6 = isIp.v6
+
+// Copied from https://github.com/indutny/node-ip/blob/master/lib/ip.js#L7
+// @ts-ignore - this is copied from the link above better to keep it the same
+const toBytes = function (ip, buff, offset) {
+  offset = ~~offset
+
+  let result
+
+  if (isV4(ip)) {
+    result = buff || new Uint8Array(offset + 4)
+    // @ts-ignore
+    // eslint-disable-next-line array-callback-return
+    ip.split(/\./g).map(function (byte) {
+      result[offset++] = parseInt(byte, 10) & 0xff
+    })
+  } else if (isV6(ip)) {
+    const sections = ip.split(':', 8)
+
+    let i
+    for (i = 0; i < sections.length; i++) {
+      const isv4 = isV4(sections[i])
+      var v4Buffer
+
+      if (isv4) {
+        v4Buffer = toBytes(sections[i])
+        sections[i] = uint8ArrayToString(v4Buffer.slice(0, 2), 'base16')
+      }
+
+      if (v4Buffer && ++i < 8) {
+        sections.splice(i, 0, uint8ArrayToString(v4Buffer.slice(2, 4), 'base16'))
+      }
+    }
+
+    if (sections[0] === '') {
+      while (sections.length < 8) sections.unshift('0')
+    } else if (sections[sections.length - 1] === '') {
+      while (sections.length < 8) sections.push('0')
+    } else if (sections.length < 8) {
+      for (i = 0; i < sections.length && sections[i] !== ''; i++);
+      const argv = [i, '1']
+      for (i = 9 - sections.length; i > 0; i--) {
+        argv.push('0')
+      }
+      sections.splice.apply(sections, argv)
+    }
+
+    result = buff || new Uint8Array(offset + 16)
+    for (i = 0; i < sections.length; i++) {
+      const word = parseInt(sections[i], 16)
+      result[offset++] = (word >> 8) & 0xff
+      result[offset++] = word & 0xff
+    }
+  }
+
+  if (!result) {
+    throw Error('Invalid ip address: ' + ip)
+  }
+
+  return result
+}
+
+// Copied from https://github.com/indutny/node-ip/blob/master/lib/ip.js#L63
+// @ts-ignore - this is copied from the link above better to keep it the same
+const toString = function (buff, offset, length) {
+  offset = ~~offset
+  length = length || (buff.length - offset)
+
+  const result = []
+  let string
+  const view = new DataView(buff.buffer)
+  if (length === 4) {
+    // IPv4
+    for (let i = 0; i < length; i++) {
+      result.push(buff[offset + i])
+    }
+    string = result.join('.')
+  } else if (length === 16) {
+    // IPv6
+    for (let i = 0; i < length; i += 2) {
+      result.push(view.getUint16(offset + i).toString(16))
+    }
+    string = result.join(':')
+    string = string.replace(/(^|:)0(:0)*:0(:|$)/, '$1::$3')
+    string = string.replace(/:{3,4}/, '::')
+  }
+
+  return string
+}
+
+module.exports = {
+  isIP,
+  isV4,
+  isV6,
+  toBytes,
+  toString
+}
+
+
+/***/ }),
+
+/***/ 6354:
+/***/ ((module) => {
+
+"use strict";
+
+/** @typedef {import("./types").Protocol} Protocol */
+
+/**
+ * Protocols
+ *
+ * @param {number | string} proto
+ * @returns {Protocol}
+ */
+function Protocols (proto) {
+  if (typeof (proto) === 'number') {
+    if (Protocols.codes[proto]) {
+      return Protocols.codes[proto]
+    }
+
+    throw new Error('no protocol with code: ' + proto)
+  } else if (typeof (proto) === 'string') {
+    if (Protocols.names[proto]) {
+      return Protocols.names[proto]
+    }
+
+    throw new Error('no protocol with name: ' + proto)
+  }
+
+  throw new Error('invalid protocol id type: ' + proto)
+}
+
+const V = -1
+Protocols.lengthPrefixedVarSize = V
+Protocols.V = V
+
+/** @type {Array<[number, number, string, (string|boolean)?, string?]>} */
+Protocols.table = [
+  [4, 32, 'ip4'],
+  [6, 16, 'tcp'],
+  [33, 16, 'dccp'],
+  [41, 128, 'ip6'],
+  [42, V, 'ip6zone'],
+  [53, V, 'dns', 'resolvable'],
+  [54, V, 'dns4', 'resolvable'],
+  [55, V, 'dns6', 'resolvable'],
+  [56, V, 'dnsaddr', 'resolvable'],
+  [132, 16, 'sctp'],
+  [273, 16, 'udp'],
+  [275, 0, 'p2p-webrtc-star'],
+  [276, 0, 'p2p-webrtc-direct'],
+  [277, 0, 'p2p-stardust'],
+  [290, 0, 'p2p-circuit'],
+  [301, 0, 'udt'],
+  [302, 0, 'utp'],
+  [400, V, 'unix', false, 'path'],
+  // `ipfs` is added before `p2p` for legacy support.
+  // All text representations will default to `p2p`, but `ipfs` will
+  // still be supported
+  [421, V, 'ipfs'],
+  // `p2p` is the preferred name for 421, and is now the default
+  [421, V, 'p2p'],
+  [443, 0, 'https'],
+  [444, 96, 'onion'],
+  [445, 296, 'onion3'],
+  [446, V, 'garlic64'],
+  [460, 0, 'quic'],
+  [477, 0, 'ws'],
+  [478, 0, 'wss'],
+  [479, 0, 'p2p-websocket-star'],
+  [480, 0, 'http'],
+  [777, V, 'memory']
+]
+/** @type {Record<string,Protocol>} */
+Protocols.names = {}
+/** @type {Record<number,Protocol>} */
+Protocols.codes = {}
+
+// populate tables
+Protocols.table.map(row => {
+  const proto = p.apply(null, row)
+  Protocols.codes[proto.code] = proto
+  Protocols.names[proto.name] = proto
+  return null
+})
+
+Protocols.object = p
+
+/**
+ *
+ * Create a protocol
+ *
+ * @param {number} code
+ * @param {number} size
+ * @param {string} name
+ * @param {any} [resolvable]
+ * @param {any} [path]
+ * @returns {Protocol}
+ */
+function p (code, size, name, resolvable, path) {
+  return {
+    code,
+    size,
+    name,
+    resolvable: Boolean(resolvable),
+    path: Boolean(path)
+  }
+}
+
+module.exports = Protocols
+
+
+/***/ }),
+
+/***/ 3392:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+function alloc(size = 0) {
+  if (globalThis.Buffer != null && globalThis.Buffer.alloc != null) {
+    return globalThis.Buffer.alloc(size);
+  }
+  return new Uint8Array(size);
+}
+function allocUnsafe(size = 0) {
+  if (globalThis.Buffer != null && globalThis.Buffer.allocUnsafe != null) {
+    return globalThis.Buffer.allocUnsafe(size);
+  }
+  return new Uint8Array(size);
+}
+
+exports.alloc = alloc;
+exports.allocUnsafe = allocUnsafe;
+
+
+/***/ }),
+
+/***/ 1414:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var alloc = __nccwpck_require__(3392);
+
+function concat(arrays, length) {
+  if (!length) {
+    length = arrays.reduce((acc, curr) => acc + curr.length, 0);
+  }
+  const output = alloc.allocUnsafe(length);
+  let offset = 0;
+  for (const arr of arrays) {
+    output.set(arr, offset);
+    offset += arr.length;
+  }
+  return output;
+}
+
+exports.concat = concat;
+
+
+/***/ }),
+
+/***/ 8214:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var bases = __nccwpck_require__(1337);
+
+function fromString(string, encoding = 'utf8') {
+  const base = bases[encoding];
+  if (!base) {
+    throw new Error(`Unsupported encoding "${ encoding }"`);
+  }
+  if ((encoding === 'utf8' || encoding === 'utf-8') && globalThis.Buffer != null && globalThis.Buffer.from != null) {
+    return globalThis.Buffer.from(string, 'utf8');
+  }
+  return base.decoder.decode(`${ base.prefix }${ string }`);
+}
+
+exports.fromString = fromString;
+
+
+/***/ }),
+
+/***/ 9299:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var bases = __nccwpck_require__(1337);
+
+function toString(array, encoding = 'utf8') {
+  const base = bases[encoding];
+  if (!base) {
+    throw new Error(`Unsupported encoding "${ encoding }"`);
+  }
+  if ((encoding === 'utf8' || encoding === 'utf-8') && globalThis.Buffer != null && globalThis.Buffer.from != null) {
+    return globalThis.Buffer.from(array.buffer, array.byteOffset, array.byteLength).toString('utf8');
+  }
+  return base.encoder.encode(array).substring(1);
+}
+
+exports.toString = toString;
+
+
+/***/ }),
+
+/***/ 1337:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+var basics = __nccwpck_require__(1046);
+var alloc = __nccwpck_require__(3392);
+
+function createCodec(name, prefix, encode, decode) {
+  return {
+    name,
+    prefix,
+    encoder: {
+      name,
+      prefix,
+      encode
+    },
+    decoder: { decode }
+  };
+}
+const string = createCodec('utf8', 'u', buf => {
+  const decoder = new TextDecoder('utf8');
+  return 'u' + decoder.decode(buf);
+}, str => {
+  const encoder = new TextEncoder();
+  return encoder.encode(str.substring(1));
+});
+const ascii = createCodec('ascii', 'a', buf => {
+  let string = 'a';
+  for (let i = 0; i < buf.length; i++) {
+    string += String.fromCharCode(buf[i]);
+  }
+  return string;
+}, str => {
+  str = str.substring(1);
+  const buf = alloc.allocUnsafe(str.length);
+  for (let i = 0; i < str.length; i++) {
+    buf[i] = str.charCodeAt(i);
+  }
+  return buf;
+});
+const BASES = {
+  utf8: string,
+  'utf-8': string,
+  hex: basics.bases.base16,
+  latin1: ascii,
+  ascii: ascii,
+  binary: ascii,
+  ...basics.bases
+};
+
+module.exports = BASES;
+
+
+/***/ }),
+
+/***/ 5985:
+/***/ ((module) => {
+
+"use strict";
+/* eslint quote-props: off */
+
+
+/**
+ * Names for all available hashes
+ *
+ * @typedef { "identity" | "sha1" | "sha2-256" | "sha2-512" | "sha3-512" | "sha3-384" | "sha3-256" | "sha3-224" | "shake-128" | "shake-256" | "keccak-224" | "keccak-256" | "keccak-384" | "keccak-512" | "blake3" | "murmur3-128" | "murmur3-32" | "dbl-sha2-256" | "md4" | "md5" | "bmt" | "sha2-256-trunc254-padded" | "ripemd-128" | "ripemd-160" | "ripemd-256" | "ripemd-320" | "x11" | "kangarootwelve" | "sm3-256" | "blake2b-8" | "blake2b-16" | "blake2b-24" | "blake2b-32" | "blake2b-40" | "blake2b-48" | "blake2b-56" | "blake2b-64" | "blake2b-72" | "blake2b-80" | "blake2b-88" | "blake2b-96" | "blake2b-104" | "blake2b-112" | "blake2b-120" | "blake2b-128" | "blake2b-136" | "blake2b-144" | "blake2b-152" | "blake2b-160" | "blake2b-168" | "blake2b-176" | "blake2b-184" | "blake2b-192" | "blake2b-200" | "blake2b-208" | "blake2b-216" | "blake2b-224" | "blake2b-232" | "blake2b-240" | "blake2b-248" | "blake2b-256" | "blake2b-264" | "blake2b-272" | "blake2b-280" | "blake2b-288" | "blake2b-296" | "blake2b-304" | "blake2b-312" | "blake2b-320" | "blake2b-328" | "blake2b-336" | "blake2b-344" | "blake2b-352" | "blake2b-360" | "blake2b-368" | "blake2b-376" | "blake2b-384" | "blake2b-392" | "blake2b-400" | "blake2b-408" | "blake2b-416" | "blake2b-424" | "blake2b-432" | "blake2b-440" | "blake2b-448" | "blake2b-456" | "blake2b-464" | "blake2b-472" | "blake2b-480" | "blake2b-488" | "blake2b-496" | "blake2b-504" | "blake2b-512" | "blake2s-8" | "blake2s-16" | "blake2s-24" | "blake2s-32" | "blake2s-40" | "blake2s-48" | "blake2s-56" | "blake2s-64" | "blake2s-72" | "blake2s-80" | "blake2s-88" | "blake2s-96" | "blake2s-104" | "blake2s-112" | "blake2s-120" | "blake2s-128" | "blake2s-136" | "blake2s-144" | "blake2s-152" | "blake2s-160" | "blake2s-168" | "blake2s-176" | "blake2s-184" | "blake2s-192" | "blake2s-200" | "blake2s-208" | "blake2s-216" | "blake2s-224" | "blake2s-232" | "blake2s-240" | "blake2s-248" | "blake2s-256" | "skein256-8" | "skein256-16" | "skein256-24" | "skein256-32" | "skein256-40" | "skein256-48" | "skein256-56" | "skein256-64" | "skein256-72" | "skein256-80" | "skein256-88" | "skein256-96" | "skein256-104" | "skein256-112" | "skein256-120" | "skein256-128" | "skein256-136" | "skein256-144" | "skein256-152" | "skein256-160" | "skein256-168" | "skein256-176" | "skein256-184" | "skein256-192" | "skein256-200" | "skein256-208" | "skein256-216" | "skein256-224" | "skein256-232" | "skein256-240" | "skein256-248" | "skein256-256" | "skein512-8" | "skein512-16" | "skein512-24" | "skein512-32" | "skein512-40" | "skein512-48" | "skein512-56" | "skein512-64" | "skein512-72" | "skein512-80" | "skein512-88" | "skein512-96" | "skein512-104" | "skein512-112" | "skein512-120" | "skein512-128" | "skein512-136" | "skein512-144" | "skein512-152" | "skein512-160" | "skein512-168" | "skein512-176" | "skein512-184" | "skein512-192" | "skein512-200" | "skein512-208" | "skein512-216" | "skein512-224" | "skein512-232" | "skein512-240" | "skein512-248" | "skein512-256" | "skein512-264" | "skein512-272" | "skein512-280" | "skein512-288" | "skein512-296" | "skein512-304" | "skein512-312" | "skein512-320" | "skein512-328" | "skein512-336" | "skein512-344" | "skein512-352" | "skein512-360" | "skein512-368" | "skein512-376" | "skein512-384" | "skein512-392" | "skein512-400" | "skein512-408" | "skein512-416" | "skein512-424" | "skein512-432" | "skein512-440" | "skein512-448" | "skein512-456" | "skein512-464" | "skein512-472" | "skein512-480" | "skein512-488" | "skein512-496" | "skein512-504" | "skein512-512" | "skein1024-8" | "skein1024-16" | "skein1024-24" | "skein1024-32" | "skein1024-40" | "skein1024-48" | "skein1024-56" | "skein1024-64" | "skein1024-72" | "skein1024-80" | "skein1024-88" | "skein1024-96" | "skein1024-104" | "skein1024-112" | "skein1024-120" | "skein1024-128" | "skein1024-136" | "skein1024-144" | "skein1024-152" | "skein1024-160" | "skein1024-168" | "skein1024-176" | "skein1024-184" | "skein1024-192" | "skein1024-200" | "skein1024-208" | "skein1024-216" | "skein1024-224" | "skein1024-232" | "skein1024-240" | "skein1024-248" | "skein1024-256" | "skein1024-264" | "skein1024-272" | "skein1024-280" | "skein1024-288" | "skein1024-296" | "skein1024-304" | "skein1024-312" | "skein1024-320" | "skein1024-328" | "skein1024-336" | "skein1024-344" | "skein1024-352" | "skein1024-360" | "skein1024-368" | "skein1024-376" | "skein1024-384" | "skein1024-392" | "skein1024-400" | "skein1024-408" | "skein1024-416" | "skein1024-424" | "skein1024-432" | "skein1024-440" | "skein1024-448" | "skein1024-456" | "skein1024-464" | "skein1024-472" | "skein1024-480" | "skein1024-488" | "skein1024-496" | "skein1024-504" | "skein1024-512" | "skein1024-520" | "skein1024-528" | "skein1024-536" | "skein1024-544" | "skein1024-552" | "skein1024-560" | "skein1024-568" | "skein1024-576" | "skein1024-584" | "skein1024-592" | "skein1024-600" | "skein1024-608" | "skein1024-616" | "skein1024-624" | "skein1024-632" | "skein1024-640" | "skein1024-648" | "skein1024-656" | "skein1024-664" | "skein1024-672" | "skein1024-680" | "skein1024-688" | "skein1024-696" | "skein1024-704" | "skein1024-712" | "skein1024-720" | "skein1024-728" | "skein1024-736" | "skein1024-744" | "skein1024-752" | "skein1024-760" | "skein1024-768" | "skein1024-776" | "skein1024-784" | "skein1024-792" | "skein1024-800" | "skein1024-808" | "skein1024-816" | "skein1024-824" | "skein1024-832" | "skein1024-840" | "skein1024-848" | "skein1024-856" | "skein1024-864" | "skein1024-872" | "skein1024-880" | "skein1024-888" | "skein1024-896" | "skein1024-904" | "skein1024-912" | "skein1024-920" | "skein1024-928" | "skein1024-936" | "skein1024-944" | "skein1024-952" | "skein1024-960" | "skein1024-968" | "skein1024-976" | "skein1024-984" | "skein1024-992" | "skein1024-1000" | "skein1024-1008" | "skein1024-1016" | "skein1024-1024" | "poseidon-bls12_381-a2-fc1" | "poseidon-bls12_381-a2-fc1-sc" } HashName
+ */
+/**
+ * Codes for all available hashes
+ *
+ * @typedef { 0x00 | 0x11 | 0x12 | 0x13 | 0x14 | 0x15 | 0x16 | 0x17 | 0x18 | 0x19 | 0x1a | 0x1b | 0x1c | 0x1d | 0x1e | 0x22 | 0x23 | 0x56 | 0xd4 | 0xd5 | 0xd6 | 0x1012 | 0x1052 | 0x1053 | 0x1054 | 0x1055 | 0x1100 | 0x1d01 | 0x534d | 0xb201 | 0xb202 | 0xb203 | 0xb204 | 0xb205 | 0xb206 | 0xb207 | 0xb208 | 0xb209 | 0xb20a | 0xb20b | 0xb20c | 0xb20d | 0xb20e | 0xb20f | 0xb210 | 0xb211 | 0xb212 | 0xb213 | 0xb214 | 0xb215 | 0xb216 | 0xb217 | 0xb218 | 0xb219 | 0xb21a | 0xb21b | 0xb21c | 0xb21d | 0xb21e | 0xb21f | 0xb220 | 0xb221 | 0xb222 | 0xb223 | 0xb224 | 0xb225 | 0xb226 | 0xb227 | 0xb228 | 0xb229 | 0xb22a | 0xb22b | 0xb22c | 0xb22d | 0xb22e | 0xb22f | 0xb230 | 0xb231 | 0xb232 | 0xb233 | 0xb234 | 0xb235 | 0xb236 | 0xb237 | 0xb238 | 0xb239 | 0xb23a | 0xb23b | 0xb23c | 0xb23d | 0xb23e | 0xb23f | 0xb240 | 0xb241 | 0xb242 | 0xb243 | 0xb244 | 0xb245 | 0xb246 | 0xb247 | 0xb248 | 0xb249 | 0xb24a | 0xb24b | 0xb24c | 0xb24d | 0xb24e | 0xb24f | 0xb250 | 0xb251 | 0xb252 | 0xb253 | 0xb254 | 0xb255 | 0xb256 | 0xb257 | 0xb258 | 0xb259 | 0xb25a | 0xb25b | 0xb25c | 0xb25d | 0xb25e | 0xb25f | 0xb260 | 0xb301 | 0xb302 | 0xb303 | 0xb304 | 0xb305 | 0xb306 | 0xb307 | 0xb308 | 0xb309 | 0xb30a | 0xb30b | 0xb30c | 0xb30d | 0xb30e | 0xb30f | 0xb310 | 0xb311 | 0xb312 | 0xb313 | 0xb314 | 0xb315 | 0xb316 | 0xb317 | 0xb318 | 0xb319 | 0xb31a | 0xb31b | 0xb31c | 0xb31d | 0xb31e | 0xb31f | 0xb320 | 0xb321 | 0xb322 | 0xb323 | 0xb324 | 0xb325 | 0xb326 | 0xb327 | 0xb328 | 0xb329 | 0xb32a | 0xb32b | 0xb32c | 0xb32d | 0xb32e | 0xb32f | 0xb330 | 0xb331 | 0xb332 | 0xb333 | 0xb334 | 0xb335 | 0xb336 | 0xb337 | 0xb338 | 0xb339 | 0xb33a | 0xb33b | 0xb33c | 0xb33d | 0xb33e | 0xb33f | 0xb340 | 0xb341 | 0xb342 | 0xb343 | 0xb344 | 0xb345 | 0xb346 | 0xb347 | 0xb348 | 0xb349 | 0xb34a | 0xb34b | 0xb34c | 0xb34d | 0xb34e | 0xb34f | 0xb350 | 0xb351 | 0xb352 | 0xb353 | 0xb354 | 0xb355 | 0xb356 | 0xb357 | 0xb358 | 0xb359 | 0xb35a | 0xb35b | 0xb35c | 0xb35d | 0xb35e | 0xb35f | 0xb360 | 0xb361 | 0xb362 | 0xb363 | 0xb364 | 0xb365 | 0xb366 | 0xb367 | 0xb368 | 0xb369 | 0xb36a | 0xb36b | 0xb36c | 0xb36d | 0xb36e | 0xb36f | 0xb370 | 0xb371 | 0xb372 | 0xb373 | 0xb374 | 0xb375 | 0xb376 | 0xb377 | 0xb378 | 0xb379 | 0xb37a | 0xb37b | 0xb37c | 0xb37d | 0xb37e | 0xb37f | 0xb380 | 0xb381 | 0xb382 | 0xb383 | 0xb384 | 0xb385 | 0xb386 | 0xb387 | 0xb388 | 0xb389 | 0xb38a | 0xb38b | 0xb38c | 0xb38d | 0xb38e | 0xb38f | 0xb390 | 0xb391 | 0xb392 | 0xb393 | 0xb394 | 0xb395 | 0xb396 | 0xb397 | 0xb398 | 0xb399 | 0xb39a | 0xb39b | 0xb39c | 0xb39d | 0xb39e | 0xb39f | 0xb3a0 | 0xb3a1 | 0xb3a2 | 0xb3a3 | 0xb3a4 | 0xb3a5 | 0xb3a6 | 0xb3a7 | 0xb3a8 | 0xb3a9 | 0xb3aa | 0xb3ab | 0xb3ac | 0xb3ad | 0xb3ae | 0xb3af | 0xb3b0 | 0xb3b1 | 0xb3b2 | 0xb3b3 | 0xb3b4 | 0xb3b5 | 0xb3b6 | 0xb3b7 | 0xb3b8 | 0xb3b9 | 0xb3ba | 0xb3bb | 0xb3bc | 0xb3bd | 0xb3be | 0xb3bf | 0xb3c0 | 0xb3c1 | 0xb3c2 | 0xb3c3 | 0xb3c4 | 0xb3c5 | 0xb3c6 | 0xb3c7 | 0xb3c8 | 0xb3c9 | 0xb3ca | 0xb3cb | 0xb3cc | 0xb3cd | 0xb3ce | 0xb3cf | 0xb3d0 | 0xb3d1 | 0xb3d2 | 0xb3d3 | 0xb3d4 | 0xb3d5 | 0xb3d6 | 0xb3d7 | 0xb3d8 | 0xb3d9 | 0xb3da | 0xb3db | 0xb3dc | 0xb3dd | 0xb3de | 0xb3df | 0xb3e0 | 0xb401 | 0xb402 } HashCode
+ */
+
+/**
+ * @type { Record<HashName,HashCode> }
+ */
+const names = Object.freeze({
+  'identity': 0x00,
+  'sha1': 0x11,
+  'sha2-256': 0x12,
+  'sha2-512': 0x13,
+  'sha3-512': 0x14,
+  'sha3-384': 0x15,
+  'sha3-256': 0x16,
+  'sha3-224': 0x17,
+  'shake-128': 0x18,
+  'shake-256': 0x19,
+  'keccak-224': 0x1a,
+  'keccak-256': 0x1b,
+  'keccak-384': 0x1c,
+  'keccak-512': 0x1d,
+  'blake3': 0x1e,
+  'murmur3-128': 0x22,
+  'murmur3-32': 0x23,
+  'dbl-sha2-256': 0x56,
+  'md4': 0xd4,
+  'md5': 0xd5,
+  'bmt': 0xd6,
+  'sha2-256-trunc254-padded': 0x1012,
+  'ripemd-128': 0x1052,
+  'ripemd-160': 0x1053,
+  'ripemd-256': 0x1054,
+  'ripemd-320': 0x1055,
+  'x11': 0x1100,
+  'kangarootwelve': 0x1d01,
+  'sm3-256': 0x534d,
+  'blake2b-8': 0xb201,
+  'blake2b-16': 0xb202,
+  'blake2b-24': 0xb203,
+  'blake2b-32': 0xb204,
+  'blake2b-40': 0xb205,
+  'blake2b-48': 0xb206,
+  'blake2b-56': 0xb207,
+  'blake2b-64': 0xb208,
+  'blake2b-72': 0xb209,
+  'blake2b-80': 0xb20a,
+  'blake2b-88': 0xb20b,
+  'blake2b-96': 0xb20c,
+  'blake2b-104': 0xb20d,
+  'blake2b-112': 0xb20e,
+  'blake2b-120': 0xb20f,
+  'blake2b-128': 0xb210,
+  'blake2b-136': 0xb211,
+  'blake2b-144': 0xb212,
+  'blake2b-152': 0xb213,
+  'blake2b-160': 0xb214,
+  'blake2b-168': 0xb215,
+  'blake2b-176': 0xb216,
+  'blake2b-184': 0xb217,
+  'blake2b-192': 0xb218,
+  'blake2b-200': 0xb219,
+  'blake2b-208': 0xb21a,
+  'blake2b-216': 0xb21b,
+  'blake2b-224': 0xb21c,
+  'blake2b-232': 0xb21d,
+  'blake2b-240': 0xb21e,
+  'blake2b-248': 0xb21f,
+  'blake2b-256': 0xb220,
+  'blake2b-264': 0xb221,
+  'blake2b-272': 0xb222,
+  'blake2b-280': 0xb223,
+  'blake2b-288': 0xb224,
+  'blake2b-296': 0xb225,
+  'blake2b-304': 0xb226,
+  'blake2b-312': 0xb227,
+  'blake2b-320': 0xb228,
+  'blake2b-328': 0xb229,
+  'blake2b-336': 0xb22a,
+  'blake2b-344': 0xb22b,
+  'blake2b-352': 0xb22c,
+  'blake2b-360': 0xb22d,
+  'blake2b-368': 0xb22e,
+  'blake2b-376': 0xb22f,
+  'blake2b-384': 0xb230,
+  'blake2b-392': 0xb231,
+  'blake2b-400': 0xb232,
+  'blake2b-408': 0xb233,
+  'blake2b-416': 0xb234,
+  'blake2b-424': 0xb235,
+  'blake2b-432': 0xb236,
+  'blake2b-440': 0xb237,
+  'blake2b-448': 0xb238,
+  'blake2b-456': 0xb239,
+  'blake2b-464': 0xb23a,
+  'blake2b-472': 0xb23b,
+  'blake2b-480': 0xb23c,
+  'blake2b-488': 0xb23d,
+  'blake2b-496': 0xb23e,
+  'blake2b-504': 0xb23f,
+  'blake2b-512': 0xb240,
+  'blake2s-8': 0xb241,
+  'blake2s-16': 0xb242,
+  'blake2s-24': 0xb243,
+  'blake2s-32': 0xb244,
+  'blake2s-40': 0xb245,
+  'blake2s-48': 0xb246,
+  'blake2s-56': 0xb247,
+  'blake2s-64': 0xb248,
+  'blake2s-72': 0xb249,
+  'blake2s-80': 0xb24a,
+  'blake2s-88': 0xb24b,
+  'blake2s-96': 0xb24c,
+  'blake2s-104': 0xb24d,
+  'blake2s-112': 0xb24e,
+  'blake2s-120': 0xb24f,
+  'blake2s-128': 0xb250,
+  'blake2s-136': 0xb251,
+  'blake2s-144': 0xb252,
+  'blake2s-152': 0xb253,
+  'blake2s-160': 0xb254,
+  'blake2s-168': 0xb255,
+  'blake2s-176': 0xb256,
+  'blake2s-184': 0xb257,
+  'blake2s-192': 0xb258,
+  'blake2s-200': 0xb259,
+  'blake2s-208': 0xb25a,
+  'blake2s-216': 0xb25b,
+  'blake2s-224': 0xb25c,
+  'blake2s-232': 0xb25d,
+  'blake2s-240': 0xb25e,
+  'blake2s-248': 0xb25f,
+  'blake2s-256': 0xb260,
+  'skein256-8': 0xb301,
+  'skein256-16': 0xb302,
+  'skein256-24': 0xb303,
+  'skein256-32': 0xb304,
+  'skein256-40': 0xb305,
+  'skein256-48': 0xb306,
+  'skein256-56': 0xb307,
+  'skein256-64': 0xb308,
+  'skein256-72': 0xb309,
+  'skein256-80': 0xb30a,
+  'skein256-88': 0xb30b,
+  'skein256-96': 0xb30c,
+  'skein256-104': 0xb30d,
+  'skein256-112': 0xb30e,
+  'skein256-120': 0xb30f,
+  'skein256-128': 0xb310,
+  'skein256-136': 0xb311,
+  'skein256-144': 0xb312,
+  'skein256-152': 0xb313,
+  'skein256-160': 0xb314,
+  'skein256-168': 0xb315,
+  'skein256-176': 0xb316,
+  'skein256-184': 0xb317,
+  'skein256-192': 0xb318,
+  'skein256-200': 0xb319,
+  'skein256-208': 0xb31a,
+  'skein256-216': 0xb31b,
+  'skein256-224': 0xb31c,
+  'skein256-232': 0xb31d,
+  'skein256-240': 0xb31e,
+  'skein256-248': 0xb31f,
+  'skein256-256': 0xb320,
+  'skein512-8': 0xb321,
+  'skein512-16': 0xb322,
+  'skein512-24': 0xb323,
+  'skein512-32': 0xb324,
+  'skein512-40': 0xb325,
+  'skein512-48': 0xb326,
+  'skein512-56': 0xb327,
+  'skein512-64': 0xb328,
+  'skein512-72': 0xb329,
+  'skein512-80': 0xb32a,
+  'skein512-88': 0xb32b,
+  'skein512-96': 0xb32c,
+  'skein512-104': 0xb32d,
+  'skein512-112': 0xb32e,
+  'skein512-120': 0xb32f,
+  'skein512-128': 0xb330,
+  'skein512-136': 0xb331,
+  'skein512-144': 0xb332,
+  'skein512-152': 0xb333,
+  'skein512-160': 0xb334,
+  'skein512-168': 0xb335,
+  'skein512-176': 0xb336,
+  'skein512-184': 0xb337,
+  'skein512-192': 0xb338,
+  'skein512-200': 0xb339,
+  'skein512-208': 0xb33a,
+  'skein512-216': 0xb33b,
+  'skein512-224': 0xb33c,
+  'skein512-232': 0xb33d,
+  'skein512-240': 0xb33e,
+  'skein512-248': 0xb33f,
+  'skein512-256': 0xb340,
+  'skein512-264': 0xb341,
+  'skein512-272': 0xb342,
+  'skein512-280': 0xb343,
+  'skein512-288': 0xb344,
+  'skein512-296': 0xb345,
+  'skein512-304': 0xb346,
+  'skein512-312': 0xb347,
+  'skein512-320': 0xb348,
+  'skein512-328': 0xb349,
+  'skein512-336': 0xb34a,
+  'skein512-344': 0xb34b,
+  'skein512-352': 0xb34c,
+  'skein512-360': 0xb34d,
+  'skein512-368': 0xb34e,
+  'skein512-376': 0xb34f,
+  'skein512-384': 0xb350,
+  'skein512-392': 0xb351,
+  'skein512-400': 0xb352,
+  'skein512-408': 0xb353,
+  'skein512-416': 0xb354,
+  'skein512-424': 0xb355,
+  'skein512-432': 0xb356,
+  'skein512-440': 0xb357,
+  'skein512-448': 0xb358,
+  'skein512-456': 0xb359,
+  'skein512-464': 0xb35a,
+  'skein512-472': 0xb35b,
+  'skein512-480': 0xb35c,
+  'skein512-488': 0xb35d,
+  'skein512-496': 0xb35e,
+  'skein512-504': 0xb35f,
+  'skein512-512': 0xb360,
+  'skein1024-8': 0xb361,
+  'skein1024-16': 0xb362,
+  'skein1024-24': 0xb363,
+  'skein1024-32': 0xb364,
+  'skein1024-40': 0xb365,
+  'skein1024-48': 0xb366,
+  'skein1024-56': 0xb367,
+  'skein1024-64': 0xb368,
+  'skein1024-72': 0xb369,
+  'skein1024-80': 0xb36a,
+  'skein1024-88': 0xb36b,
+  'skein1024-96': 0xb36c,
+  'skein1024-104': 0xb36d,
+  'skein1024-112': 0xb36e,
+  'skein1024-120': 0xb36f,
+  'skein1024-128': 0xb370,
+  'skein1024-136': 0xb371,
+  'skein1024-144': 0xb372,
+  'skein1024-152': 0xb373,
+  'skein1024-160': 0xb374,
+  'skein1024-168': 0xb375,
+  'skein1024-176': 0xb376,
+  'skein1024-184': 0xb377,
+  'skein1024-192': 0xb378,
+  'skein1024-200': 0xb379,
+  'skein1024-208': 0xb37a,
+  'skein1024-216': 0xb37b,
+  'skein1024-224': 0xb37c,
+  'skein1024-232': 0xb37d,
+  'skein1024-240': 0xb37e,
+  'skein1024-248': 0xb37f,
+  'skein1024-256': 0xb380,
+  'skein1024-264': 0xb381,
+  'skein1024-272': 0xb382,
+  'skein1024-280': 0xb383,
+  'skein1024-288': 0xb384,
+  'skein1024-296': 0xb385,
+  'skein1024-304': 0xb386,
+  'skein1024-312': 0xb387,
+  'skein1024-320': 0xb388,
+  'skein1024-328': 0xb389,
+  'skein1024-336': 0xb38a,
+  'skein1024-344': 0xb38b,
+  'skein1024-352': 0xb38c,
+  'skein1024-360': 0xb38d,
+  'skein1024-368': 0xb38e,
+  'skein1024-376': 0xb38f,
+  'skein1024-384': 0xb390,
+  'skein1024-392': 0xb391,
+  'skein1024-400': 0xb392,
+  'skein1024-408': 0xb393,
+  'skein1024-416': 0xb394,
+  'skein1024-424': 0xb395,
+  'skein1024-432': 0xb396,
+  'skein1024-440': 0xb397,
+  'skein1024-448': 0xb398,
+  'skein1024-456': 0xb399,
+  'skein1024-464': 0xb39a,
+  'skein1024-472': 0xb39b,
+  'skein1024-480': 0xb39c,
+  'skein1024-488': 0xb39d,
+  'skein1024-496': 0xb39e,
+  'skein1024-504': 0xb39f,
+  'skein1024-512': 0xb3a0,
+  'skein1024-520': 0xb3a1,
+  'skein1024-528': 0xb3a2,
+  'skein1024-536': 0xb3a3,
+  'skein1024-544': 0xb3a4,
+  'skein1024-552': 0xb3a5,
+  'skein1024-560': 0xb3a6,
+  'skein1024-568': 0xb3a7,
+  'skein1024-576': 0xb3a8,
+  'skein1024-584': 0xb3a9,
+  'skein1024-592': 0xb3aa,
+  'skein1024-600': 0xb3ab,
+  'skein1024-608': 0xb3ac,
+  'skein1024-616': 0xb3ad,
+  'skein1024-624': 0xb3ae,
+  'skein1024-632': 0xb3af,
+  'skein1024-640': 0xb3b0,
+  'skein1024-648': 0xb3b1,
+  'skein1024-656': 0xb3b2,
+  'skein1024-664': 0xb3b3,
+  'skein1024-672': 0xb3b4,
+  'skein1024-680': 0xb3b5,
+  'skein1024-688': 0xb3b6,
+  'skein1024-696': 0xb3b7,
+  'skein1024-704': 0xb3b8,
+  'skein1024-712': 0xb3b9,
+  'skein1024-720': 0xb3ba,
+  'skein1024-728': 0xb3bb,
+  'skein1024-736': 0xb3bc,
+  'skein1024-744': 0xb3bd,
+  'skein1024-752': 0xb3be,
+  'skein1024-760': 0xb3bf,
+  'skein1024-768': 0xb3c0,
+  'skein1024-776': 0xb3c1,
+  'skein1024-784': 0xb3c2,
+  'skein1024-792': 0xb3c3,
+  'skein1024-800': 0xb3c4,
+  'skein1024-808': 0xb3c5,
+  'skein1024-816': 0xb3c6,
+  'skein1024-824': 0xb3c7,
+  'skein1024-832': 0xb3c8,
+  'skein1024-840': 0xb3c9,
+  'skein1024-848': 0xb3ca,
+  'skein1024-856': 0xb3cb,
+  'skein1024-864': 0xb3cc,
+  'skein1024-872': 0xb3cd,
+  'skein1024-880': 0xb3ce,
+  'skein1024-888': 0xb3cf,
+  'skein1024-896': 0xb3d0,
+  'skein1024-904': 0xb3d1,
+  'skein1024-912': 0xb3d2,
+  'skein1024-920': 0xb3d3,
+  'skein1024-928': 0xb3d4,
+  'skein1024-936': 0xb3d5,
+  'skein1024-944': 0xb3d6,
+  'skein1024-952': 0xb3d7,
+  'skein1024-960': 0xb3d8,
+  'skein1024-968': 0xb3d9,
+  'skein1024-976': 0xb3da,
+  'skein1024-984': 0xb3db,
+  'skein1024-992': 0xb3dc,
+  'skein1024-1000': 0xb3dd,
+  'skein1024-1008': 0xb3de,
+  'skein1024-1016': 0xb3df,
+  'skein1024-1024': 0xb3e0,
+  'poseidon-bls12_381-a2-fc1': 0xb401,
+  'poseidon-bls12_381-a2-fc1-sc': 0xb402
+})
+
+module.exports = { names }
+
+
+/***/ }),
+
+/***/ 3471:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+/**
+ * Multihash implementation in JavaScript.
+ */
+
+
+const multibase = __nccwpck_require__(8959)
+const varint = __nccwpck_require__(8018)
+const { names } = __nccwpck_require__(5985)
+const { toString: uint8ArrayToString } = __nccwpck_require__(9299)
+const { fromString: uint8ArrayFromString } = __nccwpck_require__(8214)
+const { concat: uint8ArrayConcat } = __nccwpck_require__(1414)
+
+const codes = /** @type {import('./types').CodeNameMap} */({})
+
+// eslint-disable-next-line guard-for-in
+for (const key in names) {
+  const name = /** @type {HashName} */(key)
+  codes[names[name]] = name
+}
+Object.freeze(codes)
+
+/**
+ * Convert the given multihash to a hex encoded string.
+ *
+ * @param {Uint8Array} hash
+ * @returns {string}
+ */
+function toHexString (hash) {
+  if (!(hash instanceof Uint8Array)) {
+    throw new Error('must be passed a Uint8Array')
+  }
+
+  return uint8ArrayToString(hash, 'base16')
+}
+
+/**
+ * Convert the given hex encoded string to a multihash.
+ *
+ * @param {string} hash
+ * @returns {Uint8Array}
+ */
+function fromHexString (hash) {
+  return uint8ArrayFromString(hash, 'base16')
+}
+
+/**
+ * Convert the given multihash to a base58 encoded string.
+ *
+ * @param {Uint8Array} hash
+ * @returns {string}
+ */
+function toB58String (hash) {
+  if (!(hash instanceof Uint8Array)) {
+    throw new Error('must be passed a Uint8Array')
+  }
+
+  return uint8ArrayToString(multibase.encode('base58btc', hash)).slice(1)
+}
+
+/**
+ * Convert the given base58 encoded string to a multihash.
+ *
+ * @param {string|Uint8Array} hash
+ * @returns {Uint8Array}
+ */
+function fromB58String (hash) {
+  const encoded = hash instanceof Uint8Array
+    ? uint8ArrayToString(hash)
+    : hash
+
+  return multibase.decode('z' + encoded)
+}
+
+/**
+ * Decode a hash from the given multihash.
+ *
+ * @param {Uint8Array} bytes
+ * @returns {{code: HashCode, name: HashName, length: number, digest: Uint8Array}} result
+ */
+function decode (bytes) {
+  if (!(bytes instanceof Uint8Array)) {
+    throw new Error('multihash must be a Uint8Array')
+  }
+
+  if (bytes.length < 2) {
+    throw new Error('multihash too short. must be > 2 bytes.')
+  }
+
+  const code = /** @type {HashCode} */(varint.decode(bytes))
+  if (!isValidCode(code)) {
+    throw new Error(`multihash unknown function code: 0x${code.toString(16)}`)
+  }
+  bytes = bytes.slice(varint.decode.bytes)
+
+  const len = varint.decode(bytes)
+  if (len < 0) {
+    throw new Error(`multihash invalid length: ${len}`)
+  }
+  bytes = bytes.slice(varint.decode.bytes)
+
+  if (bytes.length !== len) {
+    throw new Error(`multihash length inconsistent: 0x${uint8ArrayToString(bytes, 'base16')}`)
+  }
+
+  return {
+    code,
+    name: codes[code],
+    length: len,
+    digest: bytes
+  }
+}
+
+/**
+ * Encode a hash digest along with the specified function code.
+ *
+ * > **Note:** the length is derived from the length of the digest itself.
+ *
+ * @param {Uint8Array} digest
+ * @param {HashName | HashCode} code
+ * @param {number} [length]
+ * @returns {Uint8Array}
+ */
+function encode (digest, code, length) {
+  if (!digest || code === undefined) {
+    throw new Error('multihash encode requires at least two args: digest, code')
+  }
+
+  // ensure it's a hashfunction code.
+  const hashfn = coerceCode(code)
+
+  if (!(digest instanceof Uint8Array)) {
+    throw new Error('digest should be a Uint8Array')
+  }
+
+  if (length == null) {
+    length = digest.length
+  }
+
+  if (length && digest.length !== length) {
+    throw new Error('digest length should be equal to specified length.')
+  }
+
+  const hash = varint.encode(hashfn)
+  const len = varint.encode(length)
+  return uint8ArrayConcat([hash, len, digest], hash.length + len.length + digest.length)
+}
+
+/**
+ * Converts a hash function name into the matching code.
+ * If passed a number it will return the number if it's a valid code.
+ *
+ * @param {HashName | number} name
+ * @returns {number}
+ */
+function coerceCode (name) {
+  let code = name
+
+  if (typeof name === 'string') {
+    if (names[name] === undefined) {
+      throw new Error(`Unrecognized hash function named: ${name}`)
+    }
+    code = names[name]
+  }
+
+  if (typeof code !== 'number') {
+    throw new Error(`Hash function code should be a number. Got: ${code}`)
+  }
+
+  // @ts-ignore
+  if (codes[code] === undefined && !isAppCode(code)) {
+    throw new Error(`Unrecognized function code: ${code}`)
+  }
+
+  return code
+}
+
+/**
+ * Checks if a code is part of the app range
+ *
+ * @param {number} code
+ * @returns {boolean}
+ */
+function isAppCode (code) {
+  return code > 0 && code < 0x10
+}
+
+/**
+ * Checks whether a multihash code is valid.
+ *
+ * @param {HashCode} code
+ * @returns {boolean}
+ */
+function isValidCode (code) {
+  if (isAppCode(code)) {
+    return true
+  }
+
+  if (codes[code]) {
+    return true
+  }
+
+  return false
+}
+
+/**
+ * Check if the given buffer is a valid multihash. Throws an error if it is not valid.
+ *
+ * @param {Uint8Array} multihash
+ * @returns {void}
+ * @throws {Error}
+ */
+function validate (multihash) {
+  decode(multihash) // throws if bad.
+}
+
+/**
+ * Returns a prefix from a valid multihash. Throws an error if it is not valid.
+ *
+ * @param {Uint8Array} multihash
+ * @returns {Uint8Array}
+ * @throws {Error}
+ */
+function prefix (multihash) {
+  validate(multihash)
+
+  return multihash.subarray(0, 2)
+}
+
+module.exports = {
+  names,
+  codes,
+  toHexString,
+  fromHexString,
+  toB58String,
+  fromB58String,
+  decode,
+  encode,
+  coerceCode,
+  isAppCode,
+  validate,
+  prefix,
+  isValidCode
+}
+
+/**
+ * @typedef { import("./constants").HashCode } HashCode
+ * @typedef { import("./constants").HashName } HashName
+ */
+
+
+/***/ }),
+
+/***/ 3745:
+/***/ ((module) => {
+
+"use strict";
+
+
+/**
+ * Returns a new Uint8Array created by concatenating the passed ArrayLikes
+ *
+ * @param {Array<ArrayLike<number>>} arrays
+ * @param {number} [length]
+ */
+function concat (arrays, length) {
+  if (!length) {
+    length = arrays.reduce((acc, curr) => acc + curr.length, 0)
+  }
+
+  const output = new Uint8Array(length)
+  let offset = 0
+
+  for (const arr of arrays) {
+    output.set(arr, offset)
+    offset += arr.length
+  }
+
+  return output
+}
+
+module.exports = concat
+
+
+/***/ }),
+
+/***/ 953:
+/***/ ((module) => {
+
+"use strict";
+
+
+/**
+ * Returns true if the two passed Uint8Arrays have the same content
+ *
+ * @param {Uint8Array} a
+ * @param {Uint8Array} b
+ */
+function equals (a, b) {
+  if (a === b) {
+    return true
+  }
+
+  if (a.byteLength !== b.byteLength) {
+    return false
+  }
+
+  for (let i = 0; i < a.byteLength; i++) {
+    if (a[i] !== b[i]) {
+      return false
+    }
+  }
+
+  return true
+}
+
+module.exports = equals
+
+
+/***/ }),
+
+/***/ 7349:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+const bases = __nccwpck_require__(7977)
+
+/**
+ * @typedef {import('./util/bases').SupportedEncodings} SupportedEncodings
+ */
+
+/**
+ * Create a `Uint8Array` from the passed string
+ *
+ * Supports `utf8`, `utf-8`, `hex`, and any encoding supported by the multiformats module.
+ *
+ * Also `ascii` which is similar to node's 'binary' encoding.
+ *
+ * @param {string} string
+ * @param {SupportedEncodings} [encoding=utf8] - utf8, base16, base64, base64urlpad, etc
+ * @returns {Uint8Array}
+ */
+function fromString (string, encoding = 'utf8') {
+  const base = bases[encoding]
+
+  if (!base) {
+    throw new Error(`Unsupported encoding "${encoding}"`)
+  }
+
+  // add multibase prefix
+  return base.decoder.decode(`${base.prefix}${string}`)
+}
+
+module.exports = fromString
+
+
+/***/ }),
+
+/***/ 8328:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+const bases = __nccwpck_require__(7977)
+
+/**
+ * @typedef {import('./util/bases').SupportedEncodings} SupportedEncodings
+ */
+
+/**
+ * Turns a `Uint8Array` into a string.
+ *
+ * Supports `utf8`, `utf-8` and any encoding supported by the multibase module.
+ *
+ * Also `ascii` which is similar to node's 'binary' encoding.
+ *
+ * @param {Uint8Array} array - The array to turn into a string
+ * @param {SupportedEncodings} [encoding=utf8] - The encoding to use
+ * @returns {string}
+ */
+function toString (array, encoding = 'utf8') {
+  const base = bases[encoding]
+
+  if (!base) {
+    throw new Error(`Unsupported encoding "${encoding}"`)
+  }
+
+  // strip multibase prefix
+  return base.encoder.encode(array).substring(1)
+}
+
+module.exports = toString
+
+
+/***/ }),
+
+/***/ 7977:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+  
+
+const { bases } = __nccwpck_require__(1046)
+
+/**
+ * @typedef {import('multiformats/bases/interface').MultibaseCodec<any>} MultibaseCodec
+ */
+
+/**
+ * @param {string} name
+ * @param {string} prefix
+ * @param {(buf: Uint8Array) => string} encode
+ * @param {(str: string) => Uint8Array} decode
+ * @returns {MultibaseCodec}
+ */
+function createCodec (name, prefix, encode, decode) {
+  return {
+    name,
+    prefix,
+    encoder: {
+      name,
+      prefix,
+      encode
+    },
+    decoder: {
+      decode
+    }
+  }
+}
+
+const string = createCodec('utf8', 'u', (buf) => {
+  const decoder = new TextDecoder('utf8')
+  return 'u' + decoder.decode(buf)
+}, (str) => {
+  const encoder = new TextEncoder()
+  return encoder.encode(str.substring(1))
+})
+
+const ascii = createCodec('ascii', 'a', (buf) => {
+  let string = 'a'
+
+  for (let i = 0; i < buf.length; i++) {
+    string += String.fromCharCode(buf[i])
+  }
+  return string
+}, (str) => {
+  str = str.substring(1)
+  const buf = new Uint8Array(str.length)
+
+  for (let i = 0; i < str.length; i++) {
+    buf[i] = str.charCodeAt(i)
+  }
+
+  return buf
+})
+
+/**
+ * @typedef {'utf8' | 'utf-8' | 'hex' | 'latin1' | 'ascii' | 'binary' | keyof bases } SupportedEncodings
+ */
+
+/**
+ * @type {Record<SupportedEncodings, MultibaseCodec>}
+ */
+const BASES = {
+  'utf8': string,
+  'utf-8': string,
+  'hex': bases.base16,
+  'latin1': ascii,
+  'ascii': ascii,
+  'binary': ascii,
+
+  ...bases
+}
+
+module.exports = BASES
+
+
+/***/ }),
+
+/***/ 3000:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -25603,7 +28848,7 @@ module.exports = __nested_webpack_require_1033205__(/*! /Users/polluterofminds/D
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = __nccwpck_require__(491);
+module.exports = __nccwpck_require__(9491);
 
 /***/ }),
 
@@ -25614,7 +28859,7 @@ module.exports = __nccwpck_require__(491);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = __nccwpck_require__(300);
+module.exports = __nccwpck_require__(4300);
 
 /***/ }),
 
@@ -25625,7 +28870,7 @@ module.exports = __nccwpck_require__(300);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = __nccwpck_require__(147);
+module.exports = __nccwpck_require__(7147);
 
 /***/ }),
 
@@ -25636,7 +28881,7 @@ module.exports = __nccwpck_require__(147);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = __nccwpck_require__(685);
+module.exports = __nccwpck_require__(3685);
 
 /***/ }),
 
@@ -25647,7 +28892,7 @@ module.exports = __nccwpck_require__(685);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = __nccwpck_require__(687);
+module.exports = __nccwpck_require__(5687);
 
 /***/ }),
 
@@ -25658,7 +28903,7 @@ module.exports = __nccwpck_require__(687);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = __nccwpck_require__(37);
+module.exports = __nccwpck_require__(2037);
 
 /***/ }),
 
@@ -25669,7 +28914,7 @@ module.exports = __nccwpck_require__(37);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = __nccwpck_require__(17);
+module.exports = __nccwpck_require__(1017);
 
 /***/ }),
 
@@ -25680,7 +28925,7 @@ module.exports = __nccwpck_require__(17);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = __nccwpck_require__(781);
+module.exports = __nccwpck_require__(2781);
 
 /***/ }),
 
@@ -25691,7 +28936,7 @@ module.exports = __nccwpck_require__(781);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = __nccwpck_require__(224);
+module.exports = __nccwpck_require__(6224);
 
 /***/ }),
 
@@ -25702,7 +28947,7 @@ module.exports = __nccwpck_require__(224);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = __nccwpck_require__(310);
+module.exports = __nccwpck_require__(7310);
 
 /***/ }),
 
@@ -25713,7 +28958,7 @@ module.exports = __nccwpck_require__(310);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = __nccwpck_require__(837);
+module.exports = __nccwpck_require__(3837);
 
 /***/ }),
 
@@ -25724,7 +28969,7 @@ module.exports = __nccwpck_require__(837);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = __nccwpck_require__(796);
+module.exports = __nccwpck_require__(9796);
 
 /***/ })
 
@@ -25734,27 +28979,4144 @@ module.exports = __nccwpck_require__(796);
 
 /***/ }),
 
-/***/ 294:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+/***/ 135:
+/***/ ((module) => {
 
-module.exports = __nccwpck_require__(219);
+module.exports = read
+
+var MSB = 0x80
+  , REST = 0x7F
+
+function read(buf, offset) {
+  var res    = 0
+    , offset = offset || 0
+    , shift  = 0
+    , counter = offset
+    , b
+    , l = buf.length
+
+  do {
+    if (counter >= l || shift > 49) {
+      read.bytes = 0
+      throw new RangeError('Could not decode varint')
+    }
+    b = buf[counter++]
+    res += shift < 28
+      ? (b & REST) << shift
+      : (b & REST) * Math.pow(2, shift)
+    shift += 7
+  } while (b >= MSB)
+
+  read.bytes = counter - offset
+
+  return res
+}
 
 
 /***/ }),
 
-/***/ 219:
+/***/ 7768:
+/***/ ((module) => {
+
+module.exports = encode
+
+var MSB = 0x80
+  , REST = 0x7F
+  , MSBALL = ~REST
+  , INT = Math.pow(2, 31)
+
+function encode(num, out, offset) {
+  if (Number.MAX_SAFE_INTEGER && num > Number.MAX_SAFE_INTEGER) {
+    encode.bytes = 0
+    throw new RangeError('Could not encode varint')
+  }
+  out = out || []
+  offset = offset || 0
+  var oldOffset = offset
+
+  while(num >= INT) {
+    out[offset++] = (num & 0xFF) | MSB
+    num /= 128
+  }
+  while(num & MSBALL) {
+    out[offset++] = (num & 0xFF) | MSB
+    num >>>= 7
+  }
+  out[offset] = num | 0
+  
+  encode.bytes = offset - oldOffset + 1
+  
+  return out
+}
+
+
+/***/ }),
+
+/***/ 3822:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+module.exports = {
+    encode: __nccwpck_require__(7768)
+  , decode: __nccwpck_require__(135)
+  , encodingLength: __nccwpck_require__(1953)
+}
+
+
+/***/ }),
+
+/***/ 1953:
+/***/ ((module) => {
+
+
+var N1 = Math.pow(2,  7)
+var N2 = Math.pow(2, 14)
+var N3 = Math.pow(2, 21)
+var N4 = Math.pow(2, 28)
+var N5 = Math.pow(2, 35)
+var N6 = Math.pow(2, 42)
+var N7 = Math.pow(2, 49)
+var N8 = Math.pow(2, 56)
+var N9 = Math.pow(2, 63)
+
+module.exports = function (value) {
+  return (
+    value < N1 ? 1
+  : value < N2 ? 2
+  : value < N3 ? 3
+  : value < N4 ? 4
+  : value < N5 ? 5
+  : value < N6 ? 6
+  : value < N7 ? 7
+  : value < N8 ? 8
+  : value < N9 ? 9
+  :              10
+  )
+}
+
+
+/***/ }),
+
+/***/ 7535:
+/***/ ((module) => {
+
+"use strict";
+// DO NOT CHANGE THIS FILE. IT IS GENERATED BY tools/update-table.js
+/* eslint quote-props: off */
+
+
+/**
+ * @type {import('./generated-types').NameCodeMap}
+ */
+const baseTable = Object.freeze({
+  'identity': 0x00,
+  'cidv1': 0x01,
+  'cidv2': 0x02,
+  'cidv3': 0x03,
+  'ip4': 0x04,
+  'tcp': 0x06,
+  'sha1': 0x11,
+  'sha2-256': 0x12,
+  'sha2-512': 0x13,
+  'sha3-512': 0x14,
+  'sha3-384': 0x15,
+  'sha3-256': 0x16,
+  'sha3-224': 0x17,
+  'shake-128': 0x18,
+  'shake-256': 0x19,
+  'keccak-224': 0x1a,
+  'keccak-256': 0x1b,
+  'keccak-384': 0x1c,
+  'keccak-512': 0x1d,
+  'blake3': 0x1e,
+  'dccp': 0x21,
+  'murmur3-128': 0x22,
+  'murmur3-32': 0x23,
+  'ip6': 0x29,
+  'ip6zone': 0x2a,
+  'path': 0x2f,
+  'multicodec': 0x30,
+  'multihash': 0x31,
+  'multiaddr': 0x32,
+  'multibase': 0x33,
+  'dns': 0x35,
+  'dns4': 0x36,
+  'dns6': 0x37,
+  'dnsaddr': 0x38,
+  'protobuf': 0x50,
+  'cbor': 0x51,
+  'raw': 0x55,
+  'dbl-sha2-256': 0x56,
+  'rlp': 0x60,
+  'bencode': 0x63,
+  'dag-pb': 0x70,
+  'dag-cbor': 0x71,
+  'libp2p-key': 0x72,
+  'git-raw': 0x78,
+  'torrent-info': 0x7b,
+  'torrent-file': 0x7c,
+  'leofcoin-block': 0x81,
+  'leofcoin-tx': 0x82,
+  'leofcoin-pr': 0x83,
+  'sctp': 0x84,
+  'dag-jose': 0x85,
+  'dag-cose': 0x86,
+  'eth-block': 0x90,
+  'eth-block-list': 0x91,
+  'eth-tx-trie': 0x92,
+  'eth-tx': 0x93,
+  'eth-tx-receipt-trie': 0x94,
+  'eth-tx-receipt': 0x95,
+  'eth-state-trie': 0x96,
+  'eth-account-snapshot': 0x97,
+  'eth-storage-trie': 0x98,
+  'eth-receipt-log-trie': 0x99,
+  'eth-reciept-log': 0x9a,
+  'bitcoin-block': 0xb0,
+  'bitcoin-tx': 0xb1,
+  'bitcoin-witness-commitment': 0xb2,
+  'zcash-block': 0xc0,
+  'zcash-tx': 0xc1,
+  'caip-50': 0xca,
+  'streamid': 0xce,
+  'stellar-block': 0xd0,
+  'stellar-tx': 0xd1,
+  'md4': 0xd4,
+  'md5': 0xd5,
+  'bmt': 0xd6,
+  'decred-block': 0xe0,
+  'decred-tx': 0xe1,
+  'ipld-ns': 0xe2,
+  'ipfs-ns': 0xe3,
+  'swarm-ns': 0xe4,
+  'ipns-ns': 0xe5,
+  'zeronet': 0xe6,
+  'secp256k1-pub': 0xe7,
+  'bls12_381-g1-pub': 0xea,
+  'bls12_381-g2-pub': 0xeb,
+  'x25519-pub': 0xec,
+  'ed25519-pub': 0xed,
+  'bls12_381-g1g2-pub': 0xee,
+  'dash-block': 0xf0,
+  'dash-tx': 0xf1,
+  'swarm-manifest': 0xfa,
+  'swarm-feed': 0xfb,
+  'udp': 0x0111,
+  'p2p-webrtc-star': 0x0113,
+  'p2p-webrtc-direct': 0x0114,
+  'p2p-stardust': 0x0115,
+  'p2p-circuit': 0x0122,
+  'dag-json': 0x0129,
+  'udt': 0x012d,
+  'utp': 0x012e,
+  'unix': 0x0190,
+  'thread': 0x0196,
+  'p2p': 0x01a5,
+  'ipfs': 0x01a5,
+  'https': 0x01bb,
+  'onion': 0x01bc,
+  'onion3': 0x01bd,
+  'garlic64': 0x01be,
+  'garlic32': 0x01bf,
+  'tls': 0x01c0,
+  'noise': 0x01c6,
+  'quic': 0x01cc,
+  'ws': 0x01dd,
+  'wss': 0x01de,
+  'p2p-websocket-star': 0x01df,
+  'http': 0x01e0,
+  'swhid-1-snp': 0x01f0,
+  'json': 0x0200,
+  'messagepack': 0x0201,
+  'libp2p-peer-record': 0x0301,
+  'libp2p-relay-rsvp': 0x0302,
+  'car-index-sorted': 0x0400,
+  'sha2-256-trunc254-padded': 0x1012,
+  'ripemd-128': 0x1052,
+  'ripemd-160': 0x1053,
+  'ripemd-256': 0x1054,
+  'ripemd-320': 0x1055,
+  'x11': 0x1100,
+  'p256-pub': 0x1200,
+  'p384-pub': 0x1201,
+  'p521-pub': 0x1202,
+  'ed448-pub': 0x1203,
+  'x448-pub': 0x1204,
+  'ed25519-priv': 0x1300,
+  'secp256k1-priv': 0x1301,
+  'x25519-priv': 0x1302,
+  'kangarootwelve': 0x1d01,
+  'sm3-256': 0x534d,
+  'blake2b-8': 0xb201,
+  'blake2b-16': 0xb202,
+  'blake2b-24': 0xb203,
+  'blake2b-32': 0xb204,
+  'blake2b-40': 0xb205,
+  'blake2b-48': 0xb206,
+  'blake2b-56': 0xb207,
+  'blake2b-64': 0xb208,
+  'blake2b-72': 0xb209,
+  'blake2b-80': 0xb20a,
+  'blake2b-88': 0xb20b,
+  'blake2b-96': 0xb20c,
+  'blake2b-104': 0xb20d,
+  'blake2b-112': 0xb20e,
+  'blake2b-120': 0xb20f,
+  'blake2b-128': 0xb210,
+  'blake2b-136': 0xb211,
+  'blake2b-144': 0xb212,
+  'blake2b-152': 0xb213,
+  'blake2b-160': 0xb214,
+  'blake2b-168': 0xb215,
+  'blake2b-176': 0xb216,
+  'blake2b-184': 0xb217,
+  'blake2b-192': 0xb218,
+  'blake2b-200': 0xb219,
+  'blake2b-208': 0xb21a,
+  'blake2b-216': 0xb21b,
+  'blake2b-224': 0xb21c,
+  'blake2b-232': 0xb21d,
+  'blake2b-240': 0xb21e,
+  'blake2b-248': 0xb21f,
+  'blake2b-256': 0xb220,
+  'blake2b-264': 0xb221,
+  'blake2b-272': 0xb222,
+  'blake2b-280': 0xb223,
+  'blake2b-288': 0xb224,
+  'blake2b-296': 0xb225,
+  'blake2b-304': 0xb226,
+  'blake2b-312': 0xb227,
+  'blake2b-320': 0xb228,
+  'blake2b-328': 0xb229,
+  'blake2b-336': 0xb22a,
+  'blake2b-344': 0xb22b,
+  'blake2b-352': 0xb22c,
+  'blake2b-360': 0xb22d,
+  'blake2b-368': 0xb22e,
+  'blake2b-376': 0xb22f,
+  'blake2b-384': 0xb230,
+  'blake2b-392': 0xb231,
+  'blake2b-400': 0xb232,
+  'blake2b-408': 0xb233,
+  'blake2b-416': 0xb234,
+  'blake2b-424': 0xb235,
+  'blake2b-432': 0xb236,
+  'blake2b-440': 0xb237,
+  'blake2b-448': 0xb238,
+  'blake2b-456': 0xb239,
+  'blake2b-464': 0xb23a,
+  'blake2b-472': 0xb23b,
+  'blake2b-480': 0xb23c,
+  'blake2b-488': 0xb23d,
+  'blake2b-496': 0xb23e,
+  'blake2b-504': 0xb23f,
+  'blake2b-512': 0xb240,
+  'blake2s-8': 0xb241,
+  'blake2s-16': 0xb242,
+  'blake2s-24': 0xb243,
+  'blake2s-32': 0xb244,
+  'blake2s-40': 0xb245,
+  'blake2s-48': 0xb246,
+  'blake2s-56': 0xb247,
+  'blake2s-64': 0xb248,
+  'blake2s-72': 0xb249,
+  'blake2s-80': 0xb24a,
+  'blake2s-88': 0xb24b,
+  'blake2s-96': 0xb24c,
+  'blake2s-104': 0xb24d,
+  'blake2s-112': 0xb24e,
+  'blake2s-120': 0xb24f,
+  'blake2s-128': 0xb250,
+  'blake2s-136': 0xb251,
+  'blake2s-144': 0xb252,
+  'blake2s-152': 0xb253,
+  'blake2s-160': 0xb254,
+  'blake2s-168': 0xb255,
+  'blake2s-176': 0xb256,
+  'blake2s-184': 0xb257,
+  'blake2s-192': 0xb258,
+  'blake2s-200': 0xb259,
+  'blake2s-208': 0xb25a,
+  'blake2s-216': 0xb25b,
+  'blake2s-224': 0xb25c,
+  'blake2s-232': 0xb25d,
+  'blake2s-240': 0xb25e,
+  'blake2s-248': 0xb25f,
+  'blake2s-256': 0xb260,
+  'skein256-8': 0xb301,
+  'skein256-16': 0xb302,
+  'skein256-24': 0xb303,
+  'skein256-32': 0xb304,
+  'skein256-40': 0xb305,
+  'skein256-48': 0xb306,
+  'skein256-56': 0xb307,
+  'skein256-64': 0xb308,
+  'skein256-72': 0xb309,
+  'skein256-80': 0xb30a,
+  'skein256-88': 0xb30b,
+  'skein256-96': 0xb30c,
+  'skein256-104': 0xb30d,
+  'skein256-112': 0xb30e,
+  'skein256-120': 0xb30f,
+  'skein256-128': 0xb310,
+  'skein256-136': 0xb311,
+  'skein256-144': 0xb312,
+  'skein256-152': 0xb313,
+  'skein256-160': 0xb314,
+  'skein256-168': 0xb315,
+  'skein256-176': 0xb316,
+  'skein256-184': 0xb317,
+  'skein256-192': 0xb318,
+  'skein256-200': 0xb319,
+  'skein256-208': 0xb31a,
+  'skein256-216': 0xb31b,
+  'skein256-224': 0xb31c,
+  'skein256-232': 0xb31d,
+  'skein256-240': 0xb31e,
+  'skein256-248': 0xb31f,
+  'skein256-256': 0xb320,
+  'skein512-8': 0xb321,
+  'skein512-16': 0xb322,
+  'skein512-24': 0xb323,
+  'skein512-32': 0xb324,
+  'skein512-40': 0xb325,
+  'skein512-48': 0xb326,
+  'skein512-56': 0xb327,
+  'skein512-64': 0xb328,
+  'skein512-72': 0xb329,
+  'skein512-80': 0xb32a,
+  'skein512-88': 0xb32b,
+  'skein512-96': 0xb32c,
+  'skein512-104': 0xb32d,
+  'skein512-112': 0xb32e,
+  'skein512-120': 0xb32f,
+  'skein512-128': 0xb330,
+  'skein512-136': 0xb331,
+  'skein512-144': 0xb332,
+  'skein512-152': 0xb333,
+  'skein512-160': 0xb334,
+  'skein512-168': 0xb335,
+  'skein512-176': 0xb336,
+  'skein512-184': 0xb337,
+  'skein512-192': 0xb338,
+  'skein512-200': 0xb339,
+  'skein512-208': 0xb33a,
+  'skein512-216': 0xb33b,
+  'skein512-224': 0xb33c,
+  'skein512-232': 0xb33d,
+  'skein512-240': 0xb33e,
+  'skein512-248': 0xb33f,
+  'skein512-256': 0xb340,
+  'skein512-264': 0xb341,
+  'skein512-272': 0xb342,
+  'skein512-280': 0xb343,
+  'skein512-288': 0xb344,
+  'skein512-296': 0xb345,
+  'skein512-304': 0xb346,
+  'skein512-312': 0xb347,
+  'skein512-320': 0xb348,
+  'skein512-328': 0xb349,
+  'skein512-336': 0xb34a,
+  'skein512-344': 0xb34b,
+  'skein512-352': 0xb34c,
+  'skein512-360': 0xb34d,
+  'skein512-368': 0xb34e,
+  'skein512-376': 0xb34f,
+  'skein512-384': 0xb350,
+  'skein512-392': 0xb351,
+  'skein512-400': 0xb352,
+  'skein512-408': 0xb353,
+  'skein512-416': 0xb354,
+  'skein512-424': 0xb355,
+  'skein512-432': 0xb356,
+  'skein512-440': 0xb357,
+  'skein512-448': 0xb358,
+  'skein512-456': 0xb359,
+  'skein512-464': 0xb35a,
+  'skein512-472': 0xb35b,
+  'skein512-480': 0xb35c,
+  'skein512-488': 0xb35d,
+  'skein512-496': 0xb35e,
+  'skein512-504': 0xb35f,
+  'skein512-512': 0xb360,
+  'skein1024-8': 0xb361,
+  'skein1024-16': 0xb362,
+  'skein1024-24': 0xb363,
+  'skein1024-32': 0xb364,
+  'skein1024-40': 0xb365,
+  'skein1024-48': 0xb366,
+  'skein1024-56': 0xb367,
+  'skein1024-64': 0xb368,
+  'skein1024-72': 0xb369,
+  'skein1024-80': 0xb36a,
+  'skein1024-88': 0xb36b,
+  'skein1024-96': 0xb36c,
+  'skein1024-104': 0xb36d,
+  'skein1024-112': 0xb36e,
+  'skein1024-120': 0xb36f,
+  'skein1024-128': 0xb370,
+  'skein1024-136': 0xb371,
+  'skein1024-144': 0xb372,
+  'skein1024-152': 0xb373,
+  'skein1024-160': 0xb374,
+  'skein1024-168': 0xb375,
+  'skein1024-176': 0xb376,
+  'skein1024-184': 0xb377,
+  'skein1024-192': 0xb378,
+  'skein1024-200': 0xb379,
+  'skein1024-208': 0xb37a,
+  'skein1024-216': 0xb37b,
+  'skein1024-224': 0xb37c,
+  'skein1024-232': 0xb37d,
+  'skein1024-240': 0xb37e,
+  'skein1024-248': 0xb37f,
+  'skein1024-256': 0xb380,
+  'skein1024-264': 0xb381,
+  'skein1024-272': 0xb382,
+  'skein1024-280': 0xb383,
+  'skein1024-288': 0xb384,
+  'skein1024-296': 0xb385,
+  'skein1024-304': 0xb386,
+  'skein1024-312': 0xb387,
+  'skein1024-320': 0xb388,
+  'skein1024-328': 0xb389,
+  'skein1024-336': 0xb38a,
+  'skein1024-344': 0xb38b,
+  'skein1024-352': 0xb38c,
+  'skein1024-360': 0xb38d,
+  'skein1024-368': 0xb38e,
+  'skein1024-376': 0xb38f,
+  'skein1024-384': 0xb390,
+  'skein1024-392': 0xb391,
+  'skein1024-400': 0xb392,
+  'skein1024-408': 0xb393,
+  'skein1024-416': 0xb394,
+  'skein1024-424': 0xb395,
+  'skein1024-432': 0xb396,
+  'skein1024-440': 0xb397,
+  'skein1024-448': 0xb398,
+  'skein1024-456': 0xb399,
+  'skein1024-464': 0xb39a,
+  'skein1024-472': 0xb39b,
+  'skein1024-480': 0xb39c,
+  'skein1024-488': 0xb39d,
+  'skein1024-496': 0xb39e,
+  'skein1024-504': 0xb39f,
+  'skein1024-512': 0xb3a0,
+  'skein1024-520': 0xb3a1,
+  'skein1024-528': 0xb3a2,
+  'skein1024-536': 0xb3a3,
+  'skein1024-544': 0xb3a4,
+  'skein1024-552': 0xb3a5,
+  'skein1024-560': 0xb3a6,
+  'skein1024-568': 0xb3a7,
+  'skein1024-576': 0xb3a8,
+  'skein1024-584': 0xb3a9,
+  'skein1024-592': 0xb3aa,
+  'skein1024-600': 0xb3ab,
+  'skein1024-608': 0xb3ac,
+  'skein1024-616': 0xb3ad,
+  'skein1024-624': 0xb3ae,
+  'skein1024-632': 0xb3af,
+  'skein1024-640': 0xb3b0,
+  'skein1024-648': 0xb3b1,
+  'skein1024-656': 0xb3b2,
+  'skein1024-664': 0xb3b3,
+  'skein1024-672': 0xb3b4,
+  'skein1024-680': 0xb3b5,
+  'skein1024-688': 0xb3b6,
+  'skein1024-696': 0xb3b7,
+  'skein1024-704': 0xb3b8,
+  'skein1024-712': 0xb3b9,
+  'skein1024-720': 0xb3ba,
+  'skein1024-728': 0xb3bb,
+  'skein1024-736': 0xb3bc,
+  'skein1024-744': 0xb3bd,
+  'skein1024-752': 0xb3be,
+  'skein1024-760': 0xb3bf,
+  'skein1024-768': 0xb3c0,
+  'skein1024-776': 0xb3c1,
+  'skein1024-784': 0xb3c2,
+  'skein1024-792': 0xb3c3,
+  'skein1024-800': 0xb3c4,
+  'skein1024-808': 0xb3c5,
+  'skein1024-816': 0xb3c6,
+  'skein1024-824': 0xb3c7,
+  'skein1024-832': 0xb3c8,
+  'skein1024-840': 0xb3c9,
+  'skein1024-848': 0xb3ca,
+  'skein1024-856': 0xb3cb,
+  'skein1024-864': 0xb3cc,
+  'skein1024-872': 0xb3cd,
+  'skein1024-880': 0xb3ce,
+  'skein1024-888': 0xb3cf,
+  'skein1024-896': 0xb3d0,
+  'skein1024-904': 0xb3d1,
+  'skein1024-912': 0xb3d2,
+  'skein1024-920': 0xb3d3,
+  'skein1024-928': 0xb3d4,
+  'skein1024-936': 0xb3d5,
+  'skein1024-944': 0xb3d6,
+  'skein1024-952': 0xb3d7,
+  'skein1024-960': 0xb3d8,
+  'skein1024-968': 0xb3d9,
+  'skein1024-976': 0xb3da,
+  'skein1024-984': 0xb3db,
+  'skein1024-992': 0xb3dc,
+  'skein1024-1000': 0xb3dd,
+  'skein1024-1008': 0xb3de,
+  'skein1024-1016': 0xb3df,
+  'skein1024-1024': 0xb3e0,
+  'poseidon-bls12_381-a2-fc1': 0xb401,
+  'poseidon-bls12_381-a2-fc1-sc': 0xb402,
+  'zeroxcert-imprint-256': 0xce11,
+  'fil-commitment-unsealed': 0xf101,
+  'fil-commitment-sealed': 0xf102,
+  'holochain-adr-v0': 0x807124,
+  'holochain-adr-v1': 0x817124,
+  'holochain-key-v0': 0x947124,
+  'holochain-key-v1': 0x957124,
+  'holochain-sig-v0': 0xa27124,
+  'holochain-sig-v1': 0xa37124,
+  'skynet-ns': 0xb19910,
+  'arweave-ns': 0xb29910
+})
+
+module.exports = { baseTable }
+
+
+/***/ }),
+
+/***/ 5417:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+/**
+ * Implementation of the multicodec specification.
+ *
+ * @module multicodec
+ * @example
+ * const multicodec = require('multicodec')
+ *
+ * const prefixedProtobuf = multicodec.addPrefix('protobuf', protobufBuffer)
+ * // prefixedProtobuf 0x50...
+ *
+ */
+
+
+/** @typedef {import('./generated-types').CodecName} CodecName */
+/** @typedef {import('./generated-types').CodecCode} CodecCode */
+
+const varint = __nccwpck_require__(3822)
+const { concat: uint8ArrayConcat } = __nccwpck_require__(5114)
+const util = __nccwpck_require__(6918)
+const { nameToVarint, constantToCode, nameToCode, codeToName } = __nccwpck_require__(7545)
+
+/**
+ * Prefix a buffer with a multicodec-packed.
+ *
+ * @param {CodecName|Uint8Array} multicodecStrOrCode
+ * @param {Uint8Array} data
+ * @returns {Uint8Array}
+ */
+function addPrefix (multicodecStrOrCode, data) {
+  let prefix
+
+  if (multicodecStrOrCode instanceof Uint8Array) {
+    prefix = util.varintUint8ArrayEncode(multicodecStrOrCode)
+  } else {
+    if (nameToVarint[multicodecStrOrCode]) {
+      prefix = nameToVarint[multicodecStrOrCode]
+    } else {
+      throw new Error('multicodec not recognized')
+    }
+  }
+
+  return uint8ArrayConcat([prefix, data], prefix.length + data.length)
+}
+
+/**
+ * Decapsulate the multicodec-packed prefix from the data.
+ *
+ * @param {Uint8Array} data
+ * @returns {Uint8Array}
+ */
+function rmPrefix (data) {
+  varint.decode(/** @type {Buffer} */(data))
+  return data.slice(varint.decode.bytes)
+}
+
+/**
+ * Get the codec name of the prefixed data.
+ *
+ * @param {Uint8Array} prefixedData
+ * @returns {CodecName}
+ */
+function getNameFromData (prefixedData) {
+  const code = /** @type {CodecCode} */(varint.decode(/** @type {Buffer} */(prefixedData)))
+  const name = codeToName[code]
+  if (name === undefined) {
+    throw new Error(`Code "${code}" not found`)
+  }
+  return name
+}
+
+/**
+ * Get the codec name from a code.
+ *
+ * @param {CodecCode} codec
+ * @returns {CodecName}
+ */
+function getNameFromCode (codec) {
+  return codeToName[codec]
+}
+
+/**
+ * Get the code of the codec
+ *
+ * @param {CodecName} name
+ * @returns {CodecCode}
+ */
+function getCodeFromName (name) {
+  const code = nameToCode[name]
+  if (code === undefined) {
+    throw new Error(`Codec "${name}" not found`)
+  }
+  return code
+}
+
+/**
+ * Get the code of the prefixed data.
+ *
+ * @param {Uint8Array} prefixedData
+ * @returns {CodecCode}
+ */
+function getCodeFromData (prefixedData) {
+  return /** @type {CodecCode} */(varint.decode(/** @type {Buffer} */(prefixedData)))
+}
+
+/**
+ * Get the code as varint of a codec name.
+ *
+ * @param {CodecName} name
+ * @returns {Uint8Array}
+ */
+function getVarintFromName (name) {
+  const code = nameToVarint[name]
+  if (code === undefined) {
+    throw new Error(`Codec "${name}" not found`)
+  }
+  return code
+}
+
+/**
+ * Get the varint of a code.
+ *
+ * @param {CodecCode} code
+ * @returns {Uint8Array}
+ */
+function getVarintFromCode (code) {
+  return util.varintEncode(code)
+}
+
+/**
+ * Get the codec name of the prefixed data.
+ *
+ * @deprecated use getNameFromData instead.
+ * @param {Uint8Array} prefixedData
+ * @returns {CodecName}
+ */
+function getCodec (prefixedData) {
+  return getNameFromData(prefixedData)
+}
+
+/**
+ * Get the codec name from a code.
+ *
+ * @deprecated use getNameFromCode instead.
+ * @param {CodecCode} codec
+ * @returns {CodecName}
+ */
+function getName (codec) {
+  return getNameFromCode(codec)
+}
+
+/**
+ * Get the code of the codec
+ *
+ * @deprecated use getCodeFromName instead.
+ * @param {CodecName} name
+ * @returns {CodecCode}
+ */
+function getNumber (name) {
+  return getCodeFromName(name)
+}
+
+/**
+ * Get the code of the prefixed data.
+ *
+ * @deprecated use getCodeFromData instead.
+ * @param {Uint8Array} prefixedData
+ * @returns {CodecCode}
+ */
+function getCode (prefixedData) {
+  return getCodeFromData(prefixedData)
+}
+
+/**
+ * Get the code as varint of a codec name.
+ *
+ * @deprecated use getVarintFromName instead.
+ * @param {CodecName} name
+ * @returns {Uint8Array}
+ */
+function getCodeVarint (name) {
+  return getVarintFromName(name)
+}
+
+/**
+ * Get the varint of a code.
+ *
+ * @deprecated use getVarintFromCode instead.
+ * @param {CodecCode} code
+ * @returns {Array.<number>}
+ */
+function getVarint (code) {
+  return Array.from(getVarintFromCode(code))
+}
+
+module.exports = {
+  addPrefix,
+  rmPrefix,
+  getNameFromData,
+  getNameFromCode,
+  getCodeFromName,
+  getCodeFromData,
+  getVarintFromName,
+  getVarintFromCode,
+  // Deprecated
+  getCodec,
+  getName,
+  getNumber,
+  getCode,
+  getCodeVarint,
+  getVarint,
+  // Make the constants top-level constants
+  ...constantToCode,
+  // Export the maps
+  nameToVarint,
+  nameToCode,
+  codeToName
+}
+
+
+/***/ }),
+
+/***/ 7545:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+/** @typedef {import('./generated-types').ConstantCodeMap} ConstantCodeMap */
+/** @typedef {import('./generated-types').NameUint8ArrayMap} NameUint8ArrayMap */
+/** @typedef {import('./generated-types').CodeNameMap} CodeNameMap */
+/** @typedef {import('./generated-types').CodecName} CodecName */
+/** @typedef {import('./generated-types').CodecConstant} CodecConstant */
+
+const { baseTable } = __nccwpck_require__(7535)
+const varintEncode = (__nccwpck_require__(6918).varintEncode)
+
+const nameToVarint = /** @type {NameUint8ArrayMap} */ ({})
+const constantToCode = /** @type {ConstantCodeMap} */({})
+const codeToName = /** @type {CodeNameMap} */({})
+
+// eslint-disable-next-line guard-for-in
+for (const name in baseTable) {
+  const codecName = /** @type {CodecName} */(name)
+  const code = baseTable[codecName]
+  nameToVarint[codecName] = varintEncode(code)
+
+  const constant = /** @type {CodecConstant} */(codecName.toUpperCase().replace(/-/g, '_'))
+  constantToCode[constant] = code
+
+  if (!codeToName[code]) {
+    codeToName[code] = codecName
+  }
+}
+
+Object.freeze(nameToVarint)
+Object.freeze(constantToCode)
+Object.freeze(codeToName)
+const nameToCode = Object.freeze(baseTable)
+module.exports = {
+  nameToVarint,
+  constantToCode,
+  nameToCode,
+  codeToName
+}
+
+
+/***/ }),
+
+/***/ 6918:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+const varint = __nccwpck_require__(3822)
+const { toString: uint8ArrayToString } = __nccwpck_require__(8389)
+const { fromString: uint8ArrayFromString } = __nccwpck_require__(3538)
+
+module.exports = {
+  numberToUint8Array,
+  uint8ArrayToNumber,
+  varintUint8ArrayEncode,
+  varintEncode
+}
+
+/**
+ * @param {Uint8Array} buf
+ */
+function uint8ArrayToNumber (buf) {
+  return parseInt(uint8ArrayToString(buf, 'base16'), 16)
+}
+
+/**
+ * @param {number} num
+ */
+function numberToUint8Array (num) {
+  let hexString = num.toString(16)
+  if (hexString.length % 2 === 1) {
+    hexString = '0' + hexString
+  }
+  return uint8ArrayFromString(hexString, 'base16')
+}
+
+/**
+ * @param {Uint8Array} input
+ */
+function varintUint8ArrayEncode (input) {
+  return Uint8Array.from(varint.encode(uint8ArrayToNumber(input)))
+}
+
+/**
+ * @param {number} num
+ */
+function varintEncode (num) {
+  return Uint8Array.from(varint.encode(num))
+}
+
+
+/***/ }),
+
+/***/ 960:
+/***/ ((module) => {
+
+"use strict";
+/* eslint quote-props: off */
+
+
+/**
+ * Names for all available hashes
+ *
+ * @typedef { "identity" | "sha1" | "sha2-256" | "sha2-512" | "sha3-512" | "sha3-384" | "sha3-256" | "sha3-224" | "shake-128" | "shake-256" | "keccak-224" | "keccak-256" | "keccak-384" | "keccak-512" | "blake3" | "murmur3-128" | "murmur3-32" | "dbl-sha2-256" | "md4" | "md5" | "bmt" | "sha2-256-trunc254-padded" | "ripemd-128" | "ripemd-160" | "ripemd-256" | "ripemd-320" | "x11" | "kangarootwelve" | "sm3-256" | "blake2b-8" | "blake2b-16" | "blake2b-24" | "blake2b-32" | "blake2b-40" | "blake2b-48" | "blake2b-56" | "blake2b-64" | "blake2b-72" | "blake2b-80" | "blake2b-88" | "blake2b-96" | "blake2b-104" | "blake2b-112" | "blake2b-120" | "blake2b-128" | "blake2b-136" | "blake2b-144" | "blake2b-152" | "blake2b-160" | "blake2b-168" | "blake2b-176" | "blake2b-184" | "blake2b-192" | "blake2b-200" | "blake2b-208" | "blake2b-216" | "blake2b-224" | "blake2b-232" | "blake2b-240" | "blake2b-248" | "blake2b-256" | "blake2b-264" | "blake2b-272" | "blake2b-280" | "blake2b-288" | "blake2b-296" | "blake2b-304" | "blake2b-312" | "blake2b-320" | "blake2b-328" | "blake2b-336" | "blake2b-344" | "blake2b-352" | "blake2b-360" | "blake2b-368" | "blake2b-376" | "blake2b-384" | "blake2b-392" | "blake2b-400" | "blake2b-408" | "blake2b-416" | "blake2b-424" | "blake2b-432" | "blake2b-440" | "blake2b-448" | "blake2b-456" | "blake2b-464" | "blake2b-472" | "blake2b-480" | "blake2b-488" | "blake2b-496" | "blake2b-504" | "blake2b-512" | "blake2s-8" | "blake2s-16" | "blake2s-24" | "blake2s-32" | "blake2s-40" | "blake2s-48" | "blake2s-56" | "blake2s-64" | "blake2s-72" | "blake2s-80" | "blake2s-88" | "blake2s-96" | "blake2s-104" | "blake2s-112" | "blake2s-120" | "blake2s-128" | "blake2s-136" | "blake2s-144" | "blake2s-152" | "blake2s-160" | "blake2s-168" | "blake2s-176" | "blake2s-184" | "blake2s-192" | "blake2s-200" | "blake2s-208" | "blake2s-216" | "blake2s-224" | "blake2s-232" | "blake2s-240" | "blake2s-248" | "blake2s-256" | "skein256-8" | "skein256-16" | "skein256-24" | "skein256-32" | "skein256-40" | "skein256-48" | "skein256-56" | "skein256-64" | "skein256-72" | "skein256-80" | "skein256-88" | "skein256-96" | "skein256-104" | "skein256-112" | "skein256-120" | "skein256-128" | "skein256-136" | "skein256-144" | "skein256-152" | "skein256-160" | "skein256-168" | "skein256-176" | "skein256-184" | "skein256-192" | "skein256-200" | "skein256-208" | "skein256-216" | "skein256-224" | "skein256-232" | "skein256-240" | "skein256-248" | "skein256-256" | "skein512-8" | "skein512-16" | "skein512-24" | "skein512-32" | "skein512-40" | "skein512-48" | "skein512-56" | "skein512-64" | "skein512-72" | "skein512-80" | "skein512-88" | "skein512-96" | "skein512-104" | "skein512-112" | "skein512-120" | "skein512-128" | "skein512-136" | "skein512-144" | "skein512-152" | "skein512-160" | "skein512-168" | "skein512-176" | "skein512-184" | "skein512-192" | "skein512-200" | "skein512-208" | "skein512-216" | "skein512-224" | "skein512-232" | "skein512-240" | "skein512-248" | "skein512-256" | "skein512-264" | "skein512-272" | "skein512-280" | "skein512-288" | "skein512-296" | "skein512-304" | "skein512-312" | "skein512-320" | "skein512-328" | "skein512-336" | "skein512-344" | "skein512-352" | "skein512-360" | "skein512-368" | "skein512-376" | "skein512-384" | "skein512-392" | "skein512-400" | "skein512-408" | "skein512-416" | "skein512-424" | "skein512-432" | "skein512-440" | "skein512-448" | "skein512-456" | "skein512-464" | "skein512-472" | "skein512-480" | "skein512-488" | "skein512-496" | "skein512-504" | "skein512-512" | "skein1024-8" | "skein1024-16" | "skein1024-24" | "skein1024-32" | "skein1024-40" | "skein1024-48" | "skein1024-56" | "skein1024-64" | "skein1024-72" | "skein1024-80" | "skein1024-88" | "skein1024-96" | "skein1024-104" | "skein1024-112" | "skein1024-120" | "skein1024-128" | "skein1024-136" | "skein1024-144" | "skein1024-152" | "skein1024-160" | "skein1024-168" | "skein1024-176" | "skein1024-184" | "skein1024-192" | "skein1024-200" | "skein1024-208" | "skein1024-216" | "skein1024-224" | "skein1024-232" | "skein1024-240" | "skein1024-248" | "skein1024-256" | "skein1024-264" | "skein1024-272" | "skein1024-280" | "skein1024-288" | "skein1024-296" | "skein1024-304" | "skein1024-312" | "skein1024-320" | "skein1024-328" | "skein1024-336" | "skein1024-344" | "skein1024-352" | "skein1024-360" | "skein1024-368" | "skein1024-376" | "skein1024-384" | "skein1024-392" | "skein1024-400" | "skein1024-408" | "skein1024-416" | "skein1024-424" | "skein1024-432" | "skein1024-440" | "skein1024-448" | "skein1024-456" | "skein1024-464" | "skein1024-472" | "skein1024-480" | "skein1024-488" | "skein1024-496" | "skein1024-504" | "skein1024-512" | "skein1024-520" | "skein1024-528" | "skein1024-536" | "skein1024-544" | "skein1024-552" | "skein1024-560" | "skein1024-568" | "skein1024-576" | "skein1024-584" | "skein1024-592" | "skein1024-600" | "skein1024-608" | "skein1024-616" | "skein1024-624" | "skein1024-632" | "skein1024-640" | "skein1024-648" | "skein1024-656" | "skein1024-664" | "skein1024-672" | "skein1024-680" | "skein1024-688" | "skein1024-696" | "skein1024-704" | "skein1024-712" | "skein1024-720" | "skein1024-728" | "skein1024-736" | "skein1024-744" | "skein1024-752" | "skein1024-760" | "skein1024-768" | "skein1024-776" | "skein1024-784" | "skein1024-792" | "skein1024-800" | "skein1024-808" | "skein1024-816" | "skein1024-824" | "skein1024-832" | "skein1024-840" | "skein1024-848" | "skein1024-856" | "skein1024-864" | "skein1024-872" | "skein1024-880" | "skein1024-888" | "skein1024-896" | "skein1024-904" | "skein1024-912" | "skein1024-920" | "skein1024-928" | "skein1024-936" | "skein1024-944" | "skein1024-952" | "skein1024-960" | "skein1024-968" | "skein1024-976" | "skein1024-984" | "skein1024-992" | "skein1024-1000" | "skein1024-1008" | "skein1024-1016" | "skein1024-1024" | "poseidon-bls12_381-a2-fc1" | "poseidon-bls12_381-a2-fc1-sc" } HashName
+ */
+/**
+ * Codes for all available hashes
+ *
+ * @typedef { 0x00 | 0x11 | 0x12 | 0x13 | 0x14 | 0x15 | 0x16 | 0x17 | 0x18 | 0x19 | 0x1a | 0x1b | 0x1c | 0x1d | 0x1e | 0x22 | 0x23 | 0x56 | 0xd4 | 0xd5 | 0xd6 | 0x1012 | 0x1052 | 0x1053 | 0x1054 | 0x1055 | 0x1100 | 0x1d01 | 0x534d | 0xb201 | 0xb202 | 0xb203 | 0xb204 | 0xb205 | 0xb206 | 0xb207 | 0xb208 | 0xb209 | 0xb20a | 0xb20b | 0xb20c | 0xb20d | 0xb20e | 0xb20f | 0xb210 | 0xb211 | 0xb212 | 0xb213 | 0xb214 | 0xb215 | 0xb216 | 0xb217 | 0xb218 | 0xb219 | 0xb21a | 0xb21b | 0xb21c | 0xb21d | 0xb21e | 0xb21f | 0xb220 | 0xb221 | 0xb222 | 0xb223 | 0xb224 | 0xb225 | 0xb226 | 0xb227 | 0xb228 | 0xb229 | 0xb22a | 0xb22b | 0xb22c | 0xb22d | 0xb22e | 0xb22f | 0xb230 | 0xb231 | 0xb232 | 0xb233 | 0xb234 | 0xb235 | 0xb236 | 0xb237 | 0xb238 | 0xb239 | 0xb23a | 0xb23b | 0xb23c | 0xb23d | 0xb23e | 0xb23f | 0xb240 | 0xb241 | 0xb242 | 0xb243 | 0xb244 | 0xb245 | 0xb246 | 0xb247 | 0xb248 | 0xb249 | 0xb24a | 0xb24b | 0xb24c | 0xb24d | 0xb24e | 0xb24f | 0xb250 | 0xb251 | 0xb252 | 0xb253 | 0xb254 | 0xb255 | 0xb256 | 0xb257 | 0xb258 | 0xb259 | 0xb25a | 0xb25b | 0xb25c | 0xb25d | 0xb25e | 0xb25f | 0xb260 | 0xb301 | 0xb302 | 0xb303 | 0xb304 | 0xb305 | 0xb306 | 0xb307 | 0xb308 | 0xb309 | 0xb30a | 0xb30b | 0xb30c | 0xb30d | 0xb30e | 0xb30f | 0xb310 | 0xb311 | 0xb312 | 0xb313 | 0xb314 | 0xb315 | 0xb316 | 0xb317 | 0xb318 | 0xb319 | 0xb31a | 0xb31b | 0xb31c | 0xb31d | 0xb31e | 0xb31f | 0xb320 | 0xb321 | 0xb322 | 0xb323 | 0xb324 | 0xb325 | 0xb326 | 0xb327 | 0xb328 | 0xb329 | 0xb32a | 0xb32b | 0xb32c | 0xb32d | 0xb32e | 0xb32f | 0xb330 | 0xb331 | 0xb332 | 0xb333 | 0xb334 | 0xb335 | 0xb336 | 0xb337 | 0xb338 | 0xb339 | 0xb33a | 0xb33b | 0xb33c | 0xb33d | 0xb33e | 0xb33f | 0xb340 | 0xb341 | 0xb342 | 0xb343 | 0xb344 | 0xb345 | 0xb346 | 0xb347 | 0xb348 | 0xb349 | 0xb34a | 0xb34b | 0xb34c | 0xb34d | 0xb34e | 0xb34f | 0xb350 | 0xb351 | 0xb352 | 0xb353 | 0xb354 | 0xb355 | 0xb356 | 0xb357 | 0xb358 | 0xb359 | 0xb35a | 0xb35b | 0xb35c | 0xb35d | 0xb35e | 0xb35f | 0xb360 | 0xb361 | 0xb362 | 0xb363 | 0xb364 | 0xb365 | 0xb366 | 0xb367 | 0xb368 | 0xb369 | 0xb36a | 0xb36b | 0xb36c | 0xb36d | 0xb36e | 0xb36f | 0xb370 | 0xb371 | 0xb372 | 0xb373 | 0xb374 | 0xb375 | 0xb376 | 0xb377 | 0xb378 | 0xb379 | 0xb37a | 0xb37b | 0xb37c | 0xb37d | 0xb37e | 0xb37f | 0xb380 | 0xb381 | 0xb382 | 0xb383 | 0xb384 | 0xb385 | 0xb386 | 0xb387 | 0xb388 | 0xb389 | 0xb38a | 0xb38b | 0xb38c | 0xb38d | 0xb38e | 0xb38f | 0xb390 | 0xb391 | 0xb392 | 0xb393 | 0xb394 | 0xb395 | 0xb396 | 0xb397 | 0xb398 | 0xb399 | 0xb39a | 0xb39b | 0xb39c | 0xb39d | 0xb39e | 0xb39f | 0xb3a0 | 0xb3a1 | 0xb3a2 | 0xb3a3 | 0xb3a4 | 0xb3a5 | 0xb3a6 | 0xb3a7 | 0xb3a8 | 0xb3a9 | 0xb3aa | 0xb3ab | 0xb3ac | 0xb3ad | 0xb3ae | 0xb3af | 0xb3b0 | 0xb3b1 | 0xb3b2 | 0xb3b3 | 0xb3b4 | 0xb3b5 | 0xb3b6 | 0xb3b7 | 0xb3b8 | 0xb3b9 | 0xb3ba | 0xb3bb | 0xb3bc | 0xb3bd | 0xb3be | 0xb3bf | 0xb3c0 | 0xb3c1 | 0xb3c2 | 0xb3c3 | 0xb3c4 | 0xb3c5 | 0xb3c6 | 0xb3c7 | 0xb3c8 | 0xb3c9 | 0xb3ca | 0xb3cb | 0xb3cc | 0xb3cd | 0xb3ce | 0xb3cf | 0xb3d0 | 0xb3d1 | 0xb3d2 | 0xb3d3 | 0xb3d4 | 0xb3d5 | 0xb3d6 | 0xb3d7 | 0xb3d8 | 0xb3d9 | 0xb3da | 0xb3db | 0xb3dc | 0xb3dd | 0xb3de | 0xb3df | 0xb3e0 | 0xb401 | 0xb402 } HashCode
+ */
+
+/**
+ * @type { Record<HashName,HashCode> }
+ */
+const names = Object.freeze({
+  'identity': 0x00,
+  'sha1': 0x11,
+  'sha2-256': 0x12,
+  'sha2-512': 0x13,
+  'sha3-512': 0x14,
+  'sha3-384': 0x15,
+  'sha3-256': 0x16,
+  'sha3-224': 0x17,
+  'shake-128': 0x18,
+  'shake-256': 0x19,
+  'keccak-224': 0x1a,
+  'keccak-256': 0x1b,
+  'keccak-384': 0x1c,
+  'keccak-512': 0x1d,
+  'blake3': 0x1e,
+  'murmur3-128': 0x22,
+  'murmur3-32': 0x23,
+  'dbl-sha2-256': 0x56,
+  'md4': 0xd4,
+  'md5': 0xd5,
+  'bmt': 0xd6,
+  'sha2-256-trunc254-padded': 0x1012,
+  'ripemd-128': 0x1052,
+  'ripemd-160': 0x1053,
+  'ripemd-256': 0x1054,
+  'ripemd-320': 0x1055,
+  'x11': 0x1100,
+  'kangarootwelve': 0x1d01,
+  'sm3-256': 0x534d,
+  'blake2b-8': 0xb201,
+  'blake2b-16': 0xb202,
+  'blake2b-24': 0xb203,
+  'blake2b-32': 0xb204,
+  'blake2b-40': 0xb205,
+  'blake2b-48': 0xb206,
+  'blake2b-56': 0xb207,
+  'blake2b-64': 0xb208,
+  'blake2b-72': 0xb209,
+  'blake2b-80': 0xb20a,
+  'blake2b-88': 0xb20b,
+  'blake2b-96': 0xb20c,
+  'blake2b-104': 0xb20d,
+  'blake2b-112': 0xb20e,
+  'blake2b-120': 0xb20f,
+  'blake2b-128': 0xb210,
+  'blake2b-136': 0xb211,
+  'blake2b-144': 0xb212,
+  'blake2b-152': 0xb213,
+  'blake2b-160': 0xb214,
+  'blake2b-168': 0xb215,
+  'blake2b-176': 0xb216,
+  'blake2b-184': 0xb217,
+  'blake2b-192': 0xb218,
+  'blake2b-200': 0xb219,
+  'blake2b-208': 0xb21a,
+  'blake2b-216': 0xb21b,
+  'blake2b-224': 0xb21c,
+  'blake2b-232': 0xb21d,
+  'blake2b-240': 0xb21e,
+  'blake2b-248': 0xb21f,
+  'blake2b-256': 0xb220,
+  'blake2b-264': 0xb221,
+  'blake2b-272': 0xb222,
+  'blake2b-280': 0xb223,
+  'blake2b-288': 0xb224,
+  'blake2b-296': 0xb225,
+  'blake2b-304': 0xb226,
+  'blake2b-312': 0xb227,
+  'blake2b-320': 0xb228,
+  'blake2b-328': 0xb229,
+  'blake2b-336': 0xb22a,
+  'blake2b-344': 0xb22b,
+  'blake2b-352': 0xb22c,
+  'blake2b-360': 0xb22d,
+  'blake2b-368': 0xb22e,
+  'blake2b-376': 0xb22f,
+  'blake2b-384': 0xb230,
+  'blake2b-392': 0xb231,
+  'blake2b-400': 0xb232,
+  'blake2b-408': 0xb233,
+  'blake2b-416': 0xb234,
+  'blake2b-424': 0xb235,
+  'blake2b-432': 0xb236,
+  'blake2b-440': 0xb237,
+  'blake2b-448': 0xb238,
+  'blake2b-456': 0xb239,
+  'blake2b-464': 0xb23a,
+  'blake2b-472': 0xb23b,
+  'blake2b-480': 0xb23c,
+  'blake2b-488': 0xb23d,
+  'blake2b-496': 0xb23e,
+  'blake2b-504': 0xb23f,
+  'blake2b-512': 0xb240,
+  'blake2s-8': 0xb241,
+  'blake2s-16': 0xb242,
+  'blake2s-24': 0xb243,
+  'blake2s-32': 0xb244,
+  'blake2s-40': 0xb245,
+  'blake2s-48': 0xb246,
+  'blake2s-56': 0xb247,
+  'blake2s-64': 0xb248,
+  'blake2s-72': 0xb249,
+  'blake2s-80': 0xb24a,
+  'blake2s-88': 0xb24b,
+  'blake2s-96': 0xb24c,
+  'blake2s-104': 0xb24d,
+  'blake2s-112': 0xb24e,
+  'blake2s-120': 0xb24f,
+  'blake2s-128': 0xb250,
+  'blake2s-136': 0xb251,
+  'blake2s-144': 0xb252,
+  'blake2s-152': 0xb253,
+  'blake2s-160': 0xb254,
+  'blake2s-168': 0xb255,
+  'blake2s-176': 0xb256,
+  'blake2s-184': 0xb257,
+  'blake2s-192': 0xb258,
+  'blake2s-200': 0xb259,
+  'blake2s-208': 0xb25a,
+  'blake2s-216': 0xb25b,
+  'blake2s-224': 0xb25c,
+  'blake2s-232': 0xb25d,
+  'blake2s-240': 0xb25e,
+  'blake2s-248': 0xb25f,
+  'blake2s-256': 0xb260,
+  'skein256-8': 0xb301,
+  'skein256-16': 0xb302,
+  'skein256-24': 0xb303,
+  'skein256-32': 0xb304,
+  'skein256-40': 0xb305,
+  'skein256-48': 0xb306,
+  'skein256-56': 0xb307,
+  'skein256-64': 0xb308,
+  'skein256-72': 0xb309,
+  'skein256-80': 0xb30a,
+  'skein256-88': 0xb30b,
+  'skein256-96': 0xb30c,
+  'skein256-104': 0xb30d,
+  'skein256-112': 0xb30e,
+  'skein256-120': 0xb30f,
+  'skein256-128': 0xb310,
+  'skein256-136': 0xb311,
+  'skein256-144': 0xb312,
+  'skein256-152': 0xb313,
+  'skein256-160': 0xb314,
+  'skein256-168': 0xb315,
+  'skein256-176': 0xb316,
+  'skein256-184': 0xb317,
+  'skein256-192': 0xb318,
+  'skein256-200': 0xb319,
+  'skein256-208': 0xb31a,
+  'skein256-216': 0xb31b,
+  'skein256-224': 0xb31c,
+  'skein256-232': 0xb31d,
+  'skein256-240': 0xb31e,
+  'skein256-248': 0xb31f,
+  'skein256-256': 0xb320,
+  'skein512-8': 0xb321,
+  'skein512-16': 0xb322,
+  'skein512-24': 0xb323,
+  'skein512-32': 0xb324,
+  'skein512-40': 0xb325,
+  'skein512-48': 0xb326,
+  'skein512-56': 0xb327,
+  'skein512-64': 0xb328,
+  'skein512-72': 0xb329,
+  'skein512-80': 0xb32a,
+  'skein512-88': 0xb32b,
+  'skein512-96': 0xb32c,
+  'skein512-104': 0xb32d,
+  'skein512-112': 0xb32e,
+  'skein512-120': 0xb32f,
+  'skein512-128': 0xb330,
+  'skein512-136': 0xb331,
+  'skein512-144': 0xb332,
+  'skein512-152': 0xb333,
+  'skein512-160': 0xb334,
+  'skein512-168': 0xb335,
+  'skein512-176': 0xb336,
+  'skein512-184': 0xb337,
+  'skein512-192': 0xb338,
+  'skein512-200': 0xb339,
+  'skein512-208': 0xb33a,
+  'skein512-216': 0xb33b,
+  'skein512-224': 0xb33c,
+  'skein512-232': 0xb33d,
+  'skein512-240': 0xb33e,
+  'skein512-248': 0xb33f,
+  'skein512-256': 0xb340,
+  'skein512-264': 0xb341,
+  'skein512-272': 0xb342,
+  'skein512-280': 0xb343,
+  'skein512-288': 0xb344,
+  'skein512-296': 0xb345,
+  'skein512-304': 0xb346,
+  'skein512-312': 0xb347,
+  'skein512-320': 0xb348,
+  'skein512-328': 0xb349,
+  'skein512-336': 0xb34a,
+  'skein512-344': 0xb34b,
+  'skein512-352': 0xb34c,
+  'skein512-360': 0xb34d,
+  'skein512-368': 0xb34e,
+  'skein512-376': 0xb34f,
+  'skein512-384': 0xb350,
+  'skein512-392': 0xb351,
+  'skein512-400': 0xb352,
+  'skein512-408': 0xb353,
+  'skein512-416': 0xb354,
+  'skein512-424': 0xb355,
+  'skein512-432': 0xb356,
+  'skein512-440': 0xb357,
+  'skein512-448': 0xb358,
+  'skein512-456': 0xb359,
+  'skein512-464': 0xb35a,
+  'skein512-472': 0xb35b,
+  'skein512-480': 0xb35c,
+  'skein512-488': 0xb35d,
+  'skein512-496': 0xb35e,
+  'skein512-504': 0xb35f,
+  'skein512-512': 0xb360,
+  'skein1024-8': 0xb361,
+  'skein1024-16': 0xb362,
+  'skein1024-24': 0xb363,
+  'skein1024-32': 0xb364,
+  'skein1024-40': 0xb365,
+  'skein1024-48': 0xb366,
+  'skein1024-56': 0xb367,
+  'skein1024-64': 0xb368,
+  'skein1024-72': 0xb369,
+  'skein1024-80': 0xb36a,
+  'skein1024-88': 0xb36b,
+  'skein1024-96': 0xb36c,
+  'skein1024-104': 0xb36d,
+  'skein1024-112': 0xb36e,
+  'skein1024-120': 0xb36f,
+  'skein1024-128': 0xb370,
+  'skein1024-136': 0xb371,
+  'skein1024-144': 0xb372,
+  'skein1024-152': 0xb373,
+  'skein1024-160': 0xb374,
+  'skein1024-168': 0xb375,
+  'skein1024-176': 0xb376,
+  'skein1024-184': 0xb377,
+  'skein1024-192': 0xb378,
+  'skein1024-200': 0xb379,
+  'skein1024-208': 0xb37a,
+  'skein1024-216': 0xb37b,
+  'skein1024-224': 0xb37c,
+  'skein1024-232': 0xb37d,
+  'skein1024-240': 0xb37e,
+  'skein1024-248': 0xb37f,
+  'skein1024-256': 0xb380,
+  'skein1024-264': 0xb381,
+  'skein1024-272': 0xb382,
+  'skein1024-280': 0xb383,
+  'skein1024-288': 0xb384,
+  'skein1024-296': 0xb385,
+  'skein1024-304': 0xb386,
+  'skein1024-312': 0xb387,
+  'skein1024-320': 0xb388,
+  'skein1024-328': 0xb389,
+  'skein1024-336': 0xb38a,
+  'skein1024-344': 0xb38b,
+  'skein1024-352': 0xb38c,
+  'skein1024-360': 0xb38d,
+  'skein1024-368': 0xb38e,
+  'skein1024-376': 0xb38f,
+  'skein1024-384': 0xb390,
+  'skein1024-392': 0xb391,
+  'skein1024-400': 0xb392,
+  'skein1024-408': 0xb393,
+  'skein1024-416': 0xb394,
+  'skein1024-424': 0xb395,
+  'skein1024-432': 0xb396,
+  'skein1024-440': 0xb397,
+  'skein1024-448': 0xb398,
+  'skein1024-456': 0xb399,
+  'skein1024-464': 0xb39a,
+  'skein1024-472': 0xb39b,
+  'skein1024-480': 0xb39c,
+  'skein1024-488': 0xb39d,
+  'skein1024-496': 0xb39e,
+  'skein1024-504': 0xb39f,
+  'skein1024-512': 0xb3a0,
+  'skein1024-520': 0xb3a1,
+  'skein1024-528': 0xb3a2,
+  'skein1024-536': 0xb3a3,
+  'skein1024-544': 0xb3a4,
+  'skein1024-552': 0xb3a5,
+  'skein1024-560': 0xb3a6,
+  'skein1024-568': 0xb3a7,
+  'skein1024-576': 0xb3a8,
+  'skein1024-584': 0xb3a9,
+  'skein1024-592': 0xb3aa,
+  'skein1024-600': 0xb3ab,
+  'skein1024-608': 0xb3ac,
+  'skein1024-616': 0xb3ad,
+  'skein1024-624': 0xb3ae,
+  'skein1024-632': 0xb3af,
+  'skein1024-640': 0xb3b0,
+  'skein1024-648': 0xb3b1,
+  'skein1024-656': 0xb3b2,
+  'skein1024-664': 0xb3b3,
+  'skein1024-672': 0xb3b4,
+  'skein1024-680': 0xb3b5,
+  'skein1024-688': 0xb3b6,
+  'skein1024-696': 0xb3b7,
+  'skein1024-704': 0xb3b8,
+  'skein1024-712': 0xb3b9,
+  'skein1024-720': 0xb3ba,
+  'skein1024-728': 0xb3bb,
+  'skein1024-736': 0xb3bc,
+  'skein1024-744': 0xb3bd,
+  'skein1024-752': 0xb3be,
+  'skein1024-760': 0xb3bf,
+  'skein1024-768': 0xb3c0,
+  'skein1024-776': 0xb3c1,
+  'skein1024-784': 0xb3c2,
+  'skein1024-792': 0xb3c3,
+  'skein1024-800': 0xb3c4,
+  'skein1024-808': 0xb3c5,
+  'skein1024-816': 0xb3c6,
+  'skein1024-824': 0xb3c7,
+  'skein1024-832': 0xb3c8,
+  'skein1024-840': 0xb3c9,
+  'skein1024-848': 0xb3ca,
+  'skein1024-856': 0xb3cb,
+  'skein1024-864': 0xb3cc,
+  'skein1024-872': 0xb3cd,
+  'skein1024-880': 0xb3ce,
+  'skein1024-888': 0xb3cf,
+  'skein1024-896': 0xb3d0,
+  'skein1024-904': 0xb3d1,
+  'skein1024-912': 0xb3d2,
+  'skein1024-920': 0xb3d3,
+  'skein1024-928': 0xb3d4,
+  'skein1024-936': 0xb3d5,
+  'skein1024-944': 0xb3d6,
+  'skein1024-952': 0xb3d7,
+  'skein1024-960': 0xb3d8,
+  'skein1024-968': 0xb3d9,
+  'skein1024-976': 0xb3da,
+  'skein1024-984': 0xb3db,
+  'skein1024-992': 0xb3dc,
+  'skein1024-1000': 0xb3dd,
+  'skein1024-1008': 0xb3de,
+  'skein1024-1016': 0xb3df,
+  'skein1024-1024': 0xb3e0,
+  'poseidon-bls12_381-a2-fc1': 0xb401,
+  'poseidon-bls12_381-a2-fc1-sc': 0xb402
+})
+
+module.exports = { names }
+
+
+/***/ }),
+
+/***/ 902:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+/**
+ * Multihash implementation in JavaScript.
+ */
+
+
+const multibase = __nccwpck_require__(8959)
+const varint = __nccwpck_require__(8018)
+const { names } = __nccwpck_require__(960)
+const { toString: uint8ArrayToString } = __nccwpck_require__(8389)
+const { fromString: uint8ArrayFromString } = __nccwpck_require__(3538)
+const { concat: uint8ArrayConcat } = __nccwpck_require__(5114)
+
+const codes = /** @type {import('./types').CodeNameMap} */({})
+
+// eslint-disable-next-line guard-for-in
+for (const key in names) {
+  const name = /** @type {HashName} */(key)
+  codes[names[name]] = name
+}
+Object.freeze(codes)
+
+/**
+ * Convert the given multihash to a hex encoded string.
+ *
+ * @param {Uint8Array} hash
+ * @returns {string}
+ */
+function toHexString (hash) {
+  if (!(hash instanceof Uint8Array)) {
+    throw new Error('must be passed a Uint8Array')
+  }
+
+  return uint8ArrayToString(hash, 'base16')
+}
+
+/**
+ * Convert the given hex encoded string to a multihash.
+ *
+ * @param {string} hash
+ * @returns {Uint8Array}
+ */
+function fromHexString (hash) {
+  return uint8ArrayFromString(hash, 'base16')
+}
+
+/**
+ * Convert the given multihash to a base58 encoded string.
+ *
+ * @param {Uint8Array} hash
+ * @returns {string}
+ */
+function toB58String (hash) {
+  if (!(hash instanceof Uint8Array)) {
+    throw new Error('must be passed a Uint8Array')
+  }
+
+  return uint8ArrayToString(multibase.encode('base58btc', hash)).slice(1)
+}
+
+/**
+ * Convert the given base58 encoded string to a multihash.
+ *
+ * @param {string|Uint8Array} hash
+ * @returns {Uint8Array}
+ */
+function fromB58String (hash) {
+  const encoded = hash instanceof Uint8Array
+    ? uint8ArrayToString(hash)
+    : hash
+
+  return multibase.decode('z' + encoded)
+}
+
+/**
+ * Decode a hash from the given multihash.
+ *
+ * @param {Uint8Array} bytes
+ * @returns {{code: HashCode, name: HashName, length: number, digest: Uint8Array}} result
+ */
+function decode (bytes) {
+  if (!(bytes instanceof Uint8Array)) {
+    throw new Error('multihash must be a Uint8Array')
+  }
+
+  if (bytes.length < 2) {
+    throw new Error('multihash too short. must be > 2 bytes.')
+  }
+
+  const code = /** @type {HashCode} */(varint.decode(bytes))
+  if (!isValidCode(code)) {
+    throw new Error(`multihash unknown function code: 0x${code.toString(16)}`)
+  }
+  bytes = bytes.slice(varint.decode.bytes)
+
+  const len = varint.decode(bytes)
+  if (len < 0) {
+    throw new Error(`multihash invalid length: ${len}`)
+  }
+  bytes = bytes.slice(varint.decode.bytes)
+
+  if (bytes.length !== len) {
+    throw new Error(`multihash length inconsistent: 0x${uint8ArrayToString(bytes, 'base16')}`)
+  }
+
+  return {
+    code,
+    name: codes[code],
+    length: len,
+    digest: bytes
+  }
+}
+
+/**
+ * Encode a hash digest along with the specified function code.
+ *
+ * > **Note:** the length is derived from the length of the digest itself.
+ *
+ * @param {Uint8Array} digest
+ * @param {HashName | HashCode} code
+ * @param {number} [length]
+ * @returns {Uint8Array}
+ */
+function encode (digest, code, length) {
+  if (!digest || code === undefined) {
+    throw new Error('multihash encode requires at least two args: digest, code')
+  }
+
+  // ensure it's a hashfunction code.
+  const hashfn = coerceCode(code)
+
+  if (!(digest instanceof Uint8Array)) {
+    throw new Error('digest should be a Uint8Array')
+  }
+
+  if (length == null) {
+    length = digest.length
+  }
+
+  if (length && digest.length !== length) {
+    throw new Error('digest length should be equal to specified length.')
+  }
+
+  const hash = varint.encode(hashfn)
+  const len = varint.encode(length)
+  return uint8ArrayConcat([hash, len, digest], hash.length + len.length + digest.length)
+}
+
+/**
+ * Converts a hash function name into the matching code.
+ * If passed a number it will return the number if it's a valid code.
+ *
+ * @param {HashName | number} name
+ * @returns {number}
+ */
+function coerceCode (name) {
+  let code = name
+
+  if (typeof name === 'string') {
+    if (names[name] === undefined) {
+      throw new Error(`Unrecognized hash function named: ${name}`)
+    }
+    code = names[name]
+  }
+
+  if (typeof code !== 'number') {
+    throw new Error(`Hash function code should be a number. Got: ${code}`)
+  }
+
+  // @ts-ignore
+  if (codes[code] === undefined && !isAppCode(code)) {
+    throw new Error(`Unrecognized function code: ${code}`)
+  }
+
+  return code
+}
+
+/**
+ * Checks if a code is part of the app range
+ *
+ * @param {number} code
+ * @returns {boolean}
+ */
+function isAppCode (code) {
+  return code > 0 && code < 0x10
+}
+
+/**
+ * Checks whether a multihash code is valid.
+ *
+ * @param {HashCode} code
+ * @returns {boolean}
+ */
+function isValidCode (code) {
+  if (isAppCode(code)) {
+    return true
+  }
+
+  if (codes[code]) {
+    return true
+  }
+
+  return false
+}
+
+/**
+ * Check if the given buffer is a valid multihash. Throws an error if it is not valid.
+ *
+ * @param {Uint8Array} multihash
+ * @returns {void}
+ * @throws {Error}
+ */
+function validate (multihash) {
+  decode(multihash) // throws if bad.
+}
+
+/**
+ * Returns a prefix from a valid multihash. Throws an error if it is not valid.
+ *
+ * @param {Uint8Array} multihash
+ * @returns {Uint8Array}
+ * @throws {Error}
+ */
+function prefix (multihash) {
+  validate(multihash)
+
+  return multihash.subarray(0, 2)
+}
+
+module.exports = {
+  names,
+  codes,
+  toHexString,
+  fromHexString,
+  toB58String,
+  fromB58String,
+  decode,
+  encode,
+  coerceCode,
+  isAppCode,
+  validate,
+  prefix,
+  isValidCode
+}
+
+/**
+ * @typedef { import("./constants").HashCode } HashCode
+ * @typedef { import("./constants").HashName } HashName
+ */
+
+
+/***/ }),
+
+/***/ 1585:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+const mh = __nccwpck_require__(902)
+
+const CIDUtil = {
+  /**
+   * Test if the given input is a valid CID object.
+   * Returns an error message if it is not.
+   * Returns undefined if it is a valid CID.
+   *
+   * @param {any} other
+   * @returns {string|undefined}
+   */
+  checkCIDComponents: function (other) {
+    if (other == null) {
+      return 'null values are not valid CIDs'
+    }
+
+    if (!(other.version === 0 || other.version === 1)) {
+      return 'Invalid version, must be a number equal to 1 or 0'
+    }
+
+    if (typeof other.codec !== 'string') {
+      return 'codec must be string'
+    }
+
+    if (other.version === 0) {
+      if (other.codec !== 'dag-pb') {
+        return "codec must be 'dag-pb' for CIDv0"
+      }
+      if (other.multibaseName !== 'base58btc') {
+        return "multibaseName must be 'base58btc' for CIDv0"
+      }
+    }
+
+    if (!(other.multihash instanceof Uint8Array)) {
+      return 'multihash must be a Uint8Array'
+    }
+
+    try {
+      mh.validate(other.multihash)
+    } catch (err) {
+      let errorMsg = err.message
+      if (!errorMsg) { // Just in case mh.validate() throws an error with empty error message
+        errorMsg = 'Multihash validation failed'
+      }
+      return errorMsg
+    }
+  }
+}
+
+module.exports = CIDUtil
+
+
+/***/ }),
+
+/***/ 9016:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+const mh = __nccwpck_require__(902)
+const multibase = __nccwpck_require__(8959)
+const multicodec = __nccwpck_require__(5417)
+const CIDUtil = __nccwpck_require__(1585)
+const { concat: uint8ArrayConcat } = __nccwpck_require__(5114)
+const { toString: uint8ArrayToString } = __nccwpck_require__(8389)
+const { equals: uint8ArrayEquals } = __nccwpck_require__(9192)
+
+const codecs = multicodec.nameToCode
+const codecInts = /** @type {CodecName[]} */(Object.keys(codecs)).reduce((p, name) => {
+  p[codecs[name]] = name
+  return p
+}, /** @type {Record<CodecCode, CodecName>} */({}))
+
+const symbol = Symbol.for('@ipld/js-cid/CID')
+
+/**
+ * @typedef {Object} SerializedCID
+ * @property {string} codec
+ * @property {number} version
+ * @property {Uint8Array} hash
+ */
+/**
+ * @typedef {0|1} CIDVersion
+ * @typedef {import('multibase').BaseNameOrCode} BaseNameOrCode
+ * @typedef {import('multicodec').CodecName} CodecName
+ * @typedef {import('multicodec').CodecCode} CodecCode
+ */
+
+/**
+ * Class representing a CID `<mbase><version><mcodec><mhash>`
+ * , as defined in [ipld/cid](https://github.com/multiformats/cid).
+ *
+ * @class CID
+ */
+class CID {
+  /**
+   * Create a new CID.
+   *
+   * The algorithm for argument input is roughly:
+   * ```
+   * if (cid)
+   *   -> create a copy
+   * else if (str)
+   *   if (1st char is on multibase table) -> CID String
+   *   else -> bs58 encoded multihash
+   * else if (Uint8Array)
+   *   if (1st byte is 0 or 1) -> CID
+   *   else -> multihash
+   * else if (Number)
+   *   -> construct CID by parts
+   * ```
+   *
+   * @param {CIDVersion | string | Uint8Array | CID} version
+   * @param {string|number} [codec]
+   * @param {Uint8Array} [multihash]
+   * @param {string} [multibaseName]
+   *
+   * @example
+   * new CID(<version>, <codec>, <multihash>, <multibaseName>)
+   * new CID(<cidStr>)
+   * new CID(<cid.bytes>)
+   * new CID(<multihash>)
+   * new CID(<bs58 encoded multihash>)
+   * new CID(<cid>)
+   */
+  constructor (version, codec, multihash, multibaseName) {
+    // We have below three blank field accessors only because
+    // otherwise TS will not pick them up if done after assignemnts
+
+    /**
+     * The version of the CID.
+     *
+     * @type {CIDVersion}
+     */
+    // eslint-disable-next-line no-unused-expressions
+    this.version
+
+    /**
+     * The codec of the CID.
+     *
+     * @deprecated
+     * @type {CodecName}
+     */
+    // eslint-disable-next-line no-unused-expressions
+    this.codec
+
+    /**
+     * The multihash of the CID.
+     *
+     * @type {Uint8Array}
+     */
+    // eslint-disable-next-line no-unused-expressions
+    this.multihash
+
+    Object.defineProperty(this, symbol, { value: true })
+    if (CID.isCID(version)) {
+      // version is an exising CID instance
+      const cid = /** @type {CID} */(version)
+      this.version = cid.version
+      this.codec = cid.codec
+      this.multihash = cid.multihash
+      // Default guard for when a CID < 0.7 is passed with no multibaseName
+      // @ts-ignore
+      this.multibaseName = cid.multibaseName || (cid.version === 0 ? 'base58btc' : 'base32')
+      return
+    }
+
+    if (typeof version === 'string') {
+      // e.g. 'base32' or false
+      const baseName = multibase.isEncoded(version)
+      if (baseName) {
+        // version is a CID String encoded with multibase, so v1
+        const cid = multibase.decode(version)
+        this.version = /** @type {CIDVersion} */(parseInt(cid[0].toString(), 16))
+        this.codec = multicodec.getCodec(cid.slice(1))
+        this.multihash = multicodec.rmPrefix(cid.slice(1))
+        this.multibaseName = baseName
+      } else {
+        // version is a base58btc string multihash, so v0
+        this.version = 0
+        this.codec = 'dag-pb'
+        this.multihash = mh.fromB58String(version)
+        this.multibaseName = 'base58btc'
+      }
+      CID.validateCID(this)
+      Object.defineProperty(this, 'string', { value: version })
+      return
+    }
+
+    if (version instanceof Uint8Array) {
+      const v = parseInt(version[0].toString(), 16)
+      if (v === 1) {
+        // version is a CID Uint8Array
+        const cid = version
+        this.version = v
+        this.codec = multicodec.getCodec(cid.slice(1))
+        this.multihash = multicodec.rmPrefix(cid.slice(1))
+        this.multibaseName = 'base32'
+      } else {
+        // version is a raw multihash Uint8Array, so v0
+        this.version = 0
+        this.codec = 'dag-pb'
+        this.multihash = version
+        this.multibaseName = 'base58btc'
+      }
+      CID.validateCID(this)
+      return
+    }
+
+    // otherwise, assemble the CID from the parameters
+
+    this.version = version
+
+    if (typeof codec === 'number') {
+      // @ts-ignore
+      codec = codecInts[codec]
+    }
+
+    this.codec = /** @type {CodecName} */ (codec)
+
+    this.multihash = /** @type {Uint8Array} */ (multihash)
+
+    /**
+     * Multibase name as string.
+     *
+     * @deprecated
+     * @type {string}
+     */
+    this.multibaseName = multibaseName || (version === 0 ? 'base58btc' : 'base32')
+
+    CID.validateCID(this)
+  }
+
+  /**
+   * The CID as a `Uint8Array`
+   *
+   * @returns {Uint8Array}
+   *
+   */
+  get bytes () {
+    // @ts-ignore
+    let bytes = this._bytes
+
+    if (!bytes) {
+      if (this.version === 0) {
+        bytes = this.multihash
+      } else if (this.version === 1) {
+        const codec = multicodec.getCodeVarint(this.codec)
+        bytes = uint8ArrayConcat([
+          [1], codec, this.multihash
+        ], 1 + codec.byteLength + this.multihash.byteLength)
+      } else {
+        throw new Error('unsupported version')
+      }
+
+      // Cache this Uint8Array so it doesn't have to be recreated
+      Object.defineProperty(this, '_bytes', { value: bytes })
+    }
+
+    return bytes
+  }
+
+  /**
+   * The prefix of the CID.
+   *
+   * @returns {Uint8Array}
+   */
+  get prefix () {
+    const codec = multicodec.getCodeVarint(this.codec)
+    const multihash = mh.prefix(this.multihash)
+    const prefix = uint8ArrayConcat([
+      [this.version], codec, multihash
+    ], 1 + codec.byteLength + multihash.byteLength)
+
+    return prefix
+  }
+
+  /**
+   * The codec of the CID in its number form.
+   *
+   * @returns {CodecCode}
+   */
+  get code () {
+    return codecs[this.codec]
+  }
+
+  /**
+   * Convert to a CID of version `0`.
+   *
+   * @returns {CID}
+   */
+  toV0 () {
+    if (this.codec !== 'dag-pb') {
+      throw new Error('Cannot convert a non dag-pb CID to CIDv0')
+    }
+
+    const { name, length } = mh.decode(this.multihash)
+
+    if (name !== 'sha2-256') {
+      throw new Error('Cannot convert non sha2-256 multihash CID to CIDv0')
+    }
+
+    if (length !== 32) {
+      throw new Error('Cannot convert non 32 byte multihash CID to CIDv0')
+    }
+
+    return new CID(0, this.codec, this.multihash)
+  }
+
+  /**
+   * Convert to a CID of version `1`.
+   *
+   * @returns {CID}
+   */
+  toV1 () {
+    return new CID(1, this.codec, this.multihash, this.multibaseName)
+  }
+
+  /**
+   * Encode the CID into a string.
+   *
+   * @param {BaseNameOrCode} [base=this.multibaseName] - Base encoding to use.
+   * @returns {string}
+   */
+  toBaseEncodedString (base = this.multibaseName) {
+    // @ts-ignore non enumerable cache property
+    if (this.string && this.string.length !== 0 && base === this.multibaseName) {
+      // @ts-ignore non enumerable cache property
+      return this.string
+    }
+    let str
+    if (this.version === 0) {
+      if (base !== 'base58btc') {
+        throw new Error('not supported with CIDv0, to support different bases, please migrate the instance do CIDv1, you can do that through cid.toV1()')
+      }
+      str = mh.toB58String(this.multihash)
+    } else if (this.version === 1) {
+      str = uint8ArrayToString(multibase.encode(base, this.bytes))
+    } else {
+      throw new Error('unsupported version')
+    }
+    if (base === this.multibaseName) {
+      // cache the string value
+      Object.defineProperty(this, 'string', { value: str })
+    }
+    return str
+  }
+
+  /**
+   * CID(QmdfTbBqBPQ7VNxZEYEj14VmRuZBkqFbiwReogJgS1zR1n)
+   *
+   * @returns {string}
+   */
+  [Symbol.for('nodejs.util.inspect.custom')] () {
+    return 'CID(' + this.toString() + ')'
+  }
+
+  /**
+   * Encode the CID into a string.
+   *
+   * @param {BaseNameOrCode} [base=this.multibaseName] - Base encoding to use.
+   * @returns {string}
+   */
+  toString (base) {
+    return this.toBaseEncodedString(base)
+  }
+
+  /**
+   * Serialize to a plain object.
+   *
+   * @returns {SerializedCID}
+   */
+  toJSON () {
+    return {
+      codec: this.codec,
+      version: this.version,
+      hash: this.multihash
+    }
+  }
+
+  /**
+   * Compare equality with another CID.
+   *
+   * @param {CID} other
+   * @returns {boolean}
+   */
+  equals (other) {
+    return this.codec === other.codec &&
+      this.version === other.version &&
+      uint8ArrayEquals(this.multihash, other.multihash)
+  }
+
+  /**
+   * Test if the given input is a valid CID object.
+   * Throws if it is not.
+   *
+   * @param {any} other - The other CID.
+   * @returns {void}
+   */
+  static validateCID (other) {
+    const errorMsg = CIDUtil.checkCIDComponents(other)
+    if (errorMsg) {
+      throw new Error(errorMsg)
+    }
+  }
+
+  /**
+   * Check if object is a CID instance
+   *
+   * @param {any} value
+   * @returns {value is CID}
+   */
+  static isCID (value) {
+    return value instanceof CID || Boolean(value && value[symbol])
+  }
+}
+
+CID.codecs = codecs
+
+module.exports = CID
+
+
+/***/ }),
+
+/***/ 2997:
+/***/ ((module) => {
+
+"use strict";
+
+
+/**
+ * @typedef {{ [key: string]: any }} Extensions
+ * @typedef {Error} Err
+ * @property {string} message
+ */
+
+/**
+ *
+ * @param {Error} obj
+ * @param {Extensions} props
+ * @returns {Error & Extensions}
+ */
+function assign(obj, props) {
+    for (const key in props) {
+        Object.defineProperty(obj, key, {
+            value: props[key],
+            enumerable: true,
+            configurable: true,
+        });
+    }
+
+    return obj;
+}
+
+/**
+ *
+ * @param {any} err - An Error
+ * @param {string|Extensions} code - A string code or props to set on the error
+ * @param {Extensions} [props] - Props to set on the error
+ * @returns {Error & Extensions}
+ */
+function createError(err, code, props) {
+    if (!err || typeof err === 'string') {
+        throw new TypeError('Please pass an Error to err-code');
+    }
+
+    if (!props) {
+        props = {};
+    }
+
+    if (typeof code === 'object') {
+        props = code;
+        code = '';
+    }
+
+    if (code) {
+        props.code = code;
+    }
+
+    try {
+        return assign(err, props);
+    } catch (_) {
+        props.message = err.message;
+        props.stack = err.stack;
+
+        const ErrClass = function () {};
+
+        ErrClass.prototype = Object.create(Object.getPrototypeOf(err));
+
+        // @ts-ignore
+        const output = assign(new ErrClass(), props);
+
+        return output;
+    }
+}
+
+module.exports = createError;
+
+
+/***/ }),
+
+/***/ 9233:
+/***/ ((module) => {
+
+"use strict";
+
+
+const word = '[a-fA-F\\d:]';
+const b = options => options && options.includeBoundaries ?
+	`(?:(?<=\\s|^)(?=${word})|(?<=${word})(?=\\s|$))` :
+	'';
+
+const v4 = '(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)(?:\\.(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)){3}';
+
+const v6seg = '[a-fA-F\\d]{1,4}';
+const v6 = `
+(?:
+(?:${v6seg}:){7}(?:${v6seg}|:)|                                    // 1:2:3:4:5:6:7::  1:2:3:4:5:6:7:8
+(?:${v6seg}:){6}(?:${v4}|:${v6seg}|:)|                             // 1:2:3:4:5:6::    1:2:3:4:5:6::8   1:2:3:4:5:6::8  1:2:3:4:5:6::1.2.3.4
+(?:${v6seg}:){5}(?::${v4}|(?::${v6seg}){1,2}|:)|                   // 1:2:3:4:5::      1:2:3:4:5::7:8   1:2:3:4:5::8    1:2:3:4:5::7:1.2.3.4
+(?:${v6seg}:){4}(?:(?::${v6seg}){0,1}:${v4}|(?::${v6seg}){1,3}|:)| // 1:2:3:4::        1:2:3:4::6:7:8   1:2:3:4::8      1:2:3:4::6:7:1.2.3.4
+(?:${v6seg}:){3}(?:(?::${v6seg}){0,2}:${v4}|(?::${v6seg}){1,4}|:)| // 1:2:3::          1:2:3::5:6:7:8   1:2:3::8        1:2:3::5:6:7:1.2.3.4
+(?:${v6seg}:){2}(?:(?::${v6seg}){0,3}:${v4}|(?::${v6seg}){1,5}|:)| // 1:2::            1:2::4:5:6:7:8   1:2::8          1:2::4:5:6:7:1.2.3.4
+(?:${v6seg}:){1}(?:(?::${v6seg}){0,4}:${v4}|(?::${v6seg}){1,6}|:)| // 1::              1::3:4:5:6:7:8   1::8            1::3:4:5:6:7:1.2.3.4
+(?::(?:(?::${v6seg}){0,5}:${v4}|(?::${v6seg}){1,7}|:))             // ::2:3:4:5:6:7:8  ::2:3:4:5:6:7:8  ::8             ::1.2.3.4
+)(?:%[0-9a-zA-Z]{1,})?                                             // %eth0            %1
+`.replace(/\s*\/\/.*$/gm, '').replace(/\n/g, '').trim();
+
+// Pre-compile only the exact regexes because adding a global flag make regexes stateful
+const v46Exact = new RegExp(`(?:^${v4}$)|(?:^${v6}$)`);
+const v4exact = new RegExp(`^${v4}$`);
+const v6exact = new RegExp(`^${v6}$`);
+
+const ip = options => options && options.exact ?
+	v46Exact :
+	new RegExp(`(?:${b(options)}${v4}${b(options)})|(?:${b(options)}${v6}${b(options)})`, 'g');
+
+ip.v4 = options => options && options.exact ? v4exact : new RegExp(`${b(options)}${v4}${b(options)}`, 'g');
+ip.v6 = options => options && options.exact ? v6exact : new RegExp(`${b(options)}${v6}${b(options)}`, 'g');
+
+module.exports = ip;
+
+
+/***/ }),
+
+/***/ 4975:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+const ipRegex = __nccwpck_require__(9233);
+
+const isIp = string => ipRegex({exact: true}).test(string);
+isIp.v4 = string => ipRegex.v4({exact: true}).test(string);
+isIp.v6 = string => ipRegex.v6({exact: true}).test(string);
+isIp.version = string => isIp(string) ? (isIp.v4(string) ? 4 : 6) : undefined;
+
+module.exports = isIp;
+
+
+/***/ }),
+
+/***/ 1286:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+const {
+  URLWithLegacySupport,
+  format,
+  URLSearchParams,
+  defaultBase
+} = __nccwpck_require__(4933)
+const relative = __nccwpck_require__(7114)
+
+module.exports = {
+  URL: URLWithLegacySupport,
+  URLSearchParams,
+  format,
+  relative,
+  defaultBase
+}
+
+
+/***/ }),
+
+/***/ 7114:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+const { URLWithLegacySupport, format } = __nccwpck_require__(4933)
+
+/**
+ * @param {string | undefined} url
+ * @param {any} [location]
+ * @param {any} [protocolMap]
+ * @param {any} [defaultProtocol]
+ */
+module.exports = (url, location = {}, protocolMap = {}, defaultProtocol) => {
+  let protocol = location.protocol
+    ? location.protocol.replace(':', '')
+    : 'http'
+
+  // Check protocol map
+  protocol = (protocolMap[protocol] || defaultProtocol || protocol) + ':'
+  let urlParsed
+
+  try {
+    urlParsed = new URLWithLegacySupport(url)
+  } catch (err) {
+    urlParsed = {}
+  }
+
+  const base = Object.assign({}, location, {
+    protocol: protocol || urlParsed.protocol,
+    host: location.host || urlParsed.host
+  })
+
+  return new URLWithLegacySupport(url, format(base)).toString()
+}
+
+
+/***/ }),
+
+/***/ 4933:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+const { URL, URLSearchParams, format } = __nccwpck_require__(7310)
+
+// https://github.com/nodejs/node/issues/12682
+const defaultBase = 'http://localhost'
+
+class URLWithLegacySupport extends URL {
+  constructor (url = '', base = defaultBase) {
+    super(url, base)
+    this.path = this.pathname + this.search
+    this.auth =
+            this.username && this.password
+              ? this.username + ':' + this.password
+              : null
+    this.query =
+            this.search && this.search.startsWith('?')
+              ? this.search.slice(1)
+              : null
+  }
+
+  format () {
+    return this.toString()
+  }
+}
+
+module.exports = {
+  URLWithLegacySupport,
+  URLSearchParams,
+  format,
+  defaultBase
+}
+
+
+/***/ }),
+
+/***/ 9179:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+const { encodeText } = __nccwpck_require__(56)
+
+/** @typedef {import('./types').CodecFactory} CodecFactory */
+/** @typedef {import("./types").BaseName} BaseName */
+/** @typedef {import("./types").BaseCode} BaseCode */
+
+/**
+ * Class to encode/decode in the supported Bases
+ *
+ */
+class Base {
+  /**
+   * @param {BaseName} name
+   * @param {BaseCode} code
+   * @param {CodecFactory} factory
+   * @param {string} alphabet
+   */
+  constructor (name, code, factory, alphabet) {
+    this.name = name
+    this.code = code
+    this.codeBuf = encodeText(this.code)
+    this.alphabet = alphabet
+    this.codec = factory(alphabet)
+  }
+
+  /**
+   * @param {Uint8Array} buf
+   * @returns {string}
+   */
+  encode (buf) {
+    return this.codec.encode(buf)
+  }
+
+  /**
+   * @param {string} string
+   * @returns {Uint8Array}
+   */
+  decode (string) {
+    for (const char of string) {
+      if (this.alphabet && this.alphabet.indexOf(char) < 0) {
+        throw new Error(`invalid character '${char}' in '${string}'`)
+      }
+    }
+    return this.codec.decode(string)
+  }
+}
+
+module.exports = Base
+
+
+/***/ }),
+
+/***/ 5389:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+const baseX = __nccwpck_require__(3841)
+const Base = __nccwpck_require__(9179)
+const { rfc4648 } = __nccwpck_require__(4904)
+const { decodeText, encodeText } = __nccwpck_require__(56)
+
+/** @typedef {import('./types').CodecFactory} CodecFactory */
+/** @typedef {import('./types').Codec} Codec */
+/** @typedef {import('./types').BaseName} BaseName */
+/** @typedef {import('./types').BaseCode} BaseCode */
+
+/** @type {CodecFactory} */
+const identity = () => {
+  return {
+    encode: decodeText,
+    decode: encodeText
+  }
+}
+
+/**
+ *
+ * name, code, implementation, alphabet
+ *
+ * @type {Array<[BaseName, BaseCode, CodecFactory, string]>}
+ */
+const constants = [
+  ['identity', '\x00', identity, ''],
+  ['base2', '0', rfc4648(1), '01'],
+  ['base8', '7', rfc4648(3), '01234567'],
+  ['base10', '9', baseX, '0123456789'],
+  ['base16', 'f', rfc4648(4), '0123456789abcdef'],
+  ['base16upper', 'F', rfc4648(4), '0123456789ABCDEF'],
+  ['base32hex', 'v', rfc4648(5), '0123456789abcdefghijklmnopqrstuv'],
+  ['base32hexupper', 'V', rfc4648(5), '0123456789ABCDEFGHIJKLMNOPQRSTUV'],
+  ['base32hexpad', 't', rfc4648(5), '0123456789abcdefghijklmnopqrstuv='],
+  ['base32hexpadupper', 'T', rfc4648(5), '0123456789ABCDEFGHIJKLMNOPQRSTUV='],
+  ['base32', 'b', rfc4648(5), 'abcdefghijklmnopqrstuvwxyz234567'],
+  ['base32upper', 'B', rfc4648(5), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567'],
+  ['base32pad', 'c', rfc4648(5), 'abcdefghijklmnopqrstuvwxyz234567='],
+  ['base32padupper', 'C', rfc4648(5), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567='],
+  ['base32z', 'h', rfc4648(5), 'ybndrfg8ejkmcpqxot1uwisza345h769'],
+  ['base36', 'k', baseX, '0123456789abcdefghijklmnopqrstuvwxyz'],
+  ['base36upper', 'K', baseX, '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'],
+  ['base58btc', 'z', baseX, '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'],
+  ['base58flickr', 'Z', baseX, '123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ'],
+  ['base64', 'm', rfc4648(6), 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'],
+  ['base64pad', 'M', rfc4648(6), 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='],
+  ['base64url', 'u', rfc4648(6), 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_'],
+  ['base64urlpad', 'U', rfc4648(6), 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_=']
+]
+
+/** @type {Record<BaseName,Base>} */
+const names = constants.reduce((prev, tupple) => {
+  prev[tupple[0]] = new Base(tupple[0], tupple[1], tupple[2], tupple[3])
+  return prev
+}, /** @type {Record<BaseName,Base>} */({}))
+
+/** @type {Record<BaseCode,Base>} */
+const codes = constants.reduce((prev, tupple) => {
+  prev[tupple[1]] = names[tupple[0]]
+  return prev
+}, /** @type {Record<BaseCode,Base>} */({}))
+
+module.exports = {
+  names,
+  codes
+}
+
+
+/***/ }),
+
+/***/ 8959:
+/***/ ((module, exports, __nccwpck_require__) => {
+
+"use strict";
+/**
+ * Implementation of the [multibase](https://github.com/multiformats/multibase) specification.
+ *
+ */
+
+
+const constants = __nccwpck_require__(5389)
+const { encodeText, decodeText, concat } = __nccwpck_require__(56)
+
+/** @typedef {import('./base')} Base */
+/** @typedef {import("./types").BaseNameOrCode} BaseNameOrCode */
+/** @typedef {import("./types").BaseCode} BaseCode */
+/** @typedef {import("./types").BaseName} BaseName */
+
+/**
+ * Create a new Uint8Array with the multibase varint+code.
+ *
+ * @param {BaseNameOrCode} nameOrCode - The multibase name or code number.
+ * @param {Uint8Array} buf - The data to be prefixed with multibase.
+ * @returns {Uint8Array}
+ * @throws {Error} Will throw if the encoding is not supported
+ */
+function multibase (nameOrCode, buf) {
+  if (!buf) {
+    throw new Error('requires an encoded Uint8Array')
+  }
+  const { name, codeBuf } = encoding(nameOrCode)
+  validEncode(name, buf)
+
+  return concat([codeBuf, buf], codeBuf.length + buf.length)
+}
+
+/**
+ * Encode data with the specified base and add the multibase prefix.
+ *
+ * @param {BaseNameOrCode} nameOrCode - The multibase name or code number.
+ * @param {Uint8Array} buf - The data to be encoded.
+ * @returns {Uint8Array}
+ * @throws {Error} Will throw if the encoding is not supported
+ *
+ */
+function encode (nameOrCode, buf) {
+  const enc = encoding(nameOrCode)
+  const data = encodeText(enc.encode(buf))
+
+  return concat([enc.codeBuf, data], enc.codeBuf.length + data.length)
+}
+
+/**
+ * Takes a Uint8Array or string encoded with multibase header, decodes it and
+ * returns the decoded buffer
+ *
+ * @param {Uint8Array|string} data
+ * @returns {Uint8Array}
+ * @throws {Error} Will throw if the encoding is not supported
+ *
+ */
+function decode (data) {
+  if (data instanceof Uint8Array) {
+    data = decodeText(data)
+  }
+  const prefix = data[0]
+
+  // Make all encodings case-insensitive except the ones that include upper and lower chars in the alphabet
+  if (['f', 'F', 'v', 'V', 't', 'T', 'b', 'B', 'c', 'C', 'h', 'k', 'K'].includes(prefix)) {
+    data = data.toLowerCase()
+  }
+  const enc = encoding(/** @type {BaseCode} */(data[0]))
+  return enc.decode(data.substring(1))
+}
+
+/**
+ * Is the given data multibase encoded?
+ *
+ * @param {Uint8Array|string} data
+ */
+function isEncoded (data) {
+  if (data instanceof Uint8Array) {
+    data = decodeText(data)
+  }
+
+  // Ensure bufOrString is a string
+  if (Object.prototype.toString.call(data) !== '[object String]') {
+    return false
+  }
+
+  try {
+    const enc = encoding(/** @type {BaseCode} */(data[0]))
+    return enc.name
+  } catch (err) {
+    return false
+  }
+}
+
+/**
+ * Validate encoded data
+ *
+ * @param {BaseNameOrCode} name
+ * @param {Uint8Array} buf
+ * @returns {void}
+ * @throws {Error} Will throw if the encoding is not supported
+ */
+function validEncode (name, buf) {
+  const enc = encoding(name)
+  enc.decode(decodeText(buf))
+}
+
+/**
+ * Get the encoding by name or code
+ *
+ * @param {BaseNameOrCode} nameOrCode
+ * @returns {Base}
+ * @throws {Error} Will throw if the encoding is not supported
+ */
+function encoding (nameOrCode) {
+  if (Object.prototype.hasOwnProperty.call(constants.names, /** @type {BaseName} */(nameOrCode))) {
+    return constants.names[/** @type {BaseName} */(nameOrCode)]
+  } else if (Object.prototype.hasOwnProperty.call(constants.codes, /** @type {BaseCode} */(nameOrCode))) {
+    return constants.codes[/** @type {BaseCode} */(nameOrCode)]
+  } else {
+    throw new Error(`Unsupported encoding: ${nameOrCode}`)
+  }
+}
+
+/**
+ * Get encoding from data
+ *
+ * @param {string|Uint8Array} data
+ * @returns {Base}
+ * @throws {Error} Will throw if the encoding is not supported
+ */
+function encodingFromData (data) {
+  if (data instanceof Uint8Array) {
+    data = decodeText(data)
+  }
+
+  return encoding(/** @type {BaseCode} */(data[0]))
+}
+
+exports = module.exports = multibase
+exports.encode = encode
+exports.decode = decode
+exports.isEncoded = isEncoded
+exports.encoding = encoding
+exports.encodingFromData = encodingFromData
+const names = Object.freeze(constants.names)
+const codes = Object.freeze(constants.codes)
+exports.names = names
+exports.codes = codes
+
+
+/***/ }),
+
+/***/ 4904:
+/***/ ((module) => {
+
+"use strict";
+
+
+/** @typedef {import('./types').CodecFactory} CodecFactory */
+
+/**
+ * @param {string} string
+ * @param {string} alphabet
+ * @param {number} bitsPerChar
+ * @returns {Uint8Array}
+ */
+const decode = (string, alphabet, bitsPerChar) => {
+  // Build the character lookup table:
+  /** @type {Record<string, number>} */
+  const codes = {}
+  for (let i = 0; i < alphabet.length; ++i) {
+    codes[alphabet[i]] = i
+  }
+
+  // Count the padding bytes:
+  let end = string.length
+  while (string[end - 1] === '=') {
+    --end
+  }
+
+  // Allocate the output:
+  const out = new Uint8Array((end * bitsPerChar / 8) | 0)
+
+  // Parse the data:
+  let bits = 0 // Number of bits currently in the buffer
+  let buffer = 0 // Bits waiting to be written out, MSB first
+  let written = 0 // Next byte to write
+  for (let i = 0; i < end; ++i) {
+    // Read one character from the string:
+    const value = codes[string[i]]
+    if (value === undefined) {
+      throw new SyntaxError('Invalid character ' + string[i])
+    }
+
+    // Append the bits to the buffer:
+    buffer = (buffer << bitsPerChar) | value
+    bits += bitsPerChar
+
+    // Write out some bits if the buffer has a byte's worth:
+    if (bits >= 8) {
+      bits -= 8
+      out[written++] = 0xff & (buffer >> bits)
+    }
+  }
+
+  // Verify that we have received just enough bits:
+  if (bits >= bitsPerChar || 0xff & (buffer << (8 - bits))) {
+    throw new SyntaxError('Unexpected end of data')
+  }
+
+  return out
+}
+
+/**
+ * @param {Uint8Array} data
+ * @param {string} alphabet
+ * @param {number} bitsPerChar
+ * @returns {string}
+ */
+const encode = (data, alphabet, bitsPerChar) => {
+  const pad = alphabet[alphabet.length - 1] === '='
+  const mask = (1 << bitsPerChar) - 1
+  let out = ''
+
+  let bits = 0 // Number of bits currently in the buffer
+  let buffer = 0 // Bits waiting to be written out, MSB first
+  for (let i = 0; i < data.length; ++i) {
+    // Slurp data into the buffer:
+    buffer = (buffer << 8) | data[i]
+    bits += 8
+
+    // Write out as much as we can:
+    while (bits > bitsPerChar) {
+      bits -= bitsPerChar
+      out += alphabet[mask & (buffer >> bits)]
+    }
+  }
+
+  // Partial character:
+  if (bits) {
+    out += alphabet[mask & (buffer << (bitsPerChar - bits))]
+  }
+
+  // Add padding characters until we hit a byte boundary:
+  if (pad) {
+    while ((out.length * bitsPerChar) & 7) {
+      out += '='
+    }
+  }
+
+  return out
+}
+
+/**
+ * RFC4648 Factory
+ *
+ * @param {number} bitsPerChar
+ * @returns {CodecFactory}
+ */
+const rfc4648 = (bitsPerChar) => (alphabet) => {
+  return {
+    /**
+     * @param {Uint8Array} input
+     * @returns {string}
+     */
+    encode (input) {
+      return encode(input, alphabet, bitsPerChar)
+    },
+    /**
+     * @param {string} input
+     * @returns {Uint8Array}
+     */
+    decode (input) {
+      return decode(input, alphabet, bitsPerChar)
+    }
+  }
+}
+
+module.exports = { rfc4648 }
+
+
+/***/ }),
+
+/***/ 56:
+/***/ ((module) => {
+
+"use strict";
+
+
+const textDecoder = new TextDecoder()
+/**
+ * @param {ArrayBufferView|ArrayBuffer} bytes
+ * @returns {string}
+ */
+const decodeText = (bytes) => textDecoder.decode(bytes)
+
+const textEncoder = new TextEncoder()
+/**
+ * @param {string} text
+ * @returns {Uint8Array}
+ */
+const encodeText = (text) => textEncoder.encode(text)
+
+/**
+ * Returns a new Uint8Array created by concatenating the passed Arrays
+ *
+ * @param {Array<ArrayLike<number>>} arrs
+ * @param {number} length
+ * @returns {Uint8Array}
+ */
+function concat (arrs, length) {
+  const output = new Uint8Array(length)
+  let offset = 0
+
+  for (const arr of arrs) {
+    output.set(arr, offset)
+    offset += arr.length
+  }
+
+  return output
+}
+
+module.exports = { decodeText, encodeText, concat }
+
+
+/***/ }),
+
+/***/ 5653:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var net = __nccwpck_require__(808);
-var tls = __nccwpck_require__(404);
-var http = __nccwpck_require__(685);
-var https = __nccwpck_require__(687);
-var events = __nccwpck_require__(361);
-var assert = __nccwpck_require__(491);
-var util = __nccwpck_require__(837);
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var baseX$1 = __nccwpck_require__(228);
+var bytes = __nccwpck_require__(6507);
+
+class Encoder {
+  constructor(name, prefix, baseEncode) {
+    this.name = name;
+    this.prefix = prefix;
+    this.baseEncode = baseEncode;
+  }
+  encode(bytes) {
+    if (bytes instanceof Uint8Array) {
+      return `${ this.prefix }${ this.baseEncode(bytes) }`;
+    } else {
+      throw Error('Unknown type, must be binary type');
+    }
+  }
+}
+class Decoder {
+  constructor(name, prefix, baseDecode) {
+    this.name = name;
+    this.prefix = prefix;
+    if (prefix.codePointAt(0) === undefined) {
+      throw new Error('Invalid prefix character');
+    }
+    this.prefixCodePoint = prefix.codePointAt(0);
+    this.baseDecode = baseDecode;
+  }
+  decode(text) {
+    if (typeof text === 'string') {
+      if (text.codePointAt(0) !== this.prefixCodePoint) {
+        throw Error(`Unable to decode multibase string ${ JSON.stringify(text) }, ${ this.name } decoder only supports inputs prefixed with ${ this.prefix }`);
+      }
+      return this.baseDecode(text.slice(this.prefix.length));
+    } else {
+      throw Error('Can only multibase decode strings');
+    }
+  }
+  or(decoder) {
+    return or(this, decoder);
+  }
+}
+class ComposedDecoder {
+  constructor(decoders) {
+    this.decoders = decoders;
+  }
+  or(decoder) {
+    return or(this, decoder);
+  }
+  decode(input) {
+    const prefix = input[0];
+    const decoder = this.decoders[prefix];
+    if (decoder) {
+      return decoder.decode(input);
+    } else {
+      throw RangeError(`Unable to decode multibase string ${ JSON.stringify(input) }, only inputs prefixed with ${ Object.keys(this.decoders) } are supported`);
+    }
+  }
+}
+const or = (left, right) => new ComposedDecoder({
+  ...left.decoders || { [left.prefix]: left },
+  ...right.decoders || { [right.prefix]: right }
+});
+class Codec {
+  constructor(name, prefix, baseEncode, baseDecode) {
+    this.name = name;
+    this.prefix = prefix;
+    this.baseEncode = baseEncode;
+    this.baseDecode = baseDecode;
+    this.encoder = new Encoder(name, prefix, baseEncode);
+    this.decoder = new Decoder(name, prefix, baseDecode);
+  }
+  encode(input) {
+    return this.encoder.encode(input);
+  }
+  decode(input) {
+    return this.decoder.decode(input);
+  }
+}
+const from = ({name, prefix, encode, decode}) => new Codec(name, prefix, encode, decode);
+const baseX = ({prefix, name, alphabet}) => {
+  const {encode, decode} = baseX$1(alphabet, name);
+  return from({
+    prefix,
+    name,
+    encode,
+    decode: text => bytes.coerce(decode(text))
+  });
+};
+const decode = (string, alphabet, bitsPerChar, name) => {
+  const codes = {};
+  for (let i = 0; i < alphabet.length; ++i) {
+    codes[alphabet[i]] = i;
+  }
+  let end = string.length;
+  while (string[end - 1] === '=') {
+    --end;
+  }
+  const out = new Uint8Array(end * bitsPerChar / 8 | 0);
+  let bits = 0;
+  let buffer = 0;
+  let written = 0;
+  for (let i = 0; i < end; ++i) {
+    const value = codes[string[i]];
+    if (value === undefined) {
+      throw new SyntaxError(`Non-${ name } character`);
+    }
+    buffer = buffer << bitsPerChar | value;
+    bits += bitsPerChar;
+    if (bits >= 8) {
+      bits -= 8;
+      out[written++] = 255 & buffer >> bits;
+    }
+  }
+  if (bits >= bitsPerChar || 255 & buffer << 8 - bits) {
+    throw new SyntaxError('Unexpected end of data');
+  }
+  return out;
+};
+const encode = (data, alphabet, bitsPerChar) => {
+  const pad = alphabet[alphabet.length - 1] === '=';
+  const mask = (1 << bitsPerChar) - 1;
+  let out = '';
+  let bits = 0;
+  let buffer = 0;
+  for (let i = 0; i < data.length; ++i) {
+    buffer = buffer << 8 | data[i];
+    bits += 8;
+    while (bits > bitsPerChar) {
+      bits -= bitsPerChar;
+      out += alphabet[mask & buffer >> bits];
+    }
+  }
+  if (bits) {
+    out += alphabet[mask & buffer << bitsPerChar - bits];
+  }
+  if (pad) {
+    while (out.length * bitsPerChar & 7) {
+      out += '=';
+    }
+  }
+  return out;
+};
+const rfc4648 = ({name, prefix, bitsPerChar, alphabet}) => {
+  return from({
+    prefix,
+    name,
+    encode(input) {
+      return encode(input, alphabet, bitsPerChar);
+    },
+    decode(input) {
+      return decode(input, alphabet, bitsPerChar, name);
+    }
+  });
+};
+
+exports.Codec = Codec;
+exports.baseX = baseX;
+exports.from = from;
+exports.or = or;
+exports.rfc4648 = rfc4648;
+
+
+/***/ }),
+
+/***/ 6196:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var base = __nccwpck_require__(5653);
+
+const base10 = base.baseX({
+  prefix: '9',
+  name: 'base10',
+  alphabet: '0123456789'
+});
+
+exports.base10 = base10;
+
+
+/***/ }),
+
+/***/ 2168:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var base = __nccwpck_require__(5653);
+
+const base16 = base.rfc4648({
+  prefix: 'f',
+  name: 'base16',
+  alphabet: '0123456789abcdef',
+  bitsPerChar: 4
+});
+const base16upper = base.rfc4648({
+  prefix: 'F',
+  name: 'base16upper',
+  alphabet: '0123456789ABCDEF',
+  bitsPerChar: 4
+});
+
+exports.base16 = base16;
+exports.base16upper = base16upper;
+
+
+/***/ }),
+
+/***/ 9383:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var base = __nccwpck_require__(5653);
+
+const base2 = base.rfc4648({
+  prefix: '0',
+  name: 'base2',
+  alphabet: '01',
+  bitsPerChar: 1
+});
+
+exports.base2 = base2;
+
+
+/***/ }),
+
+/***/ 899:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var base = __nccwpck_require__(5653);
+
+const alphabet = Array.from('\uD83D\uDE80\uD83E\uDE90\u2604\uD83D\uDEF0\uD83C\uDF0C\uD83C\uDF11\uD83C\uDF12\uD83C\uDF13\uD83C\uDF14\uD83C\uDF15\uD83C\uDF16\uD83C\uDF17\uD83C\uDF18\uD83C\uDF0D\uD83C\uDF0F\uD83C\uDF0E\uD83D\uDC09\u2600\uD83D\uDCBB\uD83D\uDDA5\uD83D\uDCBE\uD83D\uDCBF\uD83D\uDE02\u2764\uD83D\uDE0D\uD83E\uDD23\uD83D\uDE0A\uD83D\uDE4F\uD83D\uDC95\uD83D\uDE2D\uD83D\uDE18\uD83D\uDC4D\uD83D\uDE05\uD83D\uDC4F\uD83D\uDE01\uD83D\uDD25\uD83E\uDD70\uD83D\uDC94\uD83D\uDC96\uD83D\uDC99\uD83D\uDE22\uD83E\uDD14\uD83D\uDE06\uD83D\uDE44\uD83D\uDCAA\uD83D\uDE09\u263A\uD83D\uDC4C\uD83E\uDD17\uD83D\uDC9C\uD83D\uDE14\uD83D\uDE0E\uD83D\uDE07\uD83C\uDF39\uD83E\uDD26\uD83C\uDF89\uD83D\uDC9E\u270C\u2728\uD83E\uDD37\uD83D\uDE31\uD83D\uDE0C\uD83C\uDF38\uD83D\uDE4C\uD83D\uDE0B\uD83D\uDC97\uD83D\uDC9A\uD83D\uDE0F\uD83D\uDC9B\uD83D\uDE42\uD83D\uDC93\uD83E\uDD29\uD83D\uDE04\uD83D\uDE00\uD83D\uDDA4\uD83D\uDE03\uD83D\uDCAF\uD83D\uDE48\uD83D\uDC47\uD83C\uDFB6\uD83D\uDE12\uD83E\uDD2D\u2763\uD83D\uDE1C\uD83D\uDC8B\uD83D\uDC40\uD83D\uDE2A\uD83D\uDE11\uD83D\uDCA5\uD83D\uDE4B\uD83D\uDE1E\uD83D\uDE29\uD83D\uDE21\uD83E\uDD2A\uD83D\uDC4A\uD83E\uDD73\uD83D\uDE25\uD83E\uDD24\uD83D\uDC49\uD83D\uDC83\uD83D\uDE33\u270B\uD83D\uDE1A\uD83D\uDE1D\uD83D\uDE34\uD83C\uDF1F\uD83D\uDE2C\uD83D\uDE43\uD83C\uDF40\uD83C\uDF37\uD83D\uDE3B\uD83D\uDE13\u2B50\u2705\uD83E\uDD7A\uD83C\uDF08\uD83D\uDE08\uD83E\uDD18\uD83D\uDCA6\u2714\uD83D\uDE23\uD83C\uDFC3\uD83D\uDC90\u2639\uD83C\uDF8A\uD83D\uDC98\uD83D\uDE20\u261D\uD83D\uDE15\uD83C\uDF3A\uD83C\uDF82\uD83C\uDF3B\uD83D\uDE10\uD83D\uDD95\uD83D\uDC9D\uD83D\uDE4A\uD83D\uDE39\uD83D\uDDE3\uD83D\uDCAB\uD83D\uDC80\uD83D\uDC51\uD83C\uDFB5\uD83E\uDD1E\uD83D\uDE1B\uD83D\uDD34\uD83D\uDE24\uD83C\uDF3C\uD83D\uDE2B\u26BD\uD83E\uDD19\u2615\uD83C\uDFC6\uD83E\uDD2B\uD83D\uDC48\uD83D\uDE2E\uD83D\uDE46\uD83C\uDF7B\uD83C\uDF43\uD83D\uDC36\uD83D\uDC81\uD83D\uDE32\uD83C\uDF3F\uD83E\uDDE1\uD83C\uDF81\u26A1\uD83C\uDF1E\uD83C\uDF88\u274C\u270A\uD83D\uDC4B\uD83D\uDE30\uD83E\uDD28\uD83D\uDE36\uD83E\uDD1D\uD83D\uDEB6\uD83D\uDCB0\uD83C\uDF53\uD83D\uDCA2\uD83E\uDD1F\uD83D\uDE41\uD83D\uDEA8\uD83D\uDCA8\uD83E\uDD2C\u2708\uD83C\uDF80\uD83C\uDF7A\uD83E\uDD13\uD83D\uDE19\uD83D\uDC9F\uD83C\uDF31\uD83D\uDE16\uD83D\uDC76\uD83E\uDD74\u25B6\u27A1\u2753\uD83D\uDC8E\uD83D\uDCB8\u2B07\uD83D\uDE28\uD83C\uDF1A\uD83E\uDD8B\uD83D\uDE37\uD83D\uDD7A\u26A0\uD83D\uDE45\uD83D\uDE1F\uD83D\uDE35\uD83D\uDC4E\uD83E\uDD32\uD83E\uDD20\uD83E\uDD27\uD83D\uDCCC\uD83D\uDD35\uD83D\uDC85\uD83E\uDDD0\uD83D\uDC3E\uD83C\uDF52\uD83D\uDE17\uD83E\uDD11\uD83C\uDF0A\uD83E\uDD2F\uD83D\uDC37\u260E\uD83D\uDCA7\uD83D\uDE2F\uD83D\uDC86\uD83D\uDC46\uD83C\uDFA4\uD83D\uDE47\uD83C\uDF51\u2744\uD83C\uDF34\uD83D\uDCA3\uD83D\uDC38\uD83D\uDC8C\uD83D\uDCCD\uD83E\uDD40\uD83E\uDD22\uD83D\uDC45\uD83D\uDCA1\uD83D\uDCA9\uD83D\uDC50\uD83D\uDCF8\uD83D\uDC7B\uD83E\uDD10\uD83E\uDD2E\uD83C\uDFBC\uD83E\uDD75\uD83D\uDEA9\uD83C\uDF4E\uD83C\uDF4A\uD83D\uDC7C\uD83D\uDC8D\uD83D\uDCE3\uD83E\uDD42');
+const alphabetBytesToChars = alphabet.reduce((p, c, i) => {
+  p[i] = c;
+  return p;
+}, []);
+const alphabetCharsToBytes = alphabet.reduce((p, c, i) => {
+  p[c.codePointAt(0)] = i;
+  return p;
+}, []);
+function encode(data) {
+  return data.reduce((p, c) => {
+    p += alphabetBytesToChars[c];
+    return p;
+  }, '');
+}
+function decode(str) {
+  const byts = [];
+  for (const char of str) {
+    const byt = alphabetCharsToBytes[char.codePointAt(0)];
+    if (byt === undefined) {
+      throw new Error(`Non-base256emoji character: ${ char }`);
+    }
+    byts.push(byt);
+  }
+  return new Uint8Array(byts);
+}
+const base256emoji = base.from({
+  prefix: '\uD83D\uDE80',
+  name: 'base256emoji',
+  encode,
+  decode
+});
+
+exports.base256emoji = base256emoji;
+
+
+/***/ }),
+
+/***/ 2884:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var base = __nccwpck_require__(5653);
+
+const base32 = base.rfc4648({
+  prefix: 'b',
+  name: 'base32',
+  alphabet: 'abcdefghijklmnopqrstuvwxyz234567',
+  bitsPerChar: 5
+});
+const base32upper = base.rfc4648({
+  prefix: 'B',
+  name: 'base32upper',
+  alphabet: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567',
+  bitsPerChar: 5
+});
+const base32pad = base.rfc4648({
+  prefix: 'c',
+  name: 'base32pad',
+  alphabet: 'abcdefghijklmnopqrstuvwxyz234567=',
+  bitsPerChar: 5
+});
+const base32padupper = base.rfc4648({
+  prefix: 'C',
+  name: 'base32padupper',
+  alphabet: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567=',
+  bitsPerChar: 5
+});
+const base32hex = base.rfc4648({
+  prefix: 'v',
+  name: 'base32hex',
+  alphabet: '0123456789abcdefghijklmnopqrstuv',
+  bitsPerChar: 5
+});
+const base32hexupper = base.rfc4648({
+  prefix: 'V',
+  name: 'base32hexupper',
+  alphabet: '0123456789ABCDEFGHIJKLMNOPQRSTUV',
+  bitsPerChar: 5
+});
+const base32hexpad = base.rfc4648({
+  prefix: 't',
+  name: 'base32hexpad',
+  alphabet: '0123456789abcdefghijklmnopqrstuv=',
+  bitsPerChar: 5
+});
+const base32hexpadupper = base.rfc4648({
+  prefix: 'T',
+  name: 'base32hexpadupper',
+  alphabet: '0123456789ABCDEFGHIJKLMNOPQRSTUV=',
+  bitsPerChar: 5
+});
+const base32z = base.rfc4648({
+  prefix: 'h',
+  name: 'base32z',
+  alphabet: 'ybndrfg8ejkmcpqxot1uwisza345h769',
+  bitsPerChar: 5
+});
+
+exports.base32 = base32;
+exports.base32hex = base32hex;
+exports.base32hexpad = base32hexpad;
+exports.base32hexpadupper = base32hexpadupper;
+exports.base32hexupper = base32hexupper;
+exports.base32pad = base32pad;
+exports.base32padupper = base32padupper;
+exports.base32upper = base32upper;
+exports.base32z = base32z;
+
+
+/***/ }),
+
+/***/ 9587:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var base = __nccwpck_require__(5653);
+
+const base36 = base.baseX({
+  prefix: 'k',
+  name: 'base36',
+  alphabet: '0123456789abcdefghijklmnopqrstuvwxyz'
+});
+const base36upper = base.baseX({
+  prefix: 'K',
+  name: 'base36upper',
+  alphabet: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+});
+
+exports.base36 = base36;
+exports.base36upper = base36upper;
+
+
+/***/ }),
+
+/***/ 5648:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var base = __nccwpck_require__(5653);
+
+const base58btc = base.baseX({
+  name: 'base58btc',
+  prefix: 'z',
+  alphabet: '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'
+});
+const base58flickr = base.baseX({
+  name: 'base58flickr',
+  prefix: 'Z',
+  alphabet: '123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ'
+});
+
+exports.base58btc = base58btc;
+exports.base58flickr = base58flickr;
+
+
+/***/ }),
+
+/***/ 3095:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var base = __nccwpck_require__(5653);
+
+const base64 = base.rfc4648({
+  prefix: 'm',
+  name: 'base64',
+  alphabet: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/',
+  bitsPerChar: 6
+});
+const base64pad = base.rfc4648({
+  prefix: 'M',
+  name: 'base64pad',
+  alphabet: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=',
+  bitsPerChar: 6
+});
+const base64url = base.rfc4648({
+  prefix: 'u',
+  name: 'base64url',
+  alphabet: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_',
+  bitsPerChar: 6
+});
+const base64urlpad = base.rfc4648({
+  prefix: 'U',
+  name: 'base64urlpad',
+  alphabet: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_=',
+  bitsPerChar: 6
+});
+
+exports.base64 = base64;
+exports.base64pad = base64pad;
+exports.base64url = base64url;
+exports.base64urlpad = base64urlpad;
+
+
+/***/ }),
+
+/***/ 7233:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var base = __nccwpck_require__(5653);
+
+const base8 = base.rfc4648({
+  prefix: '7',
+  name: 'base8',
+  alphabet: '01234567',
+  bitsPerChar: 3
+});
+
+exports.base8 = base8;
+
+
+/***/ }),
+
+/***/ 7197:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var base = __nccwpck_require__(5653);
+var bytes = __nccwpck_require__(6507);
+
+const identity = base.from({
+  prefix: '\0',
+  name: 'identity',
+  encode: buf => bytes.toString(buf),
+  decode: str => bytes.fromString(str)
+});
+
+exports.identity = identity;
+
+
+/***/ }),
+
+/***/ 1046:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var identity = __nccwpck_require__(7197);
+var base2 = __nccwpck_require__(9383);
+var base8 = __nccwpck_require__(7233);
+var base10 = __nccwpck_require__(6196);
+var base16 = __nccwpck_require__(2168);
+var base32 = __nccwpck_require__(2884);
+var base36 = __nccwpck_require__(9587);
+var base58 = __nccwpck_require__(5648);
+var base64 = __nccwpck_require__(3095);
+var base256emoji = __nccwpck_require__(899);
+var sha2 = __nccwpck_require__(6987);
+var identity$1 = __nccwpck_require__(2379);
+var raw = __nccwpck_require__(2048);
+var json = __nccwpck_require__(5336);
+__nccwpck_require__(5978);
+var cid = __nccwpck_require__(6447);
+var hasher = __nccwpck_require__(92);
+var digest = __nccwpck_require__(76);
+var varint = __nccwpck_require__(4972);
+var bytes = __nccwpck_require__(6507);
+
+const bases = {
+  ...identity,
+  ...base2,
+  ...base8,
+  ...base10,
+  ...base16,
+  ...base32,
+  ...base36,
+  ...base58,
+  ...base64,
+  ...base256emoji
+};
+const hashes = {
+  ...sha2,
+  ...identity$1
+};
+const codecs = {
+  raw,
+  json
+};
+
+exports.CID = cid.CID;
+exports.hasher = hasher;
+exports.digest = digest;
+exports.varint = varint;
+exports.bytes = bytes;
+exports.bases = bases;
+exports.codecs = codecs;
+exports.hashes = hashes;
+
+
+/***/ }),
+
+/***/ 6507:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+const empty = new Uint8Array(0);
+const toHex = d => d.reduce((hex, byte) => hex + byte.toString(16).padStart(2, '0'), '');
+const fromHex = hex => {
+  const hexes = hex.match(/../g);
+  return hexes ? new Uint8Array(hexes.map(b => parseInt(b, 16))) : empty;
+};
+const equals = (aa, bb) => {
+  if (aa === bb)
+    return true;
+  if (aa.byteLength !== bb.byteLength) {
+    return false;
+  }
+  for (let ii = 0; ii < aa.byteLength; ii++) {
+    if (aa[ii] !== bb[ii]) {
+      return false;
+    }
+  }
+  return true;
+};
+const coerce = o => {
+  if (o instanceof Uint8Array && o.constructor.name === 'Uint8Array')
+    return o;
+  if (o instanceof ArrayBuffer)
+    return new Uint8Array(o);
+  if (ArrayBuffer.isView(o)) {
+    return new Uint8Array(o.buffer, o.byteOffset, o.byteLength);
+  }
+  throw new Error('Unknown type, must be binary type');
+};
+const isBinary = o => o instanceof ArrayBuffer || ArrayBuffer.isView(o);
+const fromString = str => new TextEncoder().encode(str);
+const toString = b => new TextDecoder().decode(b);
+
+exports.coerce = coerce;
+exports.empty = empty;
+exports.equals = equals;
+exports.fromHex = fromHex;
+exports.fromString = fromString;
+exports.isBinary = isBinary;
+exports.toHex = toHex;
+exports.toString = toString;
+
+
+/***/ }),
+
+/***/ 6447:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var varint = __nccwpck_require__(4972);
+var digest = __nccwpck_require__(76);
+var base58 = __nccwpck_require__(5648);
+var base32 = __nccwpck_require__(2884);
+var bytes = __nccwpck_require__(6507);
+
+class CID {
+  constructor(version, code, multihash, bytes) {
+    this.code = code;
+    this.version = version;
+    this.multihash = multihash;
+    this.bytes = bytes;
+    this.byteOffset = bytes.byteOffset;
+    this.byteLength = bytes.byteLength;
+    this.asCID = this;
+    this._baseCache = new Map();
+    Object.defineProperties(this, {
+      byteOffset: hidden,
+      byteLength: hidden,
+      code: readonly,
+      version: readonly,
+      multihash: readonly,
+      bytes: readonly,
+      _baseCache: hidden,
+      asCID: hidden
+    });
+  }
+  toV0() {
+    switch (this.version) {
+    case 0: {
+        return this;
+      }
+    default: {
+        const {code, multihash} = this;
+        if (code !== DAG_PB_CODE) {
+          throw new Error('Cannot convert a non dag-pb CID to CIDv0');
+        }
+        if (multihash.code !== SHA_256_CODE) {
+          throw new Error('Cannot convert non sha2-256 multihash CID to CIDv0');
+        }
+        return CID.createV0(multihash);
+      }
+    }
+  }
+  toV1() {
+    switch (this.version) {
+    case 0: {
+        const {code, digest: digest$1} = this.multihash;
+        const multihash = digest.create(code, digest$1);
+        return CID.createV1(this.code, multihash);
+      }
+    case 1: {
+        return this;
+      }
+    default: {
+        throw Error(`Can not convert CID version ${ this.version } to version 0. This is a bug please report`);
+      }
+    }
+  }
+  equals(other) {
+    return other && this.code === other.code && this.version === other.version && digest.equals(this.multihash, other.multihash);
+  }
+  toString(base) {
+    const {bytes, version, _baseCache} = this;
+    switch (version) {
+    case 0:
+      return toStringV0(bytes, _baseCache, base || base58.base58btc.encoder);
+    default:
+      return toStringV1(bytes, _baseCache, base || base32.base32.encoder);
+    }
+  }
+  toJSON() {
+    return {
+      code: this.code,
+      version: this.version,
+      hash: this.multihash.bytes
+    };
+  }
+  get [Symbol.toStringTag]() {
+    return 'CID';
+  }
+  [Symbol.for('nodejs.util.inspect.custom')]() {
+    return 'CID(' + this.toString() + ')';
+  }
+  static isCID(value) {
+    deprecate(/^0\.0/, IS_CID_DEPRECATION);
+    return !!(value && (value[cidSymbol] || value.asCID === value));
+  }
+  get toBaseEncodedString() {
+    throw new Error('Deprecated, use .toString()');
+  }
+  get codec() {
+    throw new Error('"codec" property is deprecated, use integer "code" property instead');
+  }
+  get buffer() {
+    throw new Error('Deprecated .buffer property, use .bytes to get Uint8Array instead');
+  }
+  get multibaseName() {
+    throw new Error('"multibaseName" property is deprecated');
+  }
+  get prefix() {
+    throw new Error('"prefix" property is deprecated');
+  }
+  static asCID(value) {
+    if (value instanceof CID) {
+      return value;
+    } else if (value != null && value.asCID === value) {
+      const {version, code, multihash, bytes} = value;
+      return new CID(version, code, multihash, bytes || encodeCID(version, code, multihash.bytes));
+    } else if (value != null && value[cidSymbol] === true) {
+      const {version, multihash, code} = value;
+      const digest$1 = digest.decode(multihash);
+      return CID.create(version, code, digest$1);
+    } else {
+      return null;
+    }
+  }
+  static create(version, code, digest) {
+    if (typeof code !== 'number') {
+      throw new Error('String codecs are no longer supported');
+    }
+    switch (version) {
+    case 0: {
+        if (code !== DAG_PB_CODE) {
+          throw new Error(`Version 0 CID must use dag-pb (code: ${ DAG_PB_CODE }) block encoding`);
+        } else {
+          return new CID(version, code, digest, digest.bytes);
+        }
+      }
+    case 1: {
+        const bytes = encodeCID(version, code, digest.bytes);
+        return new CID(version, code, digest, bytes);
+      }
+    default: {
+        throw new Error('Invalid version');
+      }
+    }
+  }
+  static createV0(digest) {
+    return CID.create(0, DAG_PB_CODE, digest);
+  }
+  static createV1(code, digest) {
+    return CID.create(1, code, digest);
+  }
+  static decode(bytes) {
+    const [cid, remainder] = CID.decodeFirst(bytes);
+    if (remainder.length) {
+      throw new Error('Incorrect length');
+    }
+    return cid;
+  }
+  static decodeFirst(bytes$1) {
+    const specs = CID.inspectBytes(bytes$1);
+    const prefixSize = specs.size - specs.multihashSize;
+    const multihashBytes = bytes.coerce(bytes$1.subarray(prefixSize, prefixSize + specs.multihashSize));
+    if (multihashBytes.byteLength !== specs.multihashSize) {
+      throw new Error('Incorrect length');
+    }
+    const digestBytes = multihashBytes.subarray(specs.multihashSize - specs.digestSize);
+    const digest$1 = new digest.Digest(specs.multihashCode, specs.digestSize, digestBytes, multihashBytes);
+    const cid = specs.version === 0 ? CID.createV0(digest$1) : CID.createV1(specs.codec, digest$1);
+    return [
+      cid,
+      bytes$1.subarray(specs.size)
+    ];
+  }
+  static inspectBytes(initialBytes) {
+    let offset = 0;
+    const next = () => {
+      const [i, length] = varint.decode(initialBytes.subarray(offset));
+      offset += length;
+      return i;
+    };
+    let version = next();
+    let codec = DAG_PB_CODE;
+    if (version === 18) {
+      version = 0;
+      offset = 0;
+    } else if (version === 1) {
+      codec = next();
+    }
+    if (version !== 0 && version !== 1) {
+      throw new RangeError(`Invalid CID version ${ version }`);
+    }
+    const prefixSize = offset;
+    const multihashCode = next();
+    const digestSize = next();
+    const size = offset + digestSize;
+    const multihashSize = size - prefixSize;
+    return {
+      version,
+      codec,
+      multihashCode,
+      digestSize,
+      multihashSize,
+      size
+    };
+  }
+  static parse(source, base) {
+    const [prefix, bytes] = parseCIDtoBytes(source, base);
+    const cid = CID.decode(bytes);
+    cid._baseCache.set(prefix, source);
+    return cid;
+  }
+}
+const parseCIDtoBytes = (source, base) => {
+  switch (source[0]) {
+  case 'Q': {
+      const decoder = base || base58.base58btc;
+      return [
+        base58.base58btc.prefix,
+        decoder.decode(`${ base58.base58btc.prefix }${ source }`)
+      ];
+    }
+  case base58.base58btc.prefix: {
+      const decoder = base || base58.base58btc;
+      return [
+        base58.base58btc.prefix,
+        decoder.decode(source)
+      ];
+    }
+  case base32.base32.prefix: {
+      const decoder = base || base32.base32;
+      return [
+        base32.base32.prefix,
+        decoder.decode(source)
+      ];
+    }
+  default: {
+      if (base == null) {
+        throw Error('To parse non base32 or base58btc encoded CID multibase decoder must be provided');
+      }
+      return [
+        source[0],
+        base.decode(source)
+      ];
+    }
+  }
+};
+const toStringV0 = (bytes, cache, base) => {
+  const {prefix} = base;
+  if (prefix !== base58.base58btc.prefix) {
+    throw Error(`Cannot string encode V0 in ${ base.name } encoding`);
+  }
+  const cid = cache.get(prefix);
+  if (cid == null) {
+    const cid = base.encode(bytes).slice(1);
+    cache.set(prefix, cid);
+    return cid;
+  } else {
+    return cid;
+  }
+};
+const toStringV1 = (bytes, cache, base) => {
+  const {prefix} = base;
+  const cid = cache.get(prefix);
+  if (cid == null) {
+    const cid = base.encode(bytes);
+    cache.set(prefix, cid);
+    return cid;
+  } else {
+    return cid;
+  }
+};
+const DAG_PB_CODE = 112;
+const SHA_256_CODE = 18;
+const encodeCID = (version, code, multihash) => {
+  const codeOffset = varint.encodingLength(version);
+  const hashOffset = codeOffset + varint.encodingLength(code);
+  const bytes = new Uint8Array(hashOffset + multihash.byteLength);
+  varint.encodeTo(version, bytes, 0);
+  varint.encodeTo(code, bytes, codeOffset);
+  bytes.set(multihash, hashOffset);
+  return bytes;
+};
+const cidSymbol = Symbol.for('@ipld/js-cid/CID');
+const readonly = {
+  writable: false,
+  configurable: false,
+  enumerable: true
+};
+const hidden = {
+  writable: false,
+  enumerable: false,
+  configurable: false
+};
+const version = '0.0.0-dev';
+const deprecate = (range, message) => {
+  if (range.test(version)) {
+    console.warn(message);
+  } else {
+    throw new Error(message);
+  }
+};
+const IS_CID_DEPRECATION = `CID.isCID(v) is deprecated and will be removed in the next major release.
+Following code pattern:
+
+if (CID.isCID(value)) {
+  doSomethingWithCID(value)
+}
+
+Is replaced with:
+
+const cid = CID.asCID(value)
+if (cid) {
+  // Make sure to use cid instead of value
+  doSomethingWithCID(cid)
+}
+`;
+
+exports.CID = CID;
+
+
+/***/ }),
+
+/***/ 5336:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+const textEncoder = new TextEncoder();
+const textDecoder = new TextDecoder();
+const name = 'json';
+const code = 512;
+const encode = node => textEncoder.encode(JSON.stringify(node));
+const decode = data => JSON.parse(textDecoder.decode(data));
+
+exports.code = code;
+exports.decode = decode;
+exports.encode = encode;
+exports.name = name;
+
+
+/***/ }),
+
+/***/ 2048:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var bytes = __nccwpck_require__(6507);
+
+const name = 'raw';
+const code = 85;
+const encode = node => bytes.coerce(node);
+const decode = data => bytes.coerce(data);
+
+exports.code = code;
+exports.decode = decode;
+exports.encode = encode;
+exports.name = name;
+
+
+/***/ }),
+
+/***/ 76:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var bytes = __nccwpck_require__(6507);
+var varint = __nccwpck_require__(4972);
+
+const create = (code, digest) => {
+  const size = digest.byteLength;
+  const sizeOffset = varint.encodingLength(code);
+  const digestOffset = sizeOffset + varint.encodingLength(size);
+  const bytes = new Uint8Array(digestOffset + size);
+  varint.encodeTo(code, bytes, 0);
+  varint.encodeTo(size, bytes, sizeOffset);
+  bytes.set(digest, digestOffset);
+  return new Digest(code, size, digest, bytes);
+};
+const decode = multihash => {
+  const bytes$1 = bytes.coerce(multihash);
+  const [code, sizeOffset] = varint.decode(bytes$1);
+  const [size, digestOffset] = varint.decode(bytes$1.subarray(sizeOffset));
+  const digest = bytes$1.subarray(sizeOffset + digestOffset);
+  if (digest.byteLength !== size) {
+    throw new Error('Incorrect length');
+  }
+  return new Digest(code, size, digest, bytes$1);
+};
+const equals = (a, b) => {
+  if (a === b) {
+    return true;
+  } else {
+    return a.code === b.code && a.size === b.size && bytes.equals(a.bytes, b.bytes);
+  }
+};
+class Digest {
+  constructor(code, size, digest, bytes) {
+    this.code = code;
+    this.size = size;
+    this.digest = digest;
+    this.bytes = bytes;
+  }
+}
+
+exports.Digest = Digest;
+exports.create = create;
+exports.decode = decode;
+exports.equals = equals;
+
+
+/***/ }),
+
+/***/ 92:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var digest = __nccwpck_require__(76);
+
+const from = ({name, code, encode}) => new Hasher(name, code, encode);
+class Hasher {
+  constructor(name, code, encode) {
+    this.name = name;
+    this.code = code;
+    this.encode = encode;
+  }
+  digest(input) {
+    if (input instanceof Uint8Array) {
+      const result = this.encode(input);
+      return result instanceof Uint8Array ? digest.create(this.code, result) : result.then(digest$1 => digest.create(this.code, digest$1));
+    } else {
+      throw Error('Unknown type, must be binary type');
+    }
+  }
+}
+
+exports.Hasher = Hasher;
+exports.from = from;
+
+
+/***/ }),
+
+/***/ 2379:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var bytes = __nccwpck_require__(6507);
+var digest$1 = __nccwpck_require__(76);
+
+const code = 0;
+const name = 'identity';
+const encode = bytes.coerce;
+const digest = input => digest$1.create(code, encode(input));
+const identity = {
+  code,
+  name,
+  encode,
+  digest
+};
+
+exports.identity = identity;
+
+
+/***/ }),
+
+/***/ 6987:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var crypto = __nccwpck_require__(6113);
+var hasher = __nccwpck_require__(92);
+var bytes = __nccwpck_require__(6507);
+
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+var crypto__default = /*#__PURE__*/_interopDefaultLegacy(crypto);
+
+const sha256 = hasher.from({
+  name: 'sha2-256',
+  code: 18,
+  encode: input => bytes.coerce(crypto__default["default"].createHash('sha256').update(input).digest())
+});
+const sha512 = hasher.from({
+  name: 'sha2-512',
+  code: 19,
+  encode: input => bytes.coerce(crypto__default["default"].createHash('sha512').update(input).digest())
+});
+
+exports.sha256 = sha256;
+exports.sha512 = sha512;
+
+
+/***/ }),
+
+/***/ 5978:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var cid = __nccwpck_require__(6447);
+var varint = __nccwpck_require__(4972);
+var bytes = __nccwpck_require__(6507);
+var hasher = __nccwpck_require__(92);
+var digest = __nccwpck_require__(76);
+
+
+
+exports.CID = cid.CID;
+exports.varint = varint;
+exports.bytes = bytes;
+exports.hasher = hasher;
+exports.digest = digest;
+
+
+/***/ }),
+
+/***/ 4972:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var varint$1 = __nccwpck_require__(4890);
+
+const decode = data => {
+  const code = varint$1.decode(data);
+  return [
+    code,
+    varint$1.decode.bytes
+  ];
+};
+const encodeTo = (int, target, offset = 0) => {
+  varint$1.encode(int, target, offset);
+  return target;
+};
+const encodingLength = int => {
+  return varint$1.encodingLength(int);
+};
+
+exports.decode = decode;
+exports.encodeTo = encodeTo;
+exports.encodingLength = encodingLength;
+
+
+/***/ }),
+
+/***/ 228:
+/***/ ((module) => {
+
+"use strict";
+
+
+function base(ALPHABET, name) {
+  if (ALPHABET.length >= 255) {
+    throw new TypeError('Alphabet too long');
+  }
+  var BASE_MAP = new Uint8Array(256);
+  for (var j = 0; j < BASE_MAP.length; j++) {
+    BASE_MAP[j] = 255;
+  }
+  for (var i = 0; i < ALPHABET.length; i++) {
+    var x = ALPHABET.charAt(i);
+    var xc = x.charCodeAt(0);
+    if (BASE_MAP[xc] !== 255) {
+      throw new TypeError(x + ' is ambiguous');
+    }
+    BASE_MAP[xc] = i;
+  }
+  var BASE = ALPHABET.length;
+  var LEADER = ALPHABET.charAt(0);
+  var FACTOR = Math.log(BASE) / Math.log(256);
+  var iFACTOR = Math.log(256) / Math.log(BASE);
+  function encode(source) {
+    if (source instanceof Uint8Array);
+    else if (ArrayBuffer.isView(source)) {
+      source = new Uint8Array(source.buffer, source.byteOffset, source.byteLength);
+    } else if (Array.isArray(source)) {
+      source = Uint8Array.from(source);
+    }
+    if (!(source instanceof Uint8Array)) {
+      throw new TypeError('Expected Uint8Array');
+    }
+    if (source.length === 0) {
+      return '';
+    }
+    var zeroes = 0;
+    var length = 0;
+    var pbegin = 0;
+    var pend = source.length;
+    while (pbegin !== pend && source[pbegin] === 0) {
+      pbegin++;
+      zeroes++;
+    }
+    var size = (pend - pbegin) * iFACTOR + 1 >>> 0;
+    var b58 = new Uint8Array(size);
+    while (pbegin !== pend) {
+      var carry = source[pbegin];
+      var i = 0;
+      for (var it1 = size - 1; (carry !== 0 || i < length) && it1 !== -1; it1--, i++) {
+        carry += 256 * b58[it1] >>> 0;
+        b58[it1] = carry % BASE >>> 0;
+        carry = carry / BASE >>> 0;
+      }
+      if (carry !== 0) {
+        throw new Error('Non-zero carry');
+      }
+      length = i;
+      pbegin++;
+    }
+    var it2 = size - length;
+    while (it2 !== size && b58[it2] === 0) {
+      it2++;
+    }
+    var str = LEADER.repeat(zeroes);
+    for (; it2 < size; ++it2) {
+      str += ALPHABET.charAt(b58[it2]);
+    }
+    return str;
+  }
+  function decodeUnsafe(source) {
+    if (typeof source !== 'string') {
+      throw new TypeError('Expected String');
+    }
+    if (source.length === 0) {
+      return new Uint8Array();
+    }
+    var psz = 0;
+    if (source[psz] === ' ') {
+      return;
+    }
+    var zeroes = 0;
+    var length = 0;
+    while (source[psz] === LEADER) {
+      zeroes++;
+      psz++;
+    }
+    var size = (source.length - psz) * FACTOR + 1 >>> 0;
+    var b256 = new Uint8Array(size);
+    while (source[psz]) {
+      var carry = BASE_MAP[source.charCodeAt(psz)];
+      if (carry === 255) {
+        return;
+      }
+      var i = 0;
+      for (var it3 = size - 1; (carry !== 0 || i < length) && it3 !== -1; it3--, i++) {
+        carry += BASE * b256[it3] >>> 0;
+        b256[it3] = carry % 256 >>> 0;
+        carry = carry / 256 >>> 0;
+      }
+      if (carry !== 0) {
+        throw new Error('Non-zero carry');
+      }
+      length = i;
+      psz++;
+    }
+    if (source[psz] === ' ') {
+      return;
+    }
+    var it4 = size - length;
+    while (it4 !== size && b256[it4] === 0) {
+      it4++;
+    }
+    var vch = new Uint8Array(zeroes + (size - it4));
+    var j = zeroes;
+    while (it4 !== size) {
+      vch[j++] = b256[it4++];
+    }
+    return vch;
+  }
+  function decode(string) {
+    var buffer = decodeUnsafe(string);
+    if (buffer) {
+      return buffer;
+    }
+    throw new Error(`Non-${ name } character`);
+  }
+  return {
+    encode: encode,
+    decodeUnsafe: decodeUnsafe,
+    decode: decode
+  };
+}
+var src = base;
+var _brrp__multiformats_scope_baseX = src;
+
+module.exports = _brrp__multiformats_scope_baseX;
+
+
+/***/ }),
+
+/***/ 4890:
+/***/ ((module) => {
+
+"use strict";
+
+
+var encode_1 = encode;
+var MSB = 128, REST = 127, MSBALL = ~REST, INT = Math.pow(2, 31);
+function encode(num, out, offset) {
+  out = out || [];
+  offset = offset || 0;
+  var oldOffset = offset;
+  while (num >= INT) {
+    out[offset++] = num & 255 | MSB;
+    num /= 128;
+  }
+  while (num & MSBALL) {
+    out[offset++] = num & 255 | MSB;
+    num >>>= 7;
+  }
+  out[offset] = num | 0;
+  encode.bytes = offset - oldOffset + 1;
+  return out;
+}
+var decode = read;
+var MSB$1 = 128, REST$1 = 127;
+function read(buf, offset) {
+  var res = 0, offset = offset || 0, shift = 0, counter = offset, b, l = buf.length;
+  do {
+    if (counter >= l) {
+      read.bytes = 0;
+      throw new RangeError('Could not decode varint');
+    }
+    b = buf[counter++];
+    res += shift < 28 ? (b & REST$1) << shift : (b & REST$1) * Math.pow(2, shift);
+    shift += 7;
+  } while (b >= MSB$1);
+  read.bytes = counter - offset;
+  return res;
+}
+var N1 = Math.pow(2, 7);
+var N2 = Math.pow(2, 14);
+var N3 = Math.pow(2, 21);
+var N4 = Math.pow(2, 28);
+var N5 = Math.pow(2, 35);
+var N6 = Math.pow(2, 42);
+var N7 = Math.pow(2, 49);
+var N8 = Math.pow(2, 56);
+var N9 = Math.pow(2, 63);
+var length = function (value) {
+  return value < N1 ? 1 : value < N2 ? 2 : value < N3 ? 3 : value < N4 ? 4 : value < N5 ? 5 : value < N6 ? 6 : value < N7 ? 7 : value < N8 ? 8 : value < N9 ? 9 : 10;
+};
+var varint = {
+  encode: encode_1,
+  decode: decode,
+  encodingLength: length
+};
+var _brrp_varint = varint;
+var varint$1 = _brrp_varint;
+
+module.exports = varint$1;
+
+
+/***/ }),
+
+/***/ 4294:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+module.exports = __nccwpck_require__(4219);
+
+
+/***/ }),
+
+/***/ 4219:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+var net = __nccwpck_require__(1808);
+var tls = __nccwpck_require__(4404);
+var http = __nccwpck_require__(3685);
+var https = __nccwpck_require__(5687);
+var events = __nccwpck_require__(2361);
+var assert = __nccwpck_require__(9491);
+var util = __nccwpck_require__(3837);
 
 
 exports.httpOverHttp = httpOverHttp;
@@ -26014,7 +33376,199 @@ exports.debug = debug; // for test
 
 /***/ }),
 
-/***/ 840:
+/***/ 1079:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+function alloc(size = 0) {
+  if (globalThis.Buffer != null && globalThis.Buffer.alloc != null) {
+    return globalThis.Buffer.alloc(size);
+  }
+  return new Uint8Array(size);
+}
+function allocUnsafe(size = 0) {
+  if (globalThis.Buffer != null && globalThis.Buffer.allocUnsafe != null) {
+    return globalThis.Buffer.allocUnsafe(size);
+  }
+  return new Uint8Array(size);
+}
+
+exports.alloc = alloc;
+exports.allocUnsafe = allocUnsafe;
+
+
+/***/ }),
+
+/***/ 5114:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var alloc = __nccwpck_require__(1079);
+
+function concat(arrays, length) {
+  if (!length) {
+    length = arrays.reduce((acc, curr) => acc + curr.length, 0);
+  }
+  const output = alloc.allocUnsafe(length);
+  let offset = 0;
+  for (const arr of arrays) {
+    output.set(arr, offset);
+    offset += arr.length;
+  }
+  return output;
+}
+
+exports.concat = concat;
+
+
+/***/ }),
+
+/***/ 9192:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+function equals(a, b) {
+  if (a === b) {
+    return true;
+  }
+  if (a.byteLength !== b.byteLength) {
+    return false;
+  }
+  for (let i = 0; i < a.byteLength; i++) {
+    if (a[i] !== b[i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+exports.equals = equals;
+
+
+/***/ }),
+
+/***/ 3538:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var bases = __nccwpck_require__(8552);
+
+function fromString(string, encoding = 'utf8') {
+  const base = bases[encoding];
+  if (!base) {
+    throw new Error(`Unsupported encoding "${ encoding }"`);
+  }
+  if ((encoding === 'utf8' || encoding === 'utf-8') && globalThis.Buffer != null && globalThis.Buffer.from != null) {
+    return globalThis.Buffer.from(string, 'utf8');
+  }
+  return base.decoder.decode(`${ base.prefix }${ string }`);
+}
+
+exports.fromString = fromString;
+
+
+/***/ }),
+
+/***/ 8389:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var bases = __nccwpck_require__(8552);
+
+function toString(array, encoding = 'utf8') {
+  const base = bases[encoding];
+  if (!base) {
+    throw new Error(`Unsupported encoding "${ encoding }"`);
+  }
+  if ((encoding === 'utf8' || encoding === 'utf-8') && globalThis.Buffer != null && globalThis.Buffer.from != null) {
+    return globalThis.Buffer.from(array.buffer, array.byteOffset, array.byteLength).toString('utf8');
+  }
+  return base.encoder.encode(array).substring(1);
+}
+
+exports.toString = toString;
+
+
+/***/ }),
+
+/***/ 8552:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+var basics = __nccwpck_require__(1046);
+var alloc = __nccwpck_require__(1079);
+
+function createCodec(name, prefix, encode, decode) {
+  return {
+    name,
+    prefix,
+    encoder: {
+      name,
+      prefix,
+      encode
+    },
+    decoder: { decode }
+  };
+}
+const string = createCodec('utf8', 'u', buf => {
+  const decoder = new TextDecoder('utf8');
+  return 'u' + decoder.decode(buf);
+}, str => {
+  const encoder = new TextEncoder();
+  return encoder.encode(str.substring(1));
+});
+const ascii = createCodec('ascii', 'a', buf => {
+  let string = 'a';
+  for (let i = 0; i < buf.length; i++) {
+    string += String.fromCharCode(buf[i]);
+  }
+  return string;
+}, str => {
+  str = str.substring(1);
+  const buf = alloc.allocUnsafe(str.length);
+  for (let i = 0; i < str.length; i++) {
+    buf[i] = str.charCodeAt(i);
+  }
+  return buf;
+});
+const BASES = {
+  utf8: string,
+  'utf-8': string,
+  hex: basics.bases.base16,
+  latin1: ascii,
+  ascii: ascii,
+  binary: ascii,
+  ...basics.bases
+};
+
+module.exports = BASES;
+
+
+/***/ }),
+
+/***/ 5840:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26078,29 +33632,29 @@ Object.defineProperty(exports, "parse", ({
   }
 }));
 
-var _v = _interopRequireDefault(__nccwpck_require__(628));
+var _v = _interopRequireDefault(__nccwpck_require__(8628));
 
-var _v2 = _interopRequireDefault(__nccwpck_require__(409));
+var _v2 = _interopRequireDefault(__nccwpck_require__(6409));
 
-var _v3 = _interopRequireDefault(__nccwpck_require__(122));
+var _v3 = _interopRequireDefault(__nccwpck_require__(5122));
 
-var _v4 = _interopRequireDefault(__nccwpck_require__(120));
+var _v4 = _interopRequireDefault(__nccwpck_require__(9120));
 
-var _nil = _interopRequireDefault(__nccwpck_require__(332));
+var _nil = _interopRequireDefault(__nccwpck_require__(5332));
 
-var _version = _interopRequireDefault(__nccwpck_require__(595));
+var _version = _interopRequireDefault(__nccwpck_require__(1595));
 
-var _validate = _interopRequireDefault(__nccwpck_require__(900));
+var _validate = _interopRequireDefault(__nccwpck_require__(6900));
 
-var _stringify = _interopRequireDefault(__nccwpck_require__(950));
+var _stringify = _interopRequireDefault(__nccwpck_require__(8950));
 
-var _parse = _interopRequireDefault(__nccwpck_require__(746));
+var _parse = _interopRequireDefault(__nccwpck_require__(2746));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 
-/***/ 569:
+/***/ 4569:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26111,7 +33665,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _crypto = _interopRequireDefault(__nccwpck_require__(113));
+var _crypto = _interopRequireDefault(__nccwpck_require__(6113));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26130,7 +33684,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 332:
+/***/ 5332:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -26145,7 +33699,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 746:
+/***/ 2746:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26156,7 +33710,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _validate = _interopRequireDefault(__nccwpck_require__(900));
+var _validate = _interopRequireDefault(__nccwpck_require__(6900));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26223,7 +33777,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = rng;
 
-var _crypto = _interopRequireDefault(__nccwpck_require__(113));
+var _crypto = _interopRequireDefault(__nccwpck_require__(6113));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26243,7 +33797,7 @@ function rng() {
 
 /***/ }),
 
-/***/ 274:
+/***/ 5274:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26254,7 +33808,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _crypto = _interopRequireDefault(__nccwpck_require__(113));
+var _crypto = _interopRequireDefault(__nccwpck_require__(6113));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26273,7 +33827,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 950:
+/***/ 8950:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26284,7 +33838,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _validate = _interopRequireDefault(__nccwpck_require__(900));
+var _validate = _interopRequireDefault(__nccwpck_require__(6900));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26319,7 +33873,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 628:
+/***/ 8628:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26332,7 +33886,7 @@ exports["default"] = void 0;
 
 var _rng = _interopRequireDefault(__nccwpck_require__(807));
 
-var _stringify = _interopRequireDefault(__nccwpck_require__(950));
+var _stringify = _interopRequireDefault(__nccwpck_require__(8950));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26433,7 +33987,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 409:
+/***/ 6409:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26444,9 +33998,9 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _v = _interopRequireDefault(__nccwpck_require__(998));
+var _v = _interopRequireDefault(__nccwpck_require__(5998));
 
-var _md = _interopRequireDefault(__nccwpck_require__(569));
+var _md = _interopRequireDefault(__nccwpck_require__(4569));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26456,7 +34010,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 998:
+/***/ 5998:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26468,9 +34022,9 @@ Object.defineProperty(exports, "__esModule", ({
 exports["default"] = _default;
 exports.URL = exports.DNS = void 0;
 
-var _stringify = _interopRequireDefault(__nccwpck_require__(950));
+var _stringify = _interopRequireDefault(__nccwpck_require__(8950));
 
-var _parse = _interopRequireDefault(__nccwpck_require__(746));
+var _parse = _interopRequireDefault(__nccwpck_require__(2746));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26541,7 +34095,7 @@ function _default(name, version, hashfunc) {
 
 /***/ }),
 
-/***/ 122:
+/***/ 5122:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26554,7 +34108,7 @@ exports["default"] = void 0;
 
 var _rng = _interopRequireDefault(__nccwpck_require__(807));
 
-var _stringify = _interopRequireDefault(__nccwpck_require__(950));
+var _stringify = _interopRequireDefault(__nccwpck_require__(8950));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26585,7 +34139,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 120:
+/***/ 9120:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26596,9 +34150,9 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _v = _interopRequireDefault(__nccwpck_require__(998));
+var _v = _interopRequireDefault(__nccwpck_require__(5998));
 
-var _sha = _interopRequireDefault(__nccwpck_require__(274));
+var _sha = _interopRequireDefault(__nccwpck_require__(5274));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26608,7 +34162,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 900:
+/***/ 6900:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26632,7 +34186,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 595:
+/***/ 1595:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26643,7 +34197,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _validate = _interopRequireDefault(__nccwpck_require__(900));
+var _validate = _interopRequireDefault(__nccwpck_require__(6900));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26660,7 +34214,120 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 491:
+/***/ 7458:
+/***/ ((module) => {
+
+module.exports = read
+
+var MSB = 0x80
+  , REST = 0x7F
+
+function read(buf, offset) {
+  var res    = 0
+    , offset = offset || 0
+    , shift  = 0
+    , counter = offset
+    , b
+    , l = buf.length
+
+  do {
+    if (counter >= l) {
+      read.bytes = 0
+      throw new RangeError('Could not decode varint')
+    }
+    b = buf[counter++]
+    res += shift < 28
+      ? (b & REST) << shift
+      : (b & REST) * Math.pow(2, shift)
+    shift += 7
+  } while (b >= MSB)
+
+  read.bytes = counter - offset
+
+  return res
+}
+
+
+/***/ }),
+
+/***/ 1415:
+/***/ ((module) => {
+
+module.exports = encode
+
+var MSB = 0x80
+  , REST = 0x7F
+  , MSBALL = ~REST
+  , INT = Math.pow(2, 31)
+
+function encode(num, out, offset) {
+  out = out || []
+  offset = offset || 0
+  var oldOffset = offset
+
+  while(num >= INT) {
+    out[offset++] = (num & 0xFF) | MSB
+    num /= 128
+  }
+  while(num & MSBALL) {
+    out[offset++] = (num & 0xFF) | MSB
+    num >>>= 7
+  }
+  out[offset] = num | 0
+  
+  encode.bytes = offset - oldOffset + 1
+  
+  return out
+}
+
+
+/***/ }),
+
+/***/ 8018:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+module.exports = {
+    encode: __nccwpck_require__(1415)
+  , decode: __nccwpck_require__(7458)
+  , encodingLength: __nccwpck_require__(5235)
+}
+
+
+/***/ }),
+
+/***/ 5235:
+/***/ ((module) => {
+
+
+var N1 = Math.pow(2,  7)
+var N2 = Math.pow(2, 14)
+var N3 = Math.pow(2, 21)
+var N4 = Math.pow(2, 28)
+var N5 = Math.pow(2, 35)
+var N6 = Math.pow(2, 42)
+var N7 = Math.pow(2, 49)
+var N8 = Math.pow(2, 56)
+var N9 = Math.pow(2, 63)
+
+module.exports = function (value) {
+  return (
+    value < N1 ? 1
+  : value < N2 ? 2
+  : value < N3 ? 3
+  : value < N4 ? 4
+  : value < N5 ? 5
+  : value < N6 ? 6
+  : value < N7 ? 7
+  : value < N8 ? 8
+  : value < N9 ? 9
+  :              10
+  )
+}
+
+
+/***/ }),
+
+/***/ 9491:
 /***/ ((module) => {
 
 "use strict";
@@ -26668,7 +34335,7 @@ module.exports = require("assert");
 
 /***/ }),
 
-/***/ 300:
+/***/ 4300:
 /***/ ((module) => {
 
 "use strict";
@@ -26676,7 +34343,7 @@ module.exports = require("buffer");
 
 /***/ }),
 
-/***/ 113:
+/***/ 6113:
 /***/ ((module) => {
 
 "use strict";
@@ -26684,7 +34351,7 @@ module.exports = require("crypto");
 
 /***/ }),
 
-/***/ 361:
+/***/ 2361:
 /***/ ((module) => {
 
 "use strict";
@@ -26692,7 +34359,7 @@ module.exports = require("events");
 
 /***/ }),
 
-/***/ 147:
+/***/ 7147:
 /***/ ((module) => {
 
 "use strict";
@@ -26700,7 +34367,7 @@ module.exports = require("fs");
 
 /***/ }),
 
-/***/ 685:
+/***/ 3685:
 /***/ ((module) => {
 
 "use strict";
@@ -26708,7 +34375,7 @@ module.exports = require("http");
 
 /***/ }),
 
-/***/ 687:
+/***/ 5687:
 /***/ ((module) => {
 
 "use strict";
@@ -26716,7 +34383,7 @@ module.exports = require("https");
 
 /***/ }),
 
-/***/ 808:
+/***/ 1808:
 /***/ ((module) => {
 
 "use strict";
@@ -26724,7 +34391,7 @@ module.exports = require("net");
 
 /***/ }),
 
-/***/ 37:
+/***/ 2037:
 /***/ ((module) => {
 
 "use strict";
@@ -26732,7 +34399,7 @@ module.exports = require("os");
 
 /***/ }),
 
-/***/ 17:
+/***/ 1017:
 /***/ ((module) => {
 
 "use strict";
@@ -26740,7 +34407,7 @@ module.exports = require("path");
 
 /***/ }),
 
-/***/ 781:
+/***/ 2781:
 /***/ ((module) => {
 
 "use strict";
@@ -26748,7 +34415,7 @@ module.exports = require("stream");
 
 /***/ }),
 
-/***/ 404:
+/***/ 4404:
 /***/ ((module) => {
 
 "use strict";
@@ -26756,7 +34423,7 @@ module.exports = require("tls");
 
 /***/ }),
 
-/***/ 224:
+/***/ 6224:
 /***/ ((module) => {
 
 "use strict";
@@ -26764,7 +34431,7 @@ module.exports = require("tty");
 
 /***/ }),
 
-/***/ 310:
+/***/ 7310:
 /***/ ((module) => {
 
 "use strict";
@@ -26772,7 +34439,7 @@ module.exports = require("url");
 
 /***/ }),
 
-/***/ 837:
+/***/ 3837:
 /***/ ((module) => {
 
 "use strict";
@@ -26780,7 +34447,7 @@ module.exports = require("util");
 
 /***/ }),
 
-/***/ 796:
+/***/ 9796:
 /***/ ((module) => {
 
 "use strict";
@@ -26829,10 +34496,10 @@ module.exports = require("zlib");
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-const core = __nccwpck_require__(186);
-const fsPath = __nccwpck_require__(17)
-const pinataSdk = __nccwpck_require__(0)
-const IPFSGatewayTools = __nccwpck_require__(158)
+const core = __nccwpck_require__(2186);
+const fsPath = __nccwpck_require__(1017)
+const pinataSdk = __nccwpck_require__(3000)
+const IPFSGatewayTools = __nccwpck_require__(4329)
 
 const gatewayTools = new IPFSGatewayTools()
 
@@ -26902,7 +34569,9 @@ const main = async () => {
     }
 }
 
-main()
+main().then(() => {
+  console.log('All done!')
+})
 
 })();
 

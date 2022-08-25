@@ -1,7 +1,7 @@
 const core = require('@actions/core');
 const fsPath = require('path')
 const pinataSdk = require('@pinata/sdk')
-const IPFSGatewayTools = require('@pinata/ipfs-gateway-tools/dist/browser')
+const IPFSGatewayTools = require('@pinata/ipfs-gateway-tools/dist/node')
 
 const gatewayTools = new IPFSGatewayTools()
 
@@ -71,4 +71,6 @@ const main = async () => {
     }
 }
 
-main()
+main().then(() => {
+  console.log('All done!')
+})
