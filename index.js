@@ -71,3 +71,5 @@ const main = async () => {
         core.setFailed(e.message)
     }
 }
+
+main()
