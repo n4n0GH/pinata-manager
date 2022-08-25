@@ -1,6 +1,9 @@
 name: 'Pinata pin and gateway management'
 description: 'Manage your pinata pins and default gateway index'
 author: 'n4n0'
+branding:
+  icon: 'cloud'
+  color: 'purple'
 inputs:
   path:
     description: 'Path to file or directory you want to pin (string)'
