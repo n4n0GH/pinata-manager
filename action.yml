@@ -26,6 +26,9 @@ inputs:
   gatewayName:
     description: 'The name of your target gateway (string)'
     required: true
+  gatewayId:
+    description: 'The Pinata internal Id of your gateway (string)'
+    required: true
 outputs:
   gateway:
     description: 'Returns the new gateway address of a successful pin'

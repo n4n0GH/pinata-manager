@@ -2,6 +2,7 @@ const core = require('@actions/core');
 const fsPath = require('path')
 const pinataSdk = require('@pinata/sdk')
 const IPFSGatewayTools = require('@pinata/ipfs-gateway-tools/dist/node')
+const axios = require('axios').default
 
 const gatewayTools = new IPFSGatewayTools()
 
@@ -34,6 +35,7 @@ o888o o888o     o888o  o888o o888o  \`Y8bd8P'
         const pinName = core.getInput('pinName', {required: true})
         const unpinOld = core.getInput('unpinOld', {required: false})
         const gatewayName = core.getInput('gatewayName', {required: true})
+        const gatewayId = core.getInput('gatewayId', {required: true})
 
         // @dev sanity check
         if (!sourcePath) throw new Error("No source path specified")
@@ -41,6 +43,7 @@ o888o o888o     o888o  o888o o888o  \`Y8bd8P'
         if (!key) throw new Error("Pinata API key is missing")
         if (!pinName) throw new Error("Name for the target pin not specified")
         if (!gatewayName) throw new Error("Gateway name not specified")
+        if (!gatewayId) throw new Error("Gateway Id not specified")
         if (!fsPath.isAbsolute(sourcePath)) {
             const dir = (process.env.GITHUB_WORKSPACE || process.cwd().toString())
             sourcePath = fsPath.join(dir, sourcePath)
@@ -69,6 +72,20 @@ o888o o888o     o888o  o888o o888o  \`Y8bd8P'
               core.setOutput('gateway', newGateway)
               core.setOutput('duplicate', 'false')
               console.log('ヾ(＾-＾)ノ Pinned file', {gateway: newGateway, cid})
+              // @dev get file id for new pin
+              const newPin = await pinata.pinList({
+                hashContains: cid,
+              })
+              const pinId = newPin.rows.filter((pin) => pin.ipfs_pin_hash === cid)[0].id
+              // @dev use undocumented blackmagick to update gateway root
+              await axios({
+                method: 'post',
+                url: `https://api.pinata.cloud/v2/gateways/${gatewayId}/pin/${pinId}`
+              }).then(() => {
+                console.log('(≧◡≦) Updated gateway root')
+              }).catch((e) => {
+                console.log('(,,#ﾟДﾟ) Gateway root was not updated...', e.message)
+              })
             } else {
               core.setOutput('duplicate', 'true')
               console.log('Σ(； ･`д･´) No code was changed, duplicate hash generated. Skipping...')

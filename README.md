@@ -16,6 +16,7 @@ Param                 | Required |Description
 `pinName`             | Yes      |Name of the pinned file. Default `super cool ipfs pin`
 `unpinOld`            | No       |Whether or not to unpin an older pin with the same name. Default `false`
 `gatewayName`         | Yes      |The name of your target gateway. **Note:** This _must_ be setup in your Pinata dashboard before using this action!
+`gatewayId`           | Yes      |The Id of your target gateway. **Note:** You have to extract this from your Pinata dashboard by opening the network monitor and setting _any_ file as gateway root.
 
 ## Outputs
 
