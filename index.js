@@ -56,6 +56,7 @@ const main = async () => {
             `${prefix}ipfs/${cid}`,
             prefix
         )
+        console.log({gateway: newGateway, cid})
         core.setOutput('gateway', newGateway)
 
         // @dev unpin old file if applicable
@@ -64,6 +65,10 @@ const main = async () => {
             // @dev retrieve current pins
             // @dev find pin with same name and unpin
             console.log('yeet');
+            const currentPins = await pinata.pinList({
+              name: pinName
+            })
+          console.log(currentPins)
         }
 
     } catch (e) {
