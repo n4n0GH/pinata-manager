@@ -26899,12 +26899,12 @@ let cid = ''
 const main = async () => {
     try {
         // @dev retrieve action inputs
-        let sourcePath = core.getInput('path', {required: true})
-        const secret = core.getInput('secret', {required: true})
-        const key = core.getInput('key', {required: true})
-        const pinName = core.getInput('pinName', {required: true})
-        const unpinOld = core.getInput('unpinOld', {required: false})
-        const gatewayName = core.getInput('gatewayName', {required: true})
+        let sourcePath = _actions_core__WEBPACK_IMPORTED_MODULE_0___default().getInput('path', {required: true})
+        const secret = _actions_core__WEBPACK_IMPORTED_MODULE_0___default().getInput('secret', {required: true})
+        const key = _actions_core__WEBPACK_IMPORTED_MODULE_0___default().getInput('key', {required: true})
+        const pinName = _actions_core__WEBPACK_IMPORTED_MODULE_0___default().getInput('pinName', {required: true})
+        const unpinOld = _actions_core__WEBPACK_IMPORTED_MODULE_0___default().getInput('unpinOld', {required: false})
+        const gatewayName = _actions_core__WEBPACK_IMPORTED_MODULE_0___default().getInput('gatewayName', {required: true})
 
         // @dev sanity check
         if (!sourcePath) throw new Error("No source path specified")
@@ -26912,13 +26912,13 @@ const main = async () => {
         if (!key) throw new Error("Pinata API key is missing")
         if (!pinName) throw new Error("Name for the target pin not specified")
         if (!gatewayName) throw new Error("Gateway name not specified")
-        if (!fsPath.isAbsolute(sourcePath)) {
+        if (!path__WEBPACK_IMPORTED_MODULE_1___default().isAbsolute(sourcePath)) {
             const dir = (process.env.GITHUB_WORKSPACE || process.cwd().toString())
-            sourcePath = fsPath.join(dir, sourcePath)
+            sourcePath = path__WEBPACK_IMPORTED_MODULE_1___default().join(dir, sourcePath)
         }
 
         // @pinata setup
-        const pinata = pinataSdk(key, secret)
+        const pinata = _pinata_sdk__WEBPACK_IMPORTED_MODULE_2___default()(key, secret)
 
         pinataOptions = {
             ...pinataOptions,
@@ -26938,7 +26938,7 @@ const main = async () => {
             `${prefix}ipfs/${cid}`,
             prefix
         )
-        core.setOutput('gateway', newGateway)
+        _actions_core__WEBPACK_IMPORTED_MODULE_0___default().setOutput('gateway', newGateway)
 
         // @dev unpin old file if applicable
         if (unpinOld) {
@@ -26949,9 +26949,11 @@ const main = async () => {
         }
 
     } catch (e) {
-        core.setFailed(e.message)
+        _actions_core__WEBPACK_IMPORTED_MODULE_0___default().setFailed(e.message)
     }
 }
+
+main()
 
 })();
 
