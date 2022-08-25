@@ -1,0 +1,28 @@
+name: 'Pinata pin and gateway management'
+description: 'Manage your pinata pins and default gateway index'
+author: 'n4n0'
+inputs:
+  path:
+    description: 'Path to file or directory you want to pin (string)'
+    required: true
+    default: ./dist
+  secret:
+    description: 'Your Pinata secret JWT (string)'
+    required: true
+  key:
+    description: 'Your Pinata API key (string)'
+    required: true
+  pinName:
+    description: 'Name of the pinned file (string)'
+    required: true
+    default: 'n4n0\'s super cool ipfs pin'
+  unpinOld:
+    description: 'Whether or not to unpin an older pin with the same name (boolean)'
+    required: false
+    default: false
+  gatewayName:
+    description: 'The name of your target gateway (string)',
+    required: true
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
