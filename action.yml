@@ -24,8 +24,8 @@ inputs:
     description: 'The name of your target gateway (string)',
     required: true
 outputs:
-  confirmation:
-    description: 'Confirmation'
+  gateway:
+    description: 'The gateway address'
 runs:
   using: 'node16'
   main: 'dist/index.js'

@@ -57,6 +57,7 @@ const main = async () => {
             `${prefix}ipfs/${cid}`,
             prefix
         )
+        core.setOutput('gateway', newGateway)
 
         // @dev unpin old file if applicable
         if (unpinOld) {
