@@ -26941,7 +26941,7 @@ const main = async () => {
         _actions_core__WEBPACK_IMPORTED_MODULE_0___default().setOutput('gateway', newGateway)
 
         // @dev unpin old file if applicable
-        if (unpinOld) {
+        if (!!unpinOld) {
             // TODO
             // @dev retrieve current pins
             // @dev find pin with same name and unpin

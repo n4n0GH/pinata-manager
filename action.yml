@@ -15,11 +15,11 @@ inputs:
   pinName:
     description: 'Name of the pinned file (string)'
     required: true
-    default: 'n4n0\'s super cool ipfs pin'
+    default: 'super cool ipfs pin'
   unpinOld:
     description: 'Whether or not to unpin an older pin with the same name (boolean)'
     required: false
-    default: false
+    default: 'false'
   gatewayName:
     description: 'The name of your target gateway (string)',
     required: true
