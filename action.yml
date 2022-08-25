@@ -23,6 +23,9 @@ inputs:
   gatewayName:
     description: 'The name of your target gateway (string)',
     required: true
+outputs:
+  confirmation:
+    description: 'Confirmation'
 runs:
   using: 'node16'
   main: 'dist/index.js'
