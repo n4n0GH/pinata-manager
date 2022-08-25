@@ -40539,8 +40539,9 @@ o888o o888o     o888o  o888o o888o  \`Y8bd8P'
               const pinId = newPin.rows.filter((pin) => pin.ipfs_pin_hash === cid)[0].id
               console.log(pinId)
               // @dev use undocumented blackmagick to update gateway root
+              console.log(`https://api.pinata.cloud/v2/gateways/${gatewayId}/pin/${pinId}`)
               await axios({
-                method: 'post',
+                method: 'POST',
                 url: `https://api.pinata.cloud/v2/gateways/${gatewayId}/pin/${pinId}`
               }).then(() => {
                 console.log('(≧◡≦) Updated gateway root')
@@ -40565,12 +40566,16 @@ o888o o888o     o888o  o888o o888o  \`Y8bd8P'
               }
             })
             const pinList = currentPins.rows
-            pinList.filter((pin) => pin.ipfs_pin_hash !== cid).forEach((pin) => {
-              pinata.unpin(pin.ipfs_pin_hash).then(() => {
-                console.log('(•̀o•́)ง Pin removed:', pin.ipfs_pin_hash)
-              }).catch((e) => {
-                console.error('(´；ω；`) Failed to remove pin', e.message)
-              })
+            console.log(pinList)
+            pinList.filter(async (pin) => {
+                console.log(pin)
+                if (pin.ipfs_pin_hash !== cid) {
+                    await pinata.unpin(pin.ipfs_pin_hash).then(() => {
+                      console.log('(•̀o•́)ง Pin removed:', pin.ipfs_pin_hash)
+                    }).catch((e) => {
+                      console.error('(´；ω；`) Failed to remove pin', e)
+                    })
+                }
             })
         }
 
