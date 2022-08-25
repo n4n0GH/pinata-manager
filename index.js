@@ -64,7 +64,7 @@ o888o o888o     o888o  o888o o888o  \`Y8bd8P'
         // @dev pin the new file
         await pinata.pinFromFS(sourcePath, pinataOptions).then(async (result) => {
             cid = result.IpfsHash.toString()
-            if (!!result.isDuplicate) {
+            if (!result.isDuplicate) {
               // @dev generate the gateway url
               const prefix = `https://${gatewayName}.mypinata.cloud`
               const newGateway = await gatewayTools.convertToDesiredGateway(
