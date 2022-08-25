@@ -40493,6 +40493,7 @@ o888o o888o     o888o  o888o o888o  \`Y8bd8P'
         let sourcePath = core.getInput('path', {required: true})
         const secret = core.getInput('secret', {required: true})
         const key = core.getInput('key', {required: true})
+        const token = core.getInput('token', {required: true})
         const pinName = core.getInput('pinName', {required: true})
         const unpinOld = core.getInput('unpinOld', {required: false})
         const gatewayName = core.getInput('gatewayName', {required: true})
@@ -40500,8 +40501,9 @@ o888o o888o     o888o  o888o o888o  \`Y8bd8P'
 
         // @dev sanity check
         if (!sourcePath) throw new Error("No source path specified")
-        if (!secret) throw new Error("Pinata JWT is missing")
+        if (!secret) throw new Error("Pinata secret is missing")
         if (!key) throw new Error("Pinata API key is missing")
+        if (!token) throw new Error("Pinata JWT is mising")
         if (!pinName) throw new Error("Name for the target pin not specified")
         if (!gatewayName) throw new Error("Gateway name not specified")
         if (!gatewayId) throw new Error("Gateway Id not specified")
@@ -40543,7 +40545,7 @@ o888o o888o     o888o  o888o o888o  \`Y8bd8P'
                 method: 'PUT',
                 url: `https://api.pinata.cloud/v2/gateways/${gatewayId}/pin/${pinId}`,
                   headers: {
-                      Authorization: `Bearer ${secret}`
+                      Authorization: `Bearer ${token}`
                   }
               }).then(() => {
                 console.log('(≧◡≦) Updated gateway root')
