@@ -62,21 +62,21 @@ o888o o888o     o888o  o888o o888o  \`Y8bd8P'
         // @dev pin the new file
         await pinata.pinFromFS(sourcePath, pinataOptions).then(async (result) => {
             cid = result.IpfsHash.toString()
-            if (!result.isDuplicate) {
+            if (!!result.isDuplicate) {
               // @dev generate the gateway url
               const prefix = `https://${gatewayName}.mypinata.cloud`
               const newGateway = await gatewayTools.convertToDesiredGateway(
                 `${prefix}/ipfs/${cid}`,
                 prefix
               )
-              core.setOutput('gateway', newGateway)
-              core.setOutput('duplicate', 'false')
               console.log('ヾ(＾-＾)ノ Pinned file', {gateway: newGateway, cid})
               // @dev get file id for new pin
               const newPin = await pinata.pinList({
                 hashContains: cid,
               })
+              console.log(newPin.rows)
               const pinId = newPin.rows.filter((pin) => pin.ipfs_pin_hash === cid)[0].id
+              console.log(pinId)
               // @dev use undocumented blackmagick to update gateway root
               await axios({
                 method: 'post',
@@ -84,11 +84,13 @@ o888o o888o     o888o  o888o o888o  \`Y8bd8P'
               }).then(() => {
                 console.log('(≧◡≦) Updated gateway root')
               }).catch((e) => {
-                console.log('(,,#ﾟДﾟ) Gateway root was not updated...', e.message)
+                console.error('(,,#ﾟДﾟ) Gateway root was not updated...', e.message)
               })
+              core.setOutput('gateway', newGateway)
+              core.setOutput('duplicate', 'false')
             } else {
               core.setOutput('duplicate', 'true')
-              console.log('Σ(； ･`д･´) No code was changed, duplicate hash generated. Skipping...')
+              console.info('Σ(； ･`д･´) No code was changed, duplicate hash generated. Skipping...')
             }
         })
 
@@ -106,7 +108,7 @@ o888o o888o     o888o  o888o o888o  \`Y8bd8P'
               pinata.unpin(pin.ipfs_pin_hash).then(() => {
                 console.log('(•̀o•́)ง Pin removed:', pin.ipfs_pin_hash)
               }).catch((e) => {
-                console.log('(´；ω；`) Failed to remove pin', e.message)
+                console.error('(´；ω；`) Failed to remove pin', e.message)
               })
             })
         }
