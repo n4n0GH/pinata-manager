@@ -21,7 +21,7 @@ inputs:
     required: false
     default: 'false'
   gatewayName:
-    description: 'The name of your target gateway (string)',
+    description: 'The name of your target gateway (string)'
     required: true
 outputs:
   gateway:
