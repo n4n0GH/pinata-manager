@@ -10,10 +10,13 @@ inputs:
     required: true
     default: ./dist
   secret:
-    description: 'Your Pinata secret JWT (string)'
+    description: 'Your Pinata secret (string)'
     required: true
   key:
     description: 'Your Pinata API key (string)'
+    required: true
+  token:
+    description: 'Your Pinata JWT (string)'
     required: true
   pinName:
     description: 'Name of the pinned file (string)'
