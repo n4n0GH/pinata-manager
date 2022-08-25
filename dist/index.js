@@ -34544,27 +34544,28 @@ const main = async () => {
         }
 
         // @dev pin the new file
-        await pinata.pinFromFS(sourcePath, pinataOptions).then((result) => {
+        await pinata.pinFromFS(sourcePath, pinataOptions).then(async (result) => {
+          console.log(result)
             cid = result.IpfsHash.toString()
-        })
 
-        // @dev update the gateway
-        const prefix = `https://${gatewayName}.mypinata.cloud/`
-        const newGateway = await gatewayTools.convertToDesiredGateway(
-            `${prefix}ipfs/${cid}`,
-            prefix
-        )
-        console.log({gateway: newGateway, cid})
-        core.setOutput('gateway', newGateway)
+            // @dev update the gateway
+            const prefix = `https://${gatewayName}.mypinata.cloud`
+            const newGateway = await gatewayTools.convertToDesiredGateway(
+              `${prefix}/ipfs/${cid}`,
+              prefix
+            )
+            console.log({gateway: newGateway, cid})
+            core.setOutput('gateway', newGateway)
+        })
 
         // @dev unpin old file if applicable
         if (!!unpinOld) {
             // TODO
             // @dev retrieve current pins
             // @dev find pin with same name and unpin
-            console.log('yeet');
             const currentPins = await pinata.pinList({
-              name: pinName
+              name: pinName,
+              status: 'pinned'
             })
           console.log(currentPins)
         }
@@ -34575,6 +34576,7 @@ const main = async () => {
 }
 
 main().then(() => {
+  core.setOutput('cid', cid)
   console.log('All done!')
 })
 
