@@ -34557,7 +34557,6 @@ o888o o888o     o888o  o888o o888o  \`Y8bd8P'
         // @dev pin the new file
         await pinata.pinFromFS(sourcePath, pinataOptions).then(async (result) => {
             cid = result.IpfsHash.toString()
-            const totalData = await pinata.userPinnedDataTotal()
             if (!result.isDuplicate) {
               // @dev generate the gateway url
               const prefix = `https://${gatewayName}.mypinata.cloud`
@@ -34572,7 +34571,6 @@ o888o o888o     o888o  o888o o888o  \`Y8bd8P'
               core.setOutput('duplicate', 'true')
               console.log('Σ(； ･`д･´) No code was changed, duplicate hash generated. Skipping...')
             }
-            console.log(`(。・ω・。) Total filesize of all pins is ${(totalData/1024/1024).toFixed(2)}MB`)
         })
 
         // @dev unpin old file if applicable
