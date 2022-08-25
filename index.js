@@ -6,7 +6,7 @@ import IPFSGatewayTools from '@pinata/ipfs-gateway-tools/dist/browser'
 
 const gatewayTools = new IPFSGatewayTools()
 
-const pinataOptions = {
+let pinataOptions = {
     pinataOptions: {
         cidVersion: 0,
         wrapWithDirectory: false,

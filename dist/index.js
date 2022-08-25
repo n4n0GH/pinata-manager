@@ -26887,7 +26887,7 @@ __nccwpck_require__.r(__webpack_exports__);
 
 const gatewayTools = new (_pinata_ipfs_gateway_tools_dist_browser__WEBPACK_IMPORTED_MODULE_3___default())()
 
-const pinataOptions = {
+let pinataOptions = {
     pinataOptions: {
         cidVersion: 0,
         wrapWithDirectory: false,
@@ -26938,6 +26938,7 @@ const main = async () => {
             `${prefix}ipfs/${cid}`,
             prefix
         )
+        core.setOutput('gateway', newGateway)
 
         // @dev unpin old file if applicable
         if (unpinOld) {
@@ -26951,6 +26952,7 @@ const main = async () => {
         core.setFailed(e.message)
     }
 }
+
 })();
 
 module.exports = __webpack_exports__;
