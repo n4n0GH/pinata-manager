@@ -5,14 +5,15 @@
 
 Github action to pin, unpin and update Pinata gateways
 
----
+The action will automatically update your Pinata's gateway root to be the newly pinned CID.
 
 ## Inputs
 Param                 | Required |Description
 ---                   |----------|---
 `path`                | Yes      |Path to file or directory you want to pin
-`secret`              | Yes      |Your Pinata secret JWT
+`secret`              | Yes      |Your Pinata secret
 `key`                 | Yes      |Your Pinata API key
+`token`               | Yes      |Your Pinata JWT
 `pinName`             | Yes      |Name of the pinned file. Default `super cool ipfs pin`
 `unpinOld`            | No       |Whether or not to unpin an older pin with the same name. Default `false`
 `gatewayName`         | Yes      |The name of your target gateway. **Note:** This _must_ be setup in your Pinata dashboard before using this action!

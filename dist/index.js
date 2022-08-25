@@ -40538,9 +40538,7 @@ o888o o888o     o888o  o888o o888o  \`Y8bd8P'
                 hashContains: cid,
               })
               const pinId = newPin.rows.filter((pin) => pin.ipfs_pin_hash === cid)[0].id
-              console.log(pinId)
               // @dev use undocumented blackmagick to update gateway root
-              console.log(`https://api.pinata.cloud/v2/gateways/${gatewayId}/pin/${pinId}`)
               await axios({
                 method: 'PUT',
                 url: `https://api.pinata.cloud/v2/gateways/${gatewayId}/pin/${pinId}`,
