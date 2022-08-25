@@ -34545,29 +34545,39 @@ const main = async () => {
 
         // @dev pin the new file
         await pinata.pinFromFS(sourcePath, pinataOptions).then(async (result) => {
-          console.log(result)
+            console.log('pinata response:', result)
             cid = result.IpfsHash.toString()
-
-            // @dev update the gateway
-            const prefix = `https://${gatewayName}.mypinata.cloud`
-            const newGateway = await gatewayTools.convertToDesiredGateway(
-              `${prefix}/ipfs/${cid}`,
-              prefix
-            )
-            console.log({gateway: newGateway, cid})
-            core.setOutput('gateway', newGateway)
+            if (!result.isDuplicate) {
+              // @dev update the gateway
+              const prefix = `https://${gatewayName}.mypinata.cloud`
+              const newGateway = await gatewayTools.convertToDesiredGateway(
+                `${prefix}/ipfs/${cid}`,
+                prefix
+              )
+              console.log({gateway: newGateway, cid})
+              core.setOutput('gateway', newGateway)
+            } else {
+              console.log('No code was changed, duplicate hash generated. Skipping...')
+            }
         })
 
         // @dev unpin old file if applicable
         if (!!unpinOld) {
-            // TODO
-            // @dev retrieve current pins
-            // @dev find pin with same name and unpin
+            // TODO change conditional to proper evaluation
+            // @dev retrieve current pins with the same name
             const currentPins = await pinata.pinList({
-              name: pinName,
-              status: 'pinned'
+              status: 'pinned',
+              metadata: {
+                name: pinName
+              }
             })
-          console.log(currentPins)
+            const pinList = currentPins.rows
+            console.log(pinList)
+            pinList.filter((pin) => pin.ipfs_pin_hash !== cid).forEach((pin) => {
+              pinata.unpin(pin.ipfs_pin_hash).then((result) => {
+                console.log(pin.ipfs_pin_hash, 'unpinned', result)
+              })
+            })
         }
 
     } catch (e) {
@@ -34577,7 +34587,6 @@ const main = async () => {
 
 main().then(() => {
   core.setOutput('cid', cid)
-  console.log('All done!')
 })
 
 })();
