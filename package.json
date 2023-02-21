@@ -7,7 +7,7 @@
   "author": "n4n0GH <n4n0@tuta.io>",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "@actions/core": "^1.9.1",
+    "@actions/core": "^1.10.0",
     "@pinata/ipfs-gateway-tools": "^1.3.0",
     "@pinata/sdk": "^1.1.26",
     "@vercel/ncc": "^0.34.0",

@@ -17,15 +17,16 @@ let cid = ''
 
 const main = async () => {
   console.log(`
-                  .o                 .oooo.   
-                .d88                d8P'\`Y8b  
-ooo. .oo.     .d'888   ooo. .oo.   888    888 
-\`888P"Y88b  .d'  888   \`888P"Y88b  888    888 
- 888   888  88ooo888oo  888   888  888    888 
- 888   888       888    888   888  \`88b  d88' 
-o888o o888o     o888o  o888o o888o  \`Y8bd8P'  
-
-        --- touch grass, anon <3 ---
+             _        __     
+            (_)      / _|    
+             _ _ __ | |_ ___ 
+            | | '_ \|  _/ __|
+            | | |_) | | \__ \
+            |_| .__/|_| |___/
+              | |            
+              |_|            
+            
+      --- decentralized storage ---
   `)
     try {
         // @dev retrieve action inputs
