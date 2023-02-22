@@ -1,6 +1,6 @@
 {
   "name": "pinata-manager",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Manage your pinata pins and default gateway",
   "main": "index.js",
   "repository": "https://github.com/n4n0GH/pinata-manager.git",
